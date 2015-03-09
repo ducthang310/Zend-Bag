@@ -1,0 +1,23 @@
+
+<?php
+$auth = Zend_Auth::getInstance();
+if($auth->getStorage()->read()) {
+    $type = $auth->getStorage()->read()->auth_type;
+    $id = $auth->getStorage()->read()->id;
+}
+else {
+    $id = null;
+    $type = null;
+}
+switch(true) {
+    case $type == Auth_Constant_Server::GUEST_TYPE :
+        break ;
+        default:
+            ?>
+            <div class="right message">
+            <a href="<?php echo BASE_URL ?>/message" title="" class="" id="right-message"></a>
+            <input type="hidden" id="message_id" value="<?php echo $id; ?>" />
+        </div>
+       <?php break;
+}
+?>

@@ -1,0 +1,88 @@
+
+
+
+<h1>Pickup detail</h1>
+<?php
+echo 'Status:' . $this->pickup->status . '<br>';
+$current_sts = $this->pickup->status;
+$auth = Zend_Auth::getInstance();
+$auth_id = $auth->getStorage()->read()->id;
+$type= $auth->getStorage()->read()->auth_type;
+$action = $this->baseUrl();
+if(Pickup_Constant_Server::getInstance()->getValue($current_sts)<Pickup_Constant_Server::getInstance()->getValue(Pickup_Constant_Server::PICKED_UP))
+    $action .= '/pickup/index/update';
+else
+    $action .= '/pickup/index/changestatus';
+?>
+<div>
+    <form role="form" method="post" action="<?php echo $action?>">
+        <input type="hidden" id="id" name="id" value="<?php echo $this->pickup->id?>">
+        <h3>EDIT <span class="label label-default"> A Pickup</span></h3>
+        <div class="form-group">
+            <label for="product_name">Pickup Address</label>
+            <input type="text" class="form-control" placeholder="Pickup Address" id="from_address"
+                   value="<?php echo $this->pickup->from_address?>" name="from_address"/>
+        </div>
+        <div class="form-group">
+            <label for="description">Delivery Address</label>
+            <input type="text" class="form-control" placeholder="Delivery Address" id="to_address"
+                   value="<?php echo $this->pickup->to_address?>" name="to_address"/>
+        </div>
+        <?php
+        switch(true){
+            case Pickup_Constant_Server::AWAITING==$current_sts:
+                ?>
+                <a type="button" class="btn btn-default" id="cancel"
+                   href="/<?php echo $this->moduleName; ?>/index/cancel/id/<?php echo $this->pickup->id ?>">Cancel</a>
+                <input type="submit" name="update" class="button" value="Save">
+                <?php
+                break;
+            case Pickup_Constant_Server::ASSIGNED == $current_sts:
+                ?>
+                <a type="button" class="btn btn-default" id="cancel"
+                   href="/<?php echo $this->moduleName; ?>/index/cancel/id/<?php echo $this->pickup->id ?>">Cancel</a>
+                <input type="submit" name="update" class="button" value="Save">
+                <?php
+                break;
+            case Pickup_Constant_Server::CANCELLED==$current_sts:
+                break;
+            case Pickup_Constant_Server::PICKED_UP==$current_sts:
+                break;
+            case Pickup_Constant_Server::DELIVERED==$current_sts:
+                ?>
+                <input type="submit" name="status" value="<?php echo Pickup_Constant_Server::ACCEPTED?>">
+                <?php
+                break;
+            case Pickup_Constant_Server::ACCEPTED==$current_sts:
+                ?>
+                <input type="submit" name="status" value="<?php echo Pickup_Constant_Server::RATED?>">
+                <?php
+                break;
+            case Pickup_Constant_Server::RATED==$current_sts:
+                ?>
+                <a type="button" class="btn btn-default" id="assign"
+                   href="/<?php echo $this->moduleName; ?>/index/rate/id/<?php echo $this->pickup->id?>">
+                    <?php echo Pickup_Constant_Server::RATED?></a>
+                <?php
+                break;
+            default:
+                break;
+        }
+        ?>
+        <a type="button" class="btn btn-default" id="back_to_list" href="/<?php echo $this->moduleName; ?>/index/list">Back to list</a>
+    </form>
+</div>
+<div class="clear"></div>
+<div class="message">
+     <div id="show-message">
+     </div>
+     <div id="chat-box">
+        <form>
+             <textarea id="message"></textarea>
+             <input type="hidden" value="<?php echo $auth_id ?>" id="from_id" />
+             <input type="hidden" value="<?php echo $this->pickup->courier_id ?>" id="to_id" />
+             <input type="hidden" value="<?php echo $this->pickup->id ?>" id="pickup"/>
+             <input type="button" value="send" name="send" id="send"/>
+        </form>
+     </div>
+</div>

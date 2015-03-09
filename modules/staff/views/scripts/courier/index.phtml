@@ -1,0 +1,177 @@
+<?php
+$auth = Zend_Auth::getInstance();
+if ($auth->getStorage()->read() != null):
+//    $id = $auth->getStorage()->read()->id;
+    $sort = $this->sort['sortField'];
+    $type_sort_current = $this->sort['sortType'];
+    $type_sort = $this->sort['type'];
+    $icon_sort = 'sort_down.png';
+    ?>
+    <div class="big-wrapper">
+    <div class="big-inner">
+        <?php
+        $msg_success = Zend_Registry::getInstance()->session->success->approved;
+        $msg_error = Zend_Registry::getInstance()->session->error->approved;
+        ?>
+        <h1 class="title-inner">Manage Courier</h1>
+        <?php echo $this->render('courier/form_search.phtml'); ?>
+        <?php
+        if ($msg_success) {
+            ?>
+            <span id="message"><p class="alert alert-success"><?php echo $msg_success['message']; ?></p></span>
+
+            <?php
+            unset(Zend_Registry::getInstance()->session->success->approved);
+        }
+        if ($msg_error) {
+            ?>
+            <span id="message"><p class="alert alert-danger"><?php echo $msg_error['message']; ?></p></span>
+
+            <?php
+            unset(Zend_Registry::getInstance()->session->error->approved);
+        }
+        ?>
+        <div class="view-booking-table">
+           <div class="table-wrapper">
+    <?php
+    if (count($this->data) > 0) {?>
+            <table cellpadding="0" cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <th>Date
+                        <a href="
+                                <?php echo $this->buildUrl(array(
+                            'page' => 1,
+                            'sort[sort_type]' => ($sort == 'created') ? $type_sort : 'ASC',
+                            'sort[sort_field]' => 'created',
+                        )) ?>">
+                            <?php
+                            if ($sort) {
+                                if ($sort) {
+                                    $icon_sort = $this->buildIcon($sort, $type_sort_current, 'created');
+                                }
+                            }
+                            ?>
+                            <img
+                                src="<?php echo BASE_URL . UDS . 'static' . UDS . 'images' . UDS . $icon_sort; ?>"
+                                alt="<?php echo $icon_sort ?>">
+                        </a>
+                    </th>
+                    <th>Company Name
+                        <a href="
+                                <?php echo $this->buildUrl(array(
+                            'page' => 1,
+                            'sort[sort_type]' => ($sort == 'company_name') ? $type_sort : 'ASC',
+                            'sort[sort_field]' => 'company_name',
+                        )) ?>">
+                            <?php
+                            if ($sort) {
+                                $icon_sort = $this->buildIcon($sort, $type_sort_current, 'from_address');
+                            }
+                            ?>
+                            <img
+                                src="<?php echo BASE_URL . UDS . 'static' . UDS . 'images' . UDS . $icon_sort; ?>"
+                                alt="<?php echo $icon_sort ?>">
+                        </a>
+                    </th>
+                    <th>ABN
+                        <a href="
+                                <?php echo $this->buildUrl(array(
+                            'page' => 1,
+                            'sort[sort_type]' => ($sort == 'abn') ? $type_sort : 'ASC',
+                            'sort[sort_field]' => 'abn',
+                        )) ?>">
+                            <?php
+                            if ($sort) {
+                                $icon_sort = $this->buildIcon($sort, $type_sort_current, 'from_address');
+                            }
+                            ?>
+                            <img
+                                src="<?php echo BASE_URL . UDS . 'static' . UDS . 'images' . UDS . $icon_sort; ?>"
+                                alt="<?php echo $icon_sort ?>">
+                        </a>
+                    </th>
+                    <th>Full name
+                        <a href="
+                                <?php echo $this->buildUrl(array(
+                            'page' => 1,
+                            'sort[sort_type]' => ($sort == 'lastname') ? $type_sort : 'ASC',
+                            'sort[sort_field]' => 'lastname',
+                        )) ?>">
+                            <?php
+                            if ($sort) {
+                                $icon_sort = $this->buildIcon($sort, $type_sort_current, 'from_address');
+                            }
+                            ?>
+                            <img
+                                src="<?php echo BASE_URL . UDS . 'static' . UDS . 'images' . UDS . $icon_sort; ?>"
+                                alt="<?php echo $icon_sort ?>">
+                        </a>
+                    </th>
+                    <th>Mobile
+                        <a href="
+                                <?php echo $this->buildUrl(array(
+                            'page' => 1,
+                            'sort[sort_type]' => ($sort == 'mobile') ? $type_sort : 'ASC',
+                            'sort[sort_field]' => 'mobile',
+                        )) ?>">
+                            <?php
+                            if ($sort) {
+                                $icon_sort = $this->buildIcon($sort, $type_sort_current, 'mobile');
+                            }
+                            ?>
+                            <img
+                                src="<?php echo BASE_URL . UDS . 'static' . UDS . 'images' . UDS . $icon_sort; ?>"
+                                alt="<?php echo $icon_sort ?>">
+                        </a>
+                    </th>
+                    <th>Can Assign
+                    </th>
+                    <th>Approved
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+              <?php
+                    $i = 1;
+                    foreach ($this->data as $courier) {
+                        $courier = new Base_Php_Overloader($courier);
+                        ?>
+                        <tr class="user<?php echo $this->escape($courier->auth_id) ?>"onclick="StaffController.detailCourier(<?php echo $this->escape($courier->auth_id) ?>)">
+                            <?php $date =  date("d-M", strtotime($this->escape($courier->created)));   ?>
+                            <td><?php echo $date?></td>
+                            <td><?php echo $this->escape($courier->company_name)?></td>
+                            <td><?php echo $this->escape($courier->abn)?></td>
+                            <td><?php echo $this->escape($courier->firstname) ?>&nbsp;<?php echo $this->escape($courier->lastname) ?></td>
+                            <td><?php echo $this->escape($courier->mobile)?></td>
+                            <td><?php echo $this->escape(Courier_Constant_Server::$_CAN_ASSIGN[$courier->can_assign]) ?></td>
+                            <td><?php if($this->escape($courier->head_office_approved) != null)
+                                {
+                                    echo $this->escape(Courier_Constant_Server::$_STATUS[$courier->head_office_approved]);
+                                }; ?>
+                            </td>
+                        </tr>
+                    <?php
+                    }
+                    ?>
+                </tbody>
+            </table>
+    <?php
+    } else {
+    ?>
+        <p class="no-result-search a-center a-center" >No results found</p>
+    <?php
+    }
+    ?>
+        </div>
+            <div class="paging">
+                <?php echo $this->paginationControl($this->data,
+                    'Sliding',
+                    'pagination.phtml', array('sort' => $this->sort,
+                        'filter' => $this->dataParams)); ?>
+            </div>
+        </div>
+        <?php echo $this->render('courier/approved.phtml'); ?>
+    </div>
+    </div>
+<?php endif; ?>

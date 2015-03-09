@@ -1,0 +1,7 @@
+Deny from all
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteBase /core/
+    RewriteRule    ^$    public/    [L]
+    RewriteRule    (.*) public/$1    [L]
+</IfModule>

@@ -1,0 +1,47 @@
+<h1>Pickup detail</h1>
+<div>
+    <form role="form" method="post" action="<?php echo $this->baseUrl(); ?>/pickup/index/updaterate">
+        <input id="pickup_id" name="pickup_id" type="hidden" value="<?php echo $this->pickup_id ?>"/>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Question</th>
+                <th>Your Rate</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php
+            if (count($this->pickups) > 0) {
+                ?>
+                <?php
+                foreach ($this->pickups as $pickup) {
+                    $pickup = new Base_Php_Overloader($pickup);
+                    ?>
+                    <tr>
+                        <input type="hidden" name="id[]" value="<?php echo $pickup->id ?>">
+                        <td><?php echo $this->escape($pickup->question) ?></td>
+                        <td>
+                            <input type="text" class="form-control" id="rating_value[]" name="rating_value[]"
+                                   value="<?php echo $this->escape($pickup->rating_value) ?>"/>
+                        </td>
+                    </tr>
+                <?php
+                }
+            }?>
+            </tbody>
+            </table>
+        <?php
+        $auth = Zend_Auth::getInstance();
+        $auth_id = $auth->getStorage()->read()->id;
+        $type = $auth->getStorage()->read()->auth_type;
+        if($type == Auth_Constant_Server::CUSTOMER_TYPE || $type ==Auth_Constant_Server::STAFF_TYPE)
+        {
+        ?>
+            <input type="submit" class="button" name="update" value="Save">
+        <?php
+        }
+        ?>
+        <a type="button" class="btn btn-default" id="back_to_list" href="/<?php echo $this->moduleName; ?>/index/list">Back to list</a>
+
+    </form>
+</div>

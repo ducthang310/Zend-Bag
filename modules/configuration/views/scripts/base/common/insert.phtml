@@ -1,0 +1,24 @@
+<h1> Welcome to Create new Configuration</h1>
+<?php if(isset($this->configKeys)){
+    if(isset($_SESSION['message'])){
+        echo $_SESSION['message'];
+        unset($_SESSION['message']);
+    };
+    $configValue = $this->configKeys;
+} ?>
+<?php if($configValue != null): ?>
+<form role="form" action="<?php echo $this->baseUrl(); ?>/configuration/base/add" method="post">
+    <select name="key">
+    <?php
+    foreach($configValue as $key => $value){
+        ?>
+        <option value="<?php echo $value['value']?>"><?php echo $value['label']?></option>
+    <?php } ?>
+    </select>
+    <input id="value" type="text" name="value"/>
+    <input type="submit" value="ADD" name="insert"/>
+<!--    <a type="button" class="btn btn-default" href="/--><?php //echo $this->moduleName; ?><!--/index/post">Add</a>-->
+<!--    <a type="button" class="btn btn-default" id="back_to_list" href="/--><?php //echo $this->moduleName; ?><!--/product/list">Back to list</a>-->
+<!--    <a type="button" class="btn btn-default" id="browse_images" target="_blank" href="/--><?php //echo $this->moduleName; ?><!--/image/browse">Browse images</a>-->
+</form>
+<?php endif; ?>

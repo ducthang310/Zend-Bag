@@ -1,0 +1,32 @@
+<h4>Page Create New Region</h4>
+
+<form method="post" action="<?php echo $this->baseUrl(); ?>/configuration/region/add" role="form">
+    <table>
+        <tr>
+            <td><labe>Country</labe></td>
+            <td> <select name="country">
+                <?php
+                foreach ($this->configdata as $value): ?>
+                    <option value="<?php echo $value ?>"><?php echo $value ?></option>
+                <?php endforeach; ?>
+            </select></td></tr>
+        <tr>
+            <td> <labe>State</labe></td>
+           <td> <input type="text" value="" name="state"/></td></tr>
+        <tr>
+            <td>  <labe>Region</labe></td>
+            <td> <input type="text" value="" name="region"/></td></tr>
+        <tr>
+            <td> <labe>Suburb</labe></td>
+            <td> <input type="text" value="" name="suburb"/></td>
+        </tr>
+        <tr>
+            <td> <labe>Postcode</labe></td>
+            <td>  <input type="text" value="" name="postcode"/></td>
+        </tr>
+        <tr>
+            <td> <input type="submit" value="add" name="add"/></td>
+        </tr>
+
+    </table>
+</form>

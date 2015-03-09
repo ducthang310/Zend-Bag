@@ -1,0 +1,159 @@
+<?php
+$auth = Zend_Auth::getInstance();
+if ($auth->getStorage()->read() != null):
+    $sort = $this->sort['sortField'];
+    $type_sort_current = $this->sort['sortType'];
+    $type_sort = $this->sort['type'];
+    $icon_sort = 'sort_down.png';
+    ?>
+    <div class="big-inner">
+        <?php
+        $msg_success = Zend_Registry::getInstance()->session->success->pickup;
+        $msg_error = Zend_Registry::getInstance()->session->error->pickup;
+        if ($msg_success) { ?>
+            <span id="message"><p class="alert alert-success"><?php echo $msg_success['message']; ?></p></span>
+            <?php
+            Zend_Registry::getInstance()->session->success->pickup = '';
+        }
+        if ($msg_error) { ?>
+            <span id="message"><p class="alert alert-success"><?php echo $msg_error['message']; ?></p></span>
+            <?php Zend_Registry::getInstance()->session->error->pickup = '';
+        }
+        ?>
+        <span id="alert_changed" class="alert-danger"></span>
+        <input type="hidden" value="1" id="check_status"/>
+        <h1 class="title-inner">View your bookings</h1>
+
+        <div class="view-booking-table">
+        <?php  if (count($this->pickups) > 0) { ?>
+            <ul class="list-ms view-booking-ul">
+                <li class="head">
+                    <div class="title">
+                        <span class="date">Date
+                            <a href="
+                                <?php echo $this->buildUrl(array(
+                                'page' => 1,
+                                'sort[sort_type]' => ($sort == 'picked_up_active_time') ? $type_sort : 'ASC',
+                                'sort[sort_field]' => 'picked_up_active_time',
+                            )) ?>">
+                                <?php
+                                if ($sort) {
+                                    if ($sort) {
+                                        $icon_sort = $this->buildIcon($sort, $type_sort_current, 'picked_up_active_time');
+                                    }
+                                }
+                                ?>
+                                <img
+                                    src="<?php echo BASE_URL . UDS . 'static' . UDS . 'images' . UDS . $icon_sort; ?>"
+                                    alt="<?php echo $icon_sort ?>">
+                            </a>
+                        </span>
+                        <span class="from">From
+                            <a href="
+                                <?php echo $this->buildUrl(array(
+                                'page' => 1,
+                                'sort[sort_type]' => ($sort == 'from_address') ? $type_sort : 'ASC',
+                                'sort[sort_field]' => 'from_address',
+                            )) ?>">
+                                <?php
+                                if ($sort) {
+                                    $icon_sort = $this->buildIcon($sort, $type_sort_current, 'from_address');
+                                }
+                                ?>
+                                <img
+                                    src="<?php echo BASE_URL . UDS . 'static' . UDS . 'images' . UDS . $icon_sort; ?>"
+                                    alt="<?php echo $icon_sort ?>">
+                            </a>
+                        </span>
+                        <span class="to">To
+                            <a href="
+                                <?php echo $this->buildUrl(array(
+                                'page' => 1,
+                                'sort[sort_type]' => ($sort == 'to_address') ? $type_sort : 'ASC',
+                                'sort[sort_field]' => 'to_address',
+                            )) ?>">
+                                <?php
+                                if ($sort) {
+                                    $icon_sort = $this->buildIcon($sort, $type_sort_current, 'to_address');
+                                }
+                                ?>
+                                <img
+                                    src="<?php echo BASE_URL . UDS . 'static' . UDS . 'images' . UDS . $icon_sort; ?>"
+                                    alt="<?php echo $icon_sort ?>">
+                            </a>
+                        </span>
+                        <span class="status">Status
+                            <a href="
+                                <?php echo $this->buildUrl(array(
+                                'page' => 1,
+                                'sort[sort_type]' => ($sort == 'status') ? $type_sort : 'ASC',
+                                'sort[sort_field]' => 'status',
+                            )) ?>">
+                                <?php
+                                if ($sort) {
+                                    $icon_sort = $this->buildIcon($sort, $type_sort_current, 'status');
+                                }
+                                ?>
+                                <img
+                                    src="<?php echo BASE_URL . UDS . 'static' . UDS . 'images' . UDS . $icon_sort; ?>"
+                                    alt="<?php echo $icon_sort ?>">
+                            </a>
+                        </span>
+                        <span class="readed" onclick="MessageController.close()"></span>
+                    </div>
+                </li>
+
+                <?php
+                    $i = 1;
+                    foreach ($this->pickups as $pickup) {
+                        $pickup = new Base_Php_Overloader($pickup);
+                        ?>
+                        <li class="item<?php echo $this->escape($pickup->id) ?>">
+                            <input type="hidden" name="pickup[]" value="<?php echo $this->escape($pickup->id) ?>"/>
+                            <input type="hidden" name="status[]" value="<?php echo $this->escape($pickup->status) ?>"/>
+                            <div class="title">
+                                <div onclick="PickupController.view(<?php echo $this->escape($pickup->id) ?>)">
+                                    <?php $date =  date("d-M", strtotime($this->escape($pickup->created)));   ?>
+                                    <span class="date"><?php echo $this->escape($date) ?></span>
+                                    <span class="from"><?php echo $this->escape($pickup->from_address) ?></span>
+                                    <span class="to"><?php echo $this->escape($pickup->to_address) ?></span>
+                                    <span
+                                        class="status"><?php echo $this->escape(Pickup_Constant_Server::$_STATUS[$pickup->status]) ?></span>
+                                </div>
+                                <span class="readed yes"  id='pickup<?php echo $this->escape($pickup->id) ?>'
+                                      onclick="MessageController.view(<?php echo $this->escape($pickup->id) ?>)"></span>
+
+                            </div>
+                        </li>
+                    <?php
+                    }
+                    ?>
+                    <div id="message-container">
+                    </div>
+                    <input type="hidden" value="1" id="message-box"/>
+            </ul>
+    <?php
+    } else {
+    ?>
+            <p class="no-result-search a-center a-center" >No results found</p>
+    <?php
+    }
+        ?>
+            <div class="paging">
+                <?php echo $this->paginationControl($this->pickups,
+                    'Sliding',
+                    'pagination.phtml', array('sort' => $this->sort)); ?>
+            </div>
+        </div>
+        <?php echo $this->render('pickup/customer_view.phtml'); ?>
+    </div>
+<?php endif; ?>
+<script type="text/plain">
+
+</script>
+<script type="text/plain" style="display:none" id="from_template">
+    <div class="mine"><p>{message}</p></div>
+</script>
+<script type="text/plain" style="display:none" id="to_template">
+    <div class="their"><p>{message}</p></div>
+</script>

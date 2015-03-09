@@ -1,0 +1,109 @@
+<ul class="tabs">
+    <?php
+    $auth = Zend_Auth::getInstance();
+    if ($auth->getStorage()->read()) {
+        $type = $auth->getStorage()->read()->auth_type;
+        if ($type == Auth_Constant_Server::STAFF_TYPE) {
+            $role = $auth->getStorage()->read()->detail->role;
+        }
+    } else {
+        $role = null;
+        $type = Auth_Constant_Server::GUEST_TYPE;
+    }
+    switch (true) {
+        case $this->hideMenuLeft:
+            break;
+        case Auth_Constant_Server::GUEST_TYPE == $type && 'register' == $this->controllerName && 'success' == $this->actionName : ?>
+            <?php
+            break;
+        case Auth_Constant_Server::GUEST_TYPE == $type && 'customer' == $this->moduleName: ?>
+            <li class="<?php if ($this->active == 'personal') echo 'active'; ?> leftlist"><a href="#register-personal" title="">Register Personal Detail</a></li>
+            <?php
+            break;
+        case Auth_Constant_Server::GUEST_TYPE == $type && 'courier' == $this->moduleName: ?>
+            <li class="<?php if ($this->active == 'company') echo 'active'; ?> leftlist"><a href="#register-company" title="">Register As A Company</a></li>
+            <li class="<?php if ($this->active == 'individual') echo 'active'; ?> leftlist"><a href="#register-individual" title="">Register As An Individual</a></li>
+            <li class="<?php if ($this->active == 'upload') echo 'active'; ?> leftlist"><a href="#cupload-id" title="">Upload IDs</a></li>
+            <li class="<?php if ($this->active == 'preferences') echo 'active'; ?> leftlist"><a href="#cpreferences" title="">Preferences</a></li>
+            <?php
+            break;
+        case Auth_Constant_Server::GUEST_TYPE == $type:
+            break;
+        case (Auth_Constant_Server::CUSTOMER_TYPE == $type || Auth_Constant_Server::COURIER_TYPE == $type) && 'profile' == $this->controllerName && 'changepassword' == $this->actionName: ?>
+            <li class="goback"><a href="<?php echo BASE_URL . UDS . $this->moduleName . UDS; ?>profile" title="Back">Back to Profile</a></li>
+            <?php
+            break;
+        case Auth_Constant_Server::CUSTOMER_TYPE == $type && 'customer' == $this->moduleName && 'profile' == $this->controllerName: ?>
+            <li class="<?php if ($this->active == 'personal') echo 'active'; ?> leftlist"><a href="#profile-personal" title="">Your Personal Details</a></li>
+            <li class="leftlist"><a href="<?php echo $this->baseUrl(); ?>/<?php echo $this->moduleName; ?>/profile/changepassword">Change password</a></li>
+            <li></li>
+            <li class="goback"><a href="<?php echo BASE_URL . UDS . $this->moduleName; ?>" title="Back">Back to Home</a></li>
+            <?php
+            break;
+        case Auth_Constant_Server::CUSTOMER_TYPE == $type && 'customer' == $this->moduleName:
+        case Auth_Constant_Server::CUSTOMER_TYPE == $type && 'pickup' == $this->moduleName:
+        case Auth_Constant_Server::CUSTOMER_TYPE == $type && 'message' == $this->moduleName:
+        case Auth_Constant_Server::CUSTOMER_TYPE == $type: ?>
+            <li class="<?php if ($this->moduleName == 'customer' && $this->controllerName == 'profile') echo 'active'; ?>"><a href="<?php echo BASE_URL . UDS; ?>customer/profile">Profile</a></li>
+            <li class="<?php if ($this->moduleName == 'pickup') echo 'active'; ?>"><a href="<?php echo BASE_URL . UDS ?>pickup/index/book">Book A Pickup</a></li>
+            <li class="<?php if ($this->moduleName == 'customer' && $this->controllerName == 'index') echo 'active'; ?>"><a href="<?php echo BASE_URL . UDS ?>customer">View Active Pickups</a></li>
+            <li class="<?php if ($this->moduleName == 'customer' && $this->controllerName == 'history') echo 'active'; ?>"><a href="<?php echo BASE_URL . UDS; ?>customer/history">History</a></li>
+            <li class="<?php if ($this->moduleName == 'message') echo 'active'; ?>"><a href="<?php echo BASE_URL ?>/message">Message Center</a></li>
+            <?php
+            break;
+        case Auth_Constant_Server::COURIER_TYPE == $type && 'courier' == $this->moduleName && 'profile' == $this->controllerName: ?>
+            <li class="<?php if ($this->active == 'company') echo 'active'; ?> leftlist"><a href="#profile-company" title="">Your Details</a></li>
+            <li class="<?php if ($this->active == 'upload') echo 'active'; ?> leftlist"><a href="#cupload-id" title="">Upload ID</a></li>
+            <li class="<?php if ($this->active == 'preferences') echo 'active'; ?> leftlist"><a href="#cpreferences" title="">Preferences</a></li>
+            <li class="leftlist"><a href="<?php echo $this->baseUrl(); ?>/<?php echo $this->moduleName; ?>/profile/changepassword">Change password</a></li>
+            <li></li>
+            <li class="goback"><a href="<?php echo BASE_URL . UDS . $this->moduleName; ?>" title="Back">Back to Home</a></li>
+            <?php
+            break;
+        case Auth_Constant_Server::COURIER_TYPE == $type && 'courier' == $this->moduleName:
+        case Auth_Constant_Server::COURIER_TYPE == $type && 'message' == $this->moduleName:
+        case Auth_Constant_Server::COURIER_TYPE == $type: ?>
+            <li class="<?php if ($this->moduleName == 'courier' && $this->controllerName == 'profile') echo 'active'; ?>"><a href="<?php echo BASE_URL . UDS; ?>courier/profile">Profile</a></li>
+            <?php if($this->isApproved){?>
+            <li class="<?php if ($this->moduleName == 'courier' && $this->controllerName == 'list') echo 'active'; ?>"><a href="<?php echo BASE_URL . UDS; ?>courier/list">List Awaiting Pickups</a></li>
+            <?php }?>
+            <li class="<?php if ($this->moduleName == 'courier' && $this->controllerName == 'index') echo 'active'; ?>"><a href="<?php echo BASE_URL . UDS; ?>courier">View Active Pickups</a></li>
+            <li class="<?php if ($this->moduleName == 'courier' && $this->controllerName == 'history') echo 'active'; ?>"><a href="<?php echo BASE_URL . UDS; ?>courier/history">History</a></li>
+            <li class="<?php if ($this->moduleName == 'message') echo 'active'; ?>"><a href="<?php echo BASE_URL . UDS; ?>message">Message Center</a></li>
+            <?php
+            break;
+            case Auth_Constant_Server::STAFF_TYPE == $type && 'configuration' == $this->moduleName:
+           ?>
+            <li class="<?php if ($this->controllerName == 'base') echo 'active'; ?>"><a href="<?php echo BASE_URL . UDS . $this->moduleName; ?>/base">Base Data Configuration</a></li>
+<!--            <li class="--><?php //if ($this->controllerName == 'region') echo 'active'; ?><!--"><a href="--><?php //echo BASE_URL . UDS . $this->moduleName; ?><!--/region">Region Configuration</a></li>-->
+<!--            <li class="--><?php //if ($this->controllerName == 'rating') echo 'active'; ?><!--"><a href="--><?php //echo BASE_URL . UDS . $this->moduleName; ?><!--/rating">Rating Configuration </a></li>-->
+            <li></li>
+            <li class="goback"><a href="<?php echo BASE_URL . UDS; ?>staff" title="Back">Back to Home</a></li>
+            <?php
+            break;
+        case Auth_Constant_Server::STAFF_TYPE == $type && 'staff' == $this->moduleName:
+        case Auth_Constant_Server::STAFF_TYPE == $type && 'message' == $this->moduleName:
+        case Auth_Constant_Server::STAFF_TYPE == $type: ?>
+            <li class="<?php if ($this->moduleName == 'staff' && $this->controllerName == 'profile') echo 'active'; ?>"><a href="<?php echo BASE_URL . UDS; ?>staff/profile">Profile</a></li>
+            <li class="<?php if ($this->moduleName == 'staff' && $this->controllerName == 'pickup') echo 'active'; ?>"><a href="<?php echo BASE_URL . UDS; ?>staff/pickup">Current pickups</a></li>
+            <li class="<?php if ($this->moduleName == 'staff' && $this->controllerName == 'history') echo 'active'; ?>"><a href="<?php echo BASE_URL . UDS; ?>staff/history">History</a></li>
+            <?php
+            if (
+                $role == Auth_Constant_Server::LOCAL_AREA_ADMIN
+                || $role == Auth_Constant_Server::INTERNATIONAL_ADMIN
+                || $role == Auth_Constant_Server::SUPER_ADMIN
+            ) { ?>
+                <li class="<?php if ($this->moduleName == 'staff' && $this->controllerName == 'staff') echo 'active'; ?>"><a href="<?php echo BASE_URL . UDS; ?>staff/staff">Manage Users</a></li>
+            <?php } ?>
+            <li class="<?php if ($this->moduleName == 'staff' && $this->controllerName == 'customer') echo 'active'; ?>"><a href="<?php echo BASE_URL . UDS; ?>staff/customer">Manage Customers</a></li>
+            <li class="<?php if ($this->moduleName == 'staff' && $this->controllerName == 'courier') echo 'active'; ?>"><a href="<?php echo BASE_URL . UDS; ?>staff/courier">Manage Couriers</a></li>
+            <li class="<?php if ($this->moduleName == 'staff' && $this->controllerName == 'report') echo 'active'; ?>"><a href="<?php echo BASE_URL . UDS; ?>staff/report/">Report Pickups</a></li>
+        <?php  if(Auth_Constant_Server::SUPER_ADMIN == $role) { ?>
+            <li class=""><a href="<?php echo BASE_URL . UDS; ?>configuration">Configuration</a></li>
+              <?php } ?>
+            <li class="<?php if ($this->moduleName == 'message') echo 'active'; ?>"><a href="<?php echo BASE_URL . UDS; ?>message/broadcast/">Message Center</a></li>
+            <?php
+            break;
+    }
+    ?>
+</ul>

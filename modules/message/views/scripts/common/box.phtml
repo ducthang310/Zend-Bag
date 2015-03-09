@@ -1,0 +1,61 @@
+<?php
+$auth = Zend_Auth::getInstance();
+if ($auth->getStorage()->read() != null) {
+//    $id = $auth->getStorage()->read()->id;
+    $sort = $this->sort['sortField'];
+    $type_sort_current = $this->sort['sortType'];
+    $type_sort = $this->sort['type'];
+    $icon_sort = 'sort_down.png';
+    ?>
+    <div class="big-inner">
+        <?php
+        $message = Zend_Registry::getInstance()->session->send->message;
+        if($message){ ?>
+            <span id="message"><p class="alert alert-success"><?php echo $this->escape($message); ?></p></span>
+       <?php     unset(Zend_Registry::getInstance()->session->send->message);
+        }
+        ?>
+        <h1 class="title-inner">Message send box</h1>
+        <h4><a href="<?php echo BASE_URL ?>/message/broadcast/box">Create new Message</a></h4>
+        <br>
+        <div class="view-booking-table">
+            <div class="table-wrapper">
+                <table cellpadding="0" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>Time
+                        </th>
+                        <th>From
+                        </th>
+                        <th>Content
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody> <?php if ($this->data) {
+                    $data = $this->data;
+                    ?>
+                    <?php foreach ($data as $key => $value) { ?>
+                        <tr id="item<?php echo $value['id'] ?>" onclick="MessageController.view(<?php echo $value['id'] ?>)">
+                            <?php $date =  date("d-M-y H:i:s", strtotime($this->escape($value['created'])));   ?>
+                            <td><?php echo $date ?></td>
+                            <td>ME</td>
+                            <td><?php echo $this->escape($value['content']) ?></td>
+                        </tr>
+                    <?php } ?>
+                </table>
+                <?php } ?>
+                </tbody>
+                </table>
+            </div>
+            <div class="paging">
+                <?php echo $this->paginationControl($this->data,
+                    'Sliding',
+                    'pagination.phtml'); ?>
+            </div>
+            <div class="form-list make-booking-inner" id="view_message">
+            </div>
+        </div>
+    </div>
+<?php } ?>
+
+

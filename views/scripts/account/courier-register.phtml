@@ -1,0 +1,430 @@
+<div class="inner register-inner">
+<div id="mobile_reg_company" class="title-formlist hide-md active">Register as a company</div>
+<div class="tab-content <?php if ($this->active == 'company') echo 'active'; ?>" id="register-company-content">
+<?php
+if ((int)Zend_Registry::getInstance()->session->courierRegister->step >= Courier_RegisterController::$company):
+    $this->regions = Configuration_Model_DbTable_Suburb::getInstance()->getRegion();
+    $this->suburbs = Configuration_Model_DbTable_Suburb::getInstance()->getSuburb();
+    $this->countries = Configuration_Model_DbTable_Suburb::getInstance()->getCountry();
+    $this->states = Configuration_Model_DbTable_Suburb::getInstance()->getState();
+    /** Call session courierRegister */
+    $data = Zend_Registry::getInstance()->session->courierRegister->company_temp;
+    $data = new Base_Php_Overloader($data);
+?>
+<form action="<?php echo $this->baseUrl(); ?>/<?php echo $this->moduleName; ?>/register/company" method="post"
+      enctype="multipart/form-data" accept-charset="utf-8">
+<ul class="form-list">
+<li>
+    <div class="title">
+        <label>Company Name<i class="question"></i></label>
+        <div class="label-content">
+            <label>Company Name<i class="question"></i></label>
+            <p><?php echo $this->escape($this->getIntro('company_name','registration','courier_company')); ?></p>
+        </div>
+    </div>
+    <div class="input-wrapper">
+        <input type="text" name="company_name" class="input-text"
+               value="<?php echo ($data && $data->company_name) ? $data->company_name : '' ?>" required placeholder="">
+        <span style="display: none" class="validate validate-error"></span>
+        <span class="required pseudo"></span>
+    </div>
+</li>
+<li>
+    <div class="title">
+        <label>ABN<i class="question"></i></label>
+
+        <div class="label-content">
+            <label>ABN<i class="question"></i></label>
+
+            <p><?php echo $this->escape($this->getIntro('abn','registration','courier_company')); ?></p>
+        </div>
+    </div>
+    <div class="input-wrapper">
+        <input type="text" name="abn" class="input-text" value="<?php echo ($data) ? $data->abn : '' ?>" required
+               placeholder="">
+        <span style="display: none" class="validate validate-error"></span>
+        <span class="required pseudo"></span></div>
+</li>
+<li>
+    <div class="title">
+        <label>Contact FirstName<i class="question"></i></label>
+
+        <div class="label-content">
+            <label>Contact FirstName<i class="question"></i></label>
+
+            <p><?php echo $this->escape($this->getIntro('contact_firstname','registration','courier_company')); ?></p>
+        </div>
+    </div>
+    <div class="input-wrapper">
+        <input name="contact_firstname" type="text" class="input-text"
+               value="<?php echo ($data) ? $data->contact_firstname : '' ?>" required placeholder="">
+        <span style="display: none" class="validate validate-error"></span>
+        <span class="required pseudo"></span></div>
+</li>
+<li>
+    <div class="title">
+        <label>Contact LastName<i class="question"></i></label>
+
+        <div class="label-content">
+            <label>Contact LastName<i class="question"></i></label>
+
+            <p><?php echo $this->escape($this->getIntro('contact_lastname','registration','courier_company')); ?></p>
+        </div>
+    </div>
+    <div class="input-wrapper">
+        <input name="contact_lastname" type="text" class="input-text"
+               value="<?php echo ($data) ? $data->contact_lastname : '' ?>" required placeholder="">
+        <span style="display: none" class="validate validate-error"></span>
+        <span class="required pseudo"></span></div>
+</li>
+<li>
+    <div class="title">
+        <label>Contact Email<i class="question"></i></label>
+
+        <div class="label-content">
+            <label>Contact Email<i class="question"></i></label>
+
+            <p><?php echo $this->escape($this->getIntro('email','registration','courier_company')); ?></p>
+        </div>
+    </div>
+    <div class="input-wrapper">
+        <input type="email" name="email" class="input-text" id="email"  value="<?php echo ($data) ? $data->email : '' ?>" required placeholder="">
+        <span style="display: none" class="validate validate-error"></span>
+        <span class="required pseudo"></span></div>
+</li>
+<li>
+    <div class="title">
+        <label>Alternate Email<i class="question"></i></label>
+
+        <div class="label-content">
+            <label>Alternate Email<i class="question"></i></label>
+
+            <p><?php echo $this->escape($this->getIntro('alternative_email','registration','courier_company')); ?></p>
+        </div>
+    </div>
+    <div class="input-wrapper">
+        <input type="email" name="alternative_email" id="alternative_email" class="input-text"
+               value="<?php echo ($data) ? $data->alternative_email : '' ?>"  placeholder="">
+        <span style="display: none" class="validate validate-error"></span>
+        <span class="pseudo"></span></div>
+</li>
+<li>
+    <div class="title">
+        <label>General Number<i class="question"></i></label>
+
+        <div class="label-content">
+            <label>General Phone Number<i class="question"></i></label>
+
+            <p><?php echo $this->escape($this->getIntro('general_number','registration','courier_company')); ?></p>
+        </div>
+    </div>
+    <div class="input-wrapper">
+        <input type="text" name="general_number" id="general_number" class="input-text"
+               value="<?php echo ($data) ? $data->general_number : '' ?>" required placeholder="" />
+        <span style="display: none" class="validate validate-error"></span>
+        <span class="required pseudo"></span>
+    </div>
+</li>
+<li>
+    <div class="title">
+        <label>Contact Number<i class="question"></i></label>
+
+        <div class="label-content">
+            <label>Contact Phone Number<i class="question"></i></label>
+
+            <p><?php echo $this->escape($this->getIntro('contact_number','registration','courier_company')); ?></p>
+        </div>
+    </div>
+    <div class="input-wrapper">
+        <input type="text" name="contact_number" id="contact_number" class="input-text"
+               value="<?php echo ($data) ? $data->contact_number : '' ?>" required placeholder="" />
+        <span style="display: none" class="validate validate-error"></span>
+        <span class="required pseudo"></span>
+    </div>
+</li>
+<li>
+    <div class="title">
+        <label>Mobile<i class="question"></i></label>
+
+        <div class="label-content">
+            <label>Mobile<i class="question"></i></label>
+
+            <p><?php echo $this->escape($this->getIntro('mobile','registration','courier_company')); ?></p>
+        </div>
+    </div>
+    <div class="input-wrapper">
+        <input type="text" name="mobile" id="mobile" class="input-text"
+               value="<?php echo ($data) ? $data->mobile : '' ?>" required placeholder="" />
+        <span style="display: none" class="validate validate-error"></span>
+        <span class="required pseudo"></span>
+    </div>
+</li>
+<li>
+    <div class="title">
+        <label>Fax Number<i class="question"></i></label>
+
+        <div class="label-content">
+            <label>Fax Number<i class="question"></i></label>
+
+            <p><?php echo $this->escape($this->getIntro('fax','registration','courier_company')); ?></p>
+        </div>
+    </div>
+    <div class="input-wrapper">
+        <input type="text" name="fax" class="input-text" value="<?php echo ($data) ? $data->fax : '' ?>" required
+               placeholder="" />
+        <span style="display: none" class="validate validate-error"></span>
+        <span class="required pseudo"></span></div>
+</li>
+<li>
+    <div class="title">
+        <label>Profile Picture<i class="question"></i></label>
+        <div class="label-content">
+            <label>Avatar<i class="question"></i></label>
+            <p><?php echo $this->escape($this->getIntro('image','registration','courier_company')); ?></p>
+        </div>
+    </div>
+    <div class="input-wrapper">
+        <?php if ($data && $data->image): ?>
+        <div class="img-upload">
+            <img src="<?php echo $this->baseUrl() . UDS . Base_Constant_Server::MEDIA . UDS . Base_Constant_Server::MEDIA_TEMP ?>/<?php echo $data->image ?>" />
+        </div>
+
+        <?php endif; ?>
+        <input type="file" name="image" class="" value="<?php echo ($data) ? $data->image : '' ?>" <?php echo ($data && $data->image)?'':'required' ?>
+               placeholder="" />
+        <input type="hidden" name="image_temp" value="<?php echo ($data) ? $data->image : '' ?>" />
+        <span class="required pseudo"></span>
+        <span style="display: none" class="validate validate-error">We’re Sorry, that file is incorrect</span>
+    </div>
+</li>
+<li>
+    <div class="title">
+        <label>STREET ADDRESS<i class="question"></i></label>
+
+        <div class="label-content">
+            <label>STREET ADDRESS<i class="question"></i></label>
+
+            <p><?php echo $this->escape($this->getIntro('address','registration','courier_company')); ?></p>
+        </div>
+    </div>
+    <div class="input-wrapper">
+        <input type="text" name="address" class="input-text" value="<?php echo ($data) ? $data->address : '' ?>"
+               required placeholder="" />
+        <span style="display: none" class="validate validate-error"></span>
+        <span class="required pseudo"></span></div>
+</li>
+<li>
+    <div class="title">
+        <label>Suburb<i class="question"></i></label>
+
+        <div class="label-content">
+            <label>Suburb<i class="question"></i></label>
+
+            <p><?php echo $this->escape($this->getIntro('suburb','registration','courier_company')); ?></p>
+        </div>
+    </div>
+    <div class="input-wrapper">
+        <input type="text" name="suburb" class="input-text" value="<?php echo ($data) ? $data->suburb : '' ?>" required
+               placeholder="" />
+        <span style="display: none" class="validate validate-error"></span>
+        <span class="required pseudo"></span></div>
+</li>
+<li>
+    <div class="title">
+        <label>State<i class="question"></i></label>
+
+        <div class="label-content">
+            <label>State<i class="question"></i></label>
+
+            <p><?php echo $this->escape($this->getIntro('courier_state','registration','courier_company')); ?></p>
+        </div>
+    </div>
+
+    <div class="input-wrapper">
+        <select name="courier_state" required>
+            <option value="">--Please Select--</option>
+            <?php  foreach($this->states as $state) {  ?>
+                <option value="<?php echo $state['state']; ?>"
+                    <?php echo (strtolower($data->courier_state) == strtolower($state['state'])) ? 'selected' : '' ?>
+                    ><?php echo $state['state']; ?></option>
+            <?php }?>
+        </select>
+        <span style="display: none" class="validate validate-error"></span>
+        <span class="required pseudo"></span>
+    </div>
+</li>
+<li>
+    <div class="title">
+        <label>Country<i class="question"></i></label>
+
+        <div class="label-content">
+            <label>Country<i class="question"></i></label>
+
+            <p><?php echo $this->escape($this->getIntro('country','registration','courier_company')); ?></p>
+        </div>
+    </div>
+    <div class="input-wrapper">
+        <select name="country" required>
+            <option value="">--Please Select--</option>
+            <?php  foreach($this->countries as $country) {  ?>
+                <option value="<?php echo $country['country']; ?>"
+                    <?php echo (strtolower($data->country) == strtolower($country['country'])) ? 'selected' : ' ' ?>
+                    ><?php echo $country['country']; ?></option>
+            <?php }?>
+        </select>
+        <span style="display: none" class="validate validate-error"></span>
+        <span class="required pseudo"></span></div>
+</li>
+<li>
+    <div class="title">
+        <label>Postal / Zip Code<i class="question"></i></label>
+
+        <div class="label-content">
+            <label>Postal / Zip Code<i class="question"></i></label>
+
+            <p><?php echo $this->escape($this->getIntro('postcode','registration','courier_company')); ?></p>
+        </div>
+    </div>
+    <div class="input-wrapper">
+        <input type="text" name="postcode" pattern="\d*" class="input-text"
+               value="<?php echo ($data) ? $data->postcode : '' ?>" required placeholder="" />
+        <span style="display: none" class="validate validate-error"></span>
+        <span class="required pseudo"></span></div>
+</li>
+<li>
+    <div class="title">
+        <label>App Username<i class="question"></i></label>
+
+        <div class="label-content">
+            <label>App Username<i class="question"></i></label>
+
+            <p><?php echo $this->escape($this->getIntro('app_email','registration','courier_company')); ?></p>
+        </div>
+    </div>
+    <div class="input-wrapper">
+        <input type="email" name="app_email" id="app_email" class="input-text"
+               value="<?php echo ($data) ? $data->app_email : '' ?>" required placeholder="" />
+        <span style="display: none" class="validate validate-error"></span> <span class="required pseudo"></span></div>
+</li>
+<li>
+    <div class="title">
+        <label>App Password<i class="question"></i></label>
+
+        <div class="label-content">
+            <label>App Password<i class="question"></i></label>
+
+            <p><?php echo $this->escape($this->getIntro('app_password','registration','courier_company')); ?></p>
+        </div>
+    </div>
+    <div class="input-wrapper">
+        <input type="password" name="app_password" class="input-text"
+               value="********" disabled="disabled">
+        <span style="display: none" class="validate validate-error"></span>
+        <span class="optional pseudo"></span></div>
+</li>
+<li>
+    <div class="title">
+        <label>Banking Detail<i class="question"></i></label>
+
+        <div class="label-content">
+            <label>Institution<i class="question"></i></label>
+
+            <p><?php echo $this->escape($this->getIntro('bank_institution','registration','courier_company')); ?></p>
+        </div>
+    </div>
+    <div class="input-wrapper">
+        <input type="text" name="bank_institution" class="input-text"
+               value="<?php echo ($data) ? $data->bank_institution : '' ?>" required placeholder="" />
+        <span style="display: none" class="validate validate-error"></span>
+        <span class="required pseudo"></span></div>
+</li>
+<li>
+    <div class="title">
+        <label>BSB<i class="question"></i></label>
+
+        <div class="label-content">
+            <label>BSB<i class="question"></i></label>
+
+            <p><?php echo $this->escape($this->getIntro('bank_bsb','registration','courier_company')); ?></p>
+        </div>
+    </div>
+    <div class="input-wrapper">
+        <input type="text" name="bank_bsb" class="input-text" value="<?php echo ($data) ? $data->bank_bsb : '' ?>"
+               required placeholder="" />
+        <span style="display: none" class="validate validate-error"></span>
+        <span class="required pseudo"></span></div>
+</li>
+<li>
+    <div class="title">
+        <label>Account No<i class="question"></i></label>
+
+        <div class="label-content">
+            <label>Account No<i class="question"></i></label>
+
+            <p><?php echo $this->escape($this->getIntro('bank_account','registration','courier_company')); ?></p>
+        </div>
+    </div>
+    <div class="input-wrapper">
+        <input type="text" name="bank_account" id="bank_account" class="input-text"
+               value="<?php echo ($data) ? $data->bank_account : '' ?>" required placeholder="" />
+        <span style="display: none" class="validate validate-error"></span>
+        <span class="required pseudo"></span></div>
+</li>
+
+<li>
+    <div class="button-set">
+        <button type="submit" name="register_company" value="1" class="button register-button"><span>Register</span>
+        </button>
+    </div>
+</li>
+</ul>
+</form>
+</div>
+<?php
+    /** End of check step */
+    endif;
+?>
+
+<?php
+    echo $this->render('account/courier-register-individual.phtml');
+    echo $this->render('account/courier-register-upload.phtml');
+    echo $this->render('account/courier-register-preference.phtml');
+?>
+<script type="text/javascript">
+<?php
+    $individual = Zend_Registry::getInstance()->session->courierRegister->individual_temp;
+    Base_Helper_Message::getInstance()->showVerticalLine($individual,'#register-individual-content');
+
+    $company = Zend_Registry::getInstance()->session->courierRegister->company_temp;
+    Base_Helper_Message::getInstance()->showVerticalLine($company,'#register-company-content');
+
+    $preferences = Zend_Registry::getInstance()->session->courierRegister->preferences_temp;
+    Base_Helper_Message::getInstance()->showVerticalLine($preferences,'#cpreferences-content');
+
+    $upload = Zend_Registry::getInstance()->session->courierRegister->upload_temp;
+    Base_Helper_Message::getInstance()->showVerticalLine($upload,'#cupload-id-content');
+
+    if($this->messages): ?>
+        $('<?php echo $this->div; ?> .pseudo').addClass('optional').removeClass('required');
+    <?php
+        foreach($this->messages as $key => $val):
+            $element = '*[name="'.$key.'"]';
+            $parent = 'parent()';
+
+        if($key == "preferred_delivery_suburb_ids"):
+            $element = 'input.delivery_suburb';
+            $parent = 'parent().parent().parent()';
+        endif;
+        if($key == "preferred_pickup_suburb_ids"):
+            $element = 'input.pickup_suburb';
+            $parent = 'parent().parent().parent()';
+        endif; ?>
+        var div = $('<?php echo $this->div . ' ' . $element ?>');
+        div.<?php echo $parent ?>.find('.validate-error').css('display', 'block');
+        div.<?php echo $parent ?>.find('.pseudo').addClass('required').removeClass('optional');
+        div.<?php echo $parent ?>.find('.validate-error').html("<?php echo $this->escape($val); ?>");
+        <?php
+        endforeach;
+    endif;
+?>
+</script>

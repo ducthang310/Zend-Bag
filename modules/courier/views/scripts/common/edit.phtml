@@ -1,0 +1,8 @@
+<?php
+$auth = Zend_Auth::getInstance();
+if($auth->getStorage()->read() != null){
+    $user = $auth->getStorage()->read()->detail;
+        echo ($user->firstname);
+        echo ($user->lastname);
+}
+

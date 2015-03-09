@@ -1,0 +1,58 @@
+<form id="search_form" method="get" action="<?php echo BASE_URL . $this->url(); ?>">
+    <ul class="form-list">
+        <li>
+            <div class="left input-wrapper">
+                <input
+                    type="radio" <?php echo (isset($this->dataParams['search']['filter']['completed']) && $this->dataParams['search']['filter']['completed']=='all') ? 'checked' : '' ?>
+                    name="search[filter][completed]" value="all" id="filter_all">
+                <label>All</label>
+            </div>
+            <div class="right input-wrapper">
+                <input
+                    type="radio" <?php echo (isset($this->dataParams['search']['filter']['completed']) && $this->dataParams['search']['filter']['completed']=='completed') ? 'checked' : '' ?>
+                    name="search[filter][completed]" value="completed" id="filter_completed">
+                <label>Completed</label></div>
+            <div class="clear"></div>
+        </li>
+        <li>
+            <label>Email </label>
+            <input class="input-text" id="destination" type="text"
+                   value="<?php echo (isset($this->dataParams['search']['field']['destination'])) ? $this->dataParams['search']['field']['destination'] : '' ?>"
+                   name="search[field][destination]" placeholder="Destination"/>
+        </li>
+        <li>
+               <div class="left input-wrapper">
+       <label>Search Name</label>
+            <input class="input-text" id="customer.search_name"
+                   value="<?php echo (isset($this->dataParams['search']['field']['customer.search_name'])) ? $this->dataParams['search']['field']['customer.search_name'] : '' ?>"
+                   type="text" name="search[field][customer.search_name]" placeholder="Search customer"/>
+     </div>
+      <div class="right input-wrapper">
+         <label>Search Suburbs</label>
+            <input class="input-text" id="customer.search_name"
+                   value="<?php echo (isset($this->dataParams['search']['field']['customer.search_name'])) ? $this->dataParams['search']['field']['customer.search_name'] : '' ?>"
+                   type="text" name="search[field][customer.search_name]" placeholder="Search customer"/>
+      </div>
+      <div class="clear"></div>
+           
+        </li>
+        <li>
+            <input type="hidden" name="page" value="<?php echo $this->dataParams['page']; ?>">
+            <input type="submit" value="Search" name="btn_submit" class="button">
+        </li>
+    </ul>
+</form>
+
+<script>
+    function valDate() {
+        if ($('#date_to').val() != "") {
+            if ($('#date_to').val() < $('#date_from').val()) {
+                $('#error_date').html("The 'DATE TO' must be greater than or equal to 'DATE FROM'");
+                return false;
+            } else {
+                $('#error_date').html("");
+                return true;
+            }
+        }
+    }
+</script>

@@ -1,0 +1,121 @@
+
+<div class="form-list make-booking-inner" id="rate-courier">
+    <?php if ($this->rating):
+        $auth = Zend_Auth::getInstance();
+        $type = $auth->getStorage()->read()->auth_type;
+        $current_sts = $this->pickup['status'];
+        $req_tmp = $this->pickup['created'];
+        $req_date = date("d M Y", strtotime($req_tmp));
+        $req_time = date("g:i A", strtotime($req_tmp));
+        $due_tmp = $this->pickup['delivered_active_time'];
+        $due_date = date("d M Y", strtotime($due_tmp));
+        $due_time = date("g:i A", strtotime($due_tmp));
+        ?>
+        <form method="post" id="form_rate">
+            <input type="hidden" name="pickup_id" value="<?php echo $this->pickup_id ?>">
+
+            <div class="make-booking-inner">
+                <div class="big-inner pref-date">
+                    <table class="top" width="100%" cellpadding="0" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th colspan="3">Summary</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>REQUEST DATE:</td>
+                            <td><?php echo $req_date; ?> </td>
+                            <td>TIME: <?php echo $req_time; ?></td>
+                        </tr>
+                        <tr>
+                            <td>DUE DATE:</td>
+                            <td><?php echo $due_date ?> </td>
+                            <td>TIME: <?php echo $due_time ?></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="rating">
+                        <p class="head"><?php if ($type == Auth_Constant_Server::CUSTOMER_TYPE) echo 'Rate Your Courier';
+                            else echo 'Customer rate'?></p>
+
+                        <p>At dlivr we truly value your feedback...</p>
+
+                        <p>both our customers and couriers are what makes us great and your ratings are important to
+                            keeping things awesome.</p>
+
+                        <div class="button-rating">
+                            <?php
+                            $idx = 0;
+                            foreach(Configuration_Constant_Client::$_rating as $rating){
+                                $idx++;
+                                if($this->rating['rating_courier_value']==$idx){
+                                    $style = 'style="background: #3ec708"';
+                                }
+                                else {
+                                    $style = '';
+                                }
+                                if($current_sts==Pickup_Constant_Server::RATED){
+                                    ?>
+                                    <a <?php echo $style?> ><?php echo $rating?></a>
+                                <?php
+                                }
+                                else {
+                                    ?>
+                                    <a onclick="PickupController.changeRate(this, <?php echo $idx?>)" <?php echo $style?> ><?php echo $rating?></a>
+                                <?php
+                                }
+                            }
+                            ?>
+                            <input type="hidden" name="rating_id" value="<?php echo $this->rating['id']; ?>" />
+                            <input type="hidden" name="rating_value" value="<?php echo $this->rating['rating_courier_value']; ?>" />
+                        </div>
+                        <p>Like to add a little moreeeee?</p>
+                        <?php
+                        if($current_sts==Pickup_Constant_Server::RATED){
+                            ?>
+                            <textarea name="comment" disabled readonly><?php echo $this->pickup['customer_note'] ?></textarea>
+                        <?php
+                        }
+                        else {
+                            ?>
+                            <textarea name="comment"><?php echo $this->pickup['customer_note'] ?></textarea>
+                        <?php
+                        }
+                        ?>
+
+                        <div class="button-sets">
+                            <?php
+                            switch (true) {
+                                case Pickup_Constant_Server::AWAITING == $current_sts:
+                                case Pickup_Constant_Server::ASSIGNED == $current_sts:
+                                case Pickup_Constant_Server::PICKED_UP == $current_sts:
+                                    break;
+                                case Pickup_Constant_Server::DELIVERED == $current_sts:
+                                case Pickup_Constant_Server::ACCEPTED == $current_sts:
+                                    if ($type == Auth_Constant_Server::CUSTOMER_TYPE) {
+                                        ?>
+                                        <button
+                                            onclick="PickupController.updateRateCourierPickup(<?php echo $this->pickup_id ?>);return false;"
+                                            class="button book-button">
+                                            <span>Rate</span></button>
+                                    <?php
+                                    }
+                                    break;
+                                case Pickup_Constant_Server::RATED == $current_sts:
+                                default:
+                                    break;
+                            }
+                            ?>
+                            <button onclick="PickupController.cancel();return false;"
+                                    class="button cancel-button"><span>close</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    <?php
+    endif;
+    ?>
+</div>

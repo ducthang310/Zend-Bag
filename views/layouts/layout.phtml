@@ -1,0 +1,73 @@
+<?php echo $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title><?php echo $this->escape($this->siteName . ' | ' . $this->title); ?></title>
+    <?php echo $this->headMeta(); ?>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php echo $this->optimizeHeadLink(); ?>
+    <?php echo $this->optimizeHeadScript(); ?>
+</head>
+<body>
+<div class="container-fluid user-container">
+    <div class="header">
+        <div class="container">
+            <a class="goback hide-xs" href="<?php echo Zend_Auth::getInstance()->getIdentity() ? '/auth/index/logout' : $this->baseUrl(); ?>" >
+                <?php echo Zend_Auth::getInstance()->getIdentity() ? 'Log out' : 'Home'; ?>
+            </a>
+            <div class="header-menu hide-md">
+                <a class="menu-icon" href="#"></a>
+                 <?php
+                if ('auth' != $this->moduleName) {
+                    echo $this->render('common/menu_left.phtml');
+                }
+                ?>
+            </div>
+            <a class="goback-mobile hide-md" href="<?php echo Zend_Auth::getInstance()->getIdentity() ? '/auth/index/logout' : $this->baseUrl(); ?>" >
+                <?php echo Zend_Auth::getInstance()->getIdentity() ? 'Log out' : 'Home'; ?>
+            </a>
+
+            <div class="inner hide-xs">
+                <a href="<?php echo $this->baseUrl(); ?>" title="DL1VR"><img src="<?php echo Base_Controller_Helper_Path2Url::getInstance()->direct(STATIC_PATH . '/images/logo.png'); ?>" alt="logo" class="logo"></a>
+            </div>
+            <?php
+            $auth =Zend_Auth::getInstance()->getStorage()->read();
+            if(!$auth){
+                $type = Auth_Constant_Server::GUEST_TYPE;
+            }else{
+                $type =  Zend_Auth::getInstance()->getStorage()->read()->auth_type;
+            }
+            if (isset($type) && Auth_Constant_Server::GUEST_TYPE != $type) {
+                    echo $this->render('common/message_status.phtml');
+            }
+            ?>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="container hide-md logo-mobile">
+            <a href="<?php echo BASE_URL ?>" title=""><img src="<?php echo Base_Controller_Helper_Path2Url::getInstance()->direct(STATIC_PATH . '/images/logo-mobile.png'); ?>" alt=""></a>
+        </div>
+        <div class="container">
+            <div class="left-menu hide-xs">
+                <?php
+                if ('auth' != $this->moduleName) {
+                    echo $this->render('common/menu_left.phtml');
+                }
+                ?>
+            </div>
+            <?php echo $this->layout()->content; ?>
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="container">
+            <p><a href="<?php echo $this->baseUrl(); ?>/home/index/policy" title="">Privacy Policy</a><span class="devide">|</span><a href="<?php echo $this->baseUrl(); ?>/home/index/term" title="">TERMS OF USE</a></p>
+        </div>
+    </div>
+</div>
+<?php echo $this->render('common/alert.phtml'); ?>
+<!--<div id="loading"><img src="--><?php //echo Base_Controller_Helper_Path2Url::getInstance()->direct(STATIC_PATH . '/images/page-loader.gif'); ?><!--" alt="loading" class=""></div>-->
+</body>
+</html>

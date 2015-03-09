@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+.approved{
+    color: blue;
+}
+
+.unapproved{
+    color: green;
+}
+
+.rejected{
+    color: red;
+}
+
+.link-download{
+    cursor: pointer;
+}
+.export-csv { border: none; cursor: pointer; border-radius: 5px; background: url(../images/arr-button.png) no-repeat 91% center #38415b; font: normal 15px "Metric", Arial, sans-serif; color: #fff; text-transform: uppercase; line-height: 53px; margin: 0 auto; display: block; text-align: center; padding: 0 5% 0 5%; width: 100%; height: 50px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; letter-spacing: 1px; cursor: pointer; white-space: nowrap; }
+.export-csv:hover { background-color: #222837; }

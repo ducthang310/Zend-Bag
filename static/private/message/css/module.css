@@ -1,0 +1,9 @@
+@charset "UTF-8";
+tr.read {
+    background-color: #7aba7b;
+    font-style: italic;
+}
+
+div.address-list {
+    min-height: 50px;
+}

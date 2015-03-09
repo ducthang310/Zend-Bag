@@ -1,0 +1,30 @@
+
+    <div class="inner register-inner">
+        <?php
+        $auth = Zend_Auth::getInstance();
+        if ($auth->getStorage()->read() != null):
+            $user = $auth->getStorage()->read()->detail;
+            ?>
+            <div>
+                <h1><?php echo $user->firstname . ' ' . $user->lastname; ?></h1>
+                <a href="<?php echo $this->baseUrl() ?>/<?php echo $this->moduleName ?>/profile/update">Edit profile</a>
+                <br>
+                <img src="<?php echo $user->image; ?>" />
+                <?php echo $user->id . '<br>'; ?>
+                <?php echo $user->lastname . '<br>'; ?>
+                <?php echo $user->firstname . '<br>'; ?>
+            </div>
+
+            <div>
+                <?php
+                if ($this->message) {
+                    if ($this->message['result'] == 'successful') {
+                        echo '<p class="alert alert-success">' . $this->message['result'] . '</p>';
+                    } else {
+                        echo '<p class="alert alert-warning">' . $this->message['result'] . '</p>';
+                    }
+                }
+                ?>
+            </div>
+        <?php endif; ?>
+    </div>

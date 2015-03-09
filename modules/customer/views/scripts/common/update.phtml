@@ -1,0 +1,46 @@
+<?php 
+    $auth = Zend_Auth::getInstance();
+    if($auth->getStorage()->read()!=null):
+        $user = $auth->getStorage()->read()->detail;
+?>
+<div id="customer_detail">
+    <h2>Update Your Profile Details</h2>
+    <form action="<?php echo $this->baseUrl(); ?>/customer/profile/update" method="post">
+        <label for="company_name">Company Name</label>
+        <input type="text" id="company_name" name="company_name" value="<?php echo $user->company_name ?>" />
+
+        <label for="abn">Abn</label>
+        <input type="text" id="abn" name="abn" value="<?php echo $user->abn ?>" />
+
+        <label for="contact_firstname">Contact Firstname</label>
+        <input type="text" id="contact_firstname" name="contact_firstname" value="<?php echo $user->contact_firstname ?>" />
+
+        <label for="contact_lastname">contact lastname</label>
+        <input type="text" id="contact_lastname" name="contact_lastname" value="<?php echo $user->contact_lastname ?>" />
+
+        <label for="email">email</label>
+        <input type="text" id="email" name="email" value="<?php echo $user->email ?>" />
+
+        <label for="alternative_email">alternative email</label>
+        <input type="text" id="alternative_email" name="alternative_email" value="<?php echo $user->alternative_email ?>" />
+
+        <label for="address">alternative email</label>
+        <input type="text" id="address" name="address" value="<?php echo $user->address ?>" />
+
+        <label for="suburb">alternative email</label>
+        <input type="text" id="suburb" name="suburb" value="<?php echo $user->suburb ?>" />
+
+        <label for="customer_state">customer_state</label>
+        <select id="customer_state" name="customer_state">
+            <option value="0">--Please select--</option>
+            <option selected="selected" value="<?php echo $user->customer_state ?>" ><?php echo $user->customer_state ?></option>
+        </select>
+
+        <label for="postcode">postcode</label>
+        <input type="text" id="postcode" name="postcode" value="<?php echo $user->postcode ?>" />
+
+        <input type="submit" id="update" name="update" value="Save" />
+    </form>
+</div>
+
+<?php endif; ?>

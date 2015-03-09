@@ -1,0 +1,105 @@
+<?php
+$auth = Zend_Auth::getInstance();
+if ($auth->getStorage()->read() != null):
+//    $id = $auth->getStorage()->read()->id;
+$sort = $this->sort['sortField'];
+$type_sort_current = $this->sort['sortType'];
+$type_sort = $this->sort['type'];
+$icon_sort = 'sort_down.png';
+?>
+<div class="big-inner">
+    <?php
+    $result = Zend_Registry::getInstance()->session->success->updatebase;
+    if ($result) {
+        ?>
+        <span id="message"><p class="alert alert-success"><?php echo $result['message']; ?></p></span>
+        <?php
+        unset(Zend_Registry::getInstance()->session->success->updatebase);
+    }
+    $result_2 = Zend_Registry::getInstance()->session->success->create;
+    if ($result_2) {
+        ?>
+        <span id="message"><p class="alert alert-success"><?php echo $result_2['message']; ?></p></span>
+        <?php
+        unset(Zend_Registry::getInstance()->session->success->create);
+    }
+    ?>
+    <h1 class="title-inner">List Staff </h1>
+    <a href="<?php echo BASE_URL?>/staff/staff/create" ><button style="">Create New Staff</button></a>
+    <div class="manage-users">
+        <div class="table-wrapper">
+        <table cellpadding="0" cellspacing="0" width="100%">
+            <thead>
+            <tr>
+                <th>No.</th>
+                <th>Email
+                    <a href="
+                                <?php echo $this->buildUrl(array(
+                        'page' => 1,
+                        'sort[sort_type]' => ($sort == 'email') ? $type_sort : 'ASC',
+                        'sort[sort_field]' => 'email',
+                    )) ?>">
+                        <?php
+                        if ($sort) {
+                            if ($sort) {
+                                $icon_sort = $this->buildIcon($sort, $type_sort_current, 'email');
+                            }
+                        }
+                        ?>
+                        <img
+                            src="<?php echo BASE_URL . UDS . 'static' . UDS . 'images' . UDS . $icon_sort; ?>"
+                            alt="<?php echo $icon_sort ?>">
+                    </a>
+                </th>
+
+                <th>Role
+                    <a href="
+                                <?php echo $this->buildUrl(array(
+                        'page' => 1,
+                        'sort[sort_type]' => ($sort == 'role') ? $type_sort : 'ASC',
+                        'sort[sort_field]' => 'role',
+                    )) ?>">
+                        <?php
+                            if ($sort) {
+                                $icon_sort = $this->buildIcon($sort, $type_sort_current, 'role');
+                            }
+                        ?>
+                        <img
+                            src="<?php echo BASE_URL . UDS . 'static' . UDS . 'images' . UDS . $icon_sort; ?>"
+                            alt="<?php echo $icon_sort ?>">
+                    </a>
+                </th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php
+            if($this->dataParams){
+                $dataParams = $this->dataParams;
+                $i = ( ( $dataParams['page'] - 1 ) * Zend_Registry::getInstance()->appConfig['paginator']['itemperpage'] ) + 1;
+            }
+            foreach ($this->staffs as $staff) {
+                $staff = new Base_Php_Overloader($staff);
+                ?>
+                <tr class="item user<?php echo $staff->auth_id ?>" onclick="StaffController.editstaff(<?php echo $staff->auth_id ?>)">
+                    <td><?php echo $i ?></td>
+                    <td><?php echo $this->escape($staff->email) ?></td>
+                    <td><?php echo Auth_Constant_Server::getLabelRoleByKey(($staff->role));  ?></td>
+                    <td><?php echo $this->escape(Customer_Constant_Server::$_STATUS[$staff->disabled]) ?></td>
+                </tr>
+                <?php
+                $i ++;
+            } ?>
+            </tbody>
+        </table>
+
+    </div>
+        <div class="paging">
+            <?php echo $this->paginationControl($this->staffs, 'Sliding', 'pagination.phtml', array('sort' => $this->sort, 'filter' => $this->dataParams)); ?>
+        </div>
+        <div class="form-list make-booking-inner" id="update_field">
+            <?php echo $this->render('staff/update.phtml'); ?>
+        </div>
+    </div>
+</div>
+<?php endif; ?>

@@ -1,0 +1,190 @@
+<?php
+$params = Zend_Registry::getInstance()->session->success->fieldParams;
+
+?>
+<?php if ($params != null) {
+    Zend_Registry::getInstance()->session->success->fieldParams = '';
+} ?>
+<div class="inner register-inner">
+    <?php $result = Zend_Registry::getInstance()->session->error->create; ?>
+    <div class="title-formlist hide-md active">Staff</div>
+    <div class="tab-content active" id="register-personal-content">
+        <form action="<?php BASE_URL ?>/staff/staff/add" method="post">
+            <ul class="form-list">
+                <li>
+                    <div class="title">
+                        <label>App Username<i class="question"></i></label>
+
+                        <div class="label-content">
+                            <label>App Username<i class="question"></i></label>
+
+                            <p>App Username</p>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="email" name="app_email" id="app_email"
+                               onblur="ValidateController.check(this.id,'app_email',this.value,'')" class="input-text"
+                               value="<?php echo (isset($params['app_email'])) ? $this->escape($params['app_email']) : '' ?>"
+                               required placeholder="">
+                        <span style="display: none" class="validate validate-error">Oops. Looks like there is a problem with your email, please check it and try again.</span>
+                        <span class="required pseudo"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="title">
+                        <label>Contact Email<i class="question"></i></label>
+
+                        <div class="label-content">
+                            <label>Contact Email<i class="question"></i></label>
+
+                            <p>Contact Email</p>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="email" name="email" class="input-text" id="email"
+                               onblur="ValidateController.check(this.id,'email',this.value,'')"
+                               value="<?php echo (isset($params['email'])) ? $this->escape($params['email']) : '' ?>"
+                               required
+                               placeholder="">
+                        <span style="display: none" class="validate validate-error">Oops. Looks like there is a problem with your email, please check it and try again.</span>
+                        <span class="required pseudo"></span></div>
+                </li>
+                <li>
+                    <div class="title">
+                        <label>App Password<i class="question"></i></label>
+
+                        <div class="label-content">
+                            <label>App Password<i class="question"></i></label>
+
+                            <p>App Password</p>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="password" name="app_password" class="input-text"
+                               id="app_password"
+                               onblur="ValidateController.check(this.id,'app_password',this.value,'')"
+                               placeholder="********" required>
+                        <span style="display: none" class="validate validate-error"></span>
+                        <span class="required pseudo"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="title"><label>Re-Password</label></div>
+                    <div class="input-wrapper"><input type="password" name="re_password" class="input-text" value=""
+                                                      id="re_password"
+                                                      onblur="ValidateController.check(this.id,'re_password',this.value,'')"
+                                                      required placeholder="">
+                        <span style="display: none " class="validate validate-error"></span>
+                        <span class="required pseudo"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="title"><label>Role</label></div>
+                    <div class="input-wrapper">
+                        <?php if ($this->role) { ?>
+                            <select name="role" id="role">
+                                <?php
+                                $role = (Auth_Constant_Server::getRole($this->role));
+                                foreach ($role as $key => $value) {
+                                    ?>
+                                    <option
+                                        value="<?php echo $value['value'] ?>" <?php if (isset($params['role']) && $params['role'] == $value['value']) {
+                                        echo "selected";
+                                    }; ?>><?php echo $value['label'] ?></option>
+                                <?php
+                                }
+                                ?>
+                            </select>
+                        <?php } ?>
+
+                        <span class="required pseudo"></span>
+                    </div>
+                </li>
+                <li>
+                    <?php
+                    if (isset($result['area_ids']) && $result['area_ids'] != null) {
+                        ?>
+                        <span style="display: block "
+                              class="validate validate-error area"><?php echo $result['area_ids']; ?></span>
+                        <span class="required pseudo"></span>
+                    <?php } ?>
+                </li>
+                <li id="area" style="display: none">
+                    <div class="title">
+                        <label>AREA<i class="question"></i></label>
+
+                        <div class="label-content">
+                            <label>AREA<i class="question"></i></label>
+
+                            <p>Suburbs</p>
+                        </div>
+                    </div>
+                    <div class="input-wrapper address-list">
+                        <ul>
+                            <?php foreach ($this->area as $suburb) { ?>
+                                <li>
+                                    <input id="delivery_suburb<?php echo $suburb['id']; ?>" class="area_ids"
+                                           name="area_ids[]" type="checkbox"
+                                           value="<?php echo $suburb['id']; ?>"/>
+                                    <label
+                                        for="delivery_suburb<?php echo $suburb['id']; ?>"><?php echo $this->escape($suburb['suburb']); ?></label>
+                                </li>
+                            <?php } ?>
+                        </ul>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="button-set">
+                        <button type="submit" name="create" class="button register-button"><span>Create</span>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+    <?php if($params != null){
+       foreach($params as $key => $val){
+       if($val != null){
+         $element = '*[id="'.$key.'"]';
+         $parent = 'parent()';
+
+        ?>
+    $('<?php echo $element ?>').<?php echo $parent ?>.find('.required').removeClass('required').addClass('optional');
+    <?php   }
+     }
+
+     }
+    ?>
+    <?php if($result != null){
+      foreach($result as $key => $val){
+           $element = '*[name="'.$key.'"]';
+           $parent = 'parent()';
+      ?>
+    $('<?php echo $element ?>').<?php echo $parent ?>.find('.validate-error').css('display', 'block');
+    $('<?php echo $element ?>').<?php echo $parent ?>.find('.optional').removeClass('optional').addClass('required');
+    $('<?php echo $element ?>').<?php echo $parent ?>.find('.validate-error').html("<?php echo $this->escape($val) ?>");
+    <?php }
+     } ?>
+
+    $(".validate-error").click(function () {
+        $(this).hide();
+    });
+    $(".area").click(function () {
+        $("#area").show();
+    });
+    $("#role").change(function () {
+        var role = this.value;
+        if (role == 3 || role == 4) {
+            $("#area").show();
+        } else {
+            $("#area").hide();
+        }
+    });
+</script>
+<?php
+Zend_Registry::getInstance()->session->error->create = '';
+?>
+<div class="clear"></div>

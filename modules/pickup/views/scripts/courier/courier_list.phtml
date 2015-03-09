@@ -1,0 +1,38 @@
+<ul class="form-list make-booking-inner" id="list_make">
+    
+    <?php if ($this->couriers){
+        ?>
+        <li>
+        <div class="title">
+            <label>Courier List:</label>
+        </div>
+        <div class="input-wrapper">
+            <select id="courier_id" required>
+                <option value="">--Please Select--</option>
+                <?php
+                foreach ($this->couriers as $courier) {
+                    ?>
+                    <option id="courier_auth_id" value="<?php echo $courier['auth_id']; ?>"
+                        ><?php echo $courier['is_company'] ? $courier['company_name'] : $courier['firstname'] . ' ' . $courier['lastname']; ?></option>
+                <?php } ?>
+            </select>
+            <span style="display: none" class="validate validate-error"></span>
+            <span class="required pseudo"></span>
+        </div>
+    </li>
+    <?php }
+    else { ?>
+        <li>
+            <p class="no-result-search a-center a-center" >Can not find any courier that can delivery</p>
+        </li>
+    <?php } ?>
+    <li>
+    <div class="button-sets">
+    <?php if ($this->couriers){ ?>
+    <button onclick="PickupController.assignPickup(<?php echo $this->pickup_id ?>);return false;" class="button button-two" name="update" value="Save">
+        <span>Assign</span>
+    </button>
+    <?php } ?>
+    <button onclick="PickupController.cancel();return false;" class="button <?php if ($this->couriers){ echo "button-two"; } ?>"><span>close</span></button>
+    </div></li>
+</ul>

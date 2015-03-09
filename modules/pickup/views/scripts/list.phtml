@@ -1,0 +1,58 @@
+<?php $user = Zend_Auth::getInstance()->getStorage()->read(); ?>
+<?php foreach ($user as $value) {
+    $id_user = $value['auth_id'];
+
+};?>
+    <form action="#" method="post" accept-charset="utf-8">
+
+            <div class="big-inner">
+                <h1 class="title-inner">View your bookings</h1>
+                <ul class="list-ms">
+                    <li class="head">
+                        <div class="title">
+                            <div class="title">
+                                <span class="date">Date</span>
+                                <span class="from">From</span>
+                                <span class="to">To</span>
+                                <span class="status">Status</span>
+                                <span class="readed"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <?php
+                    if (count($this->pickups) > 0) {
+                        $i = 1;
+                        foreach ($this->pickups as $pickup) {
+                            $pickup = new Base_Php_Overloader($pickup);
+                            $id = $this->escape($pickup->id);
+                            ?>
+                            <li class="item active">
+                                <div class="title">
+                                    <span class="date"><?php echo date("d-M", strtotime($this->escape( $this->escape($pickup->awaiting_active_time)))) ?></span>
+                                    <span class="from"><?php echo $this->escape($pickup->from_address) ?></span>
+                                    <span class="to"><?php echo $this->escape($pickup->to_address) ?></span>
+                                    <span class="status"><?php echo $this->escape($pickup->status) ?></span>
+                                    <span class="readed"></span>
+                                </div>
+                            </li>
+                        <?php
+                        }?>
+                        <div id="message-container">
+                        </div>
+                    <?php
+                    }?>
+                </ul>
+                <!--                old version -->
+                <div class="form-list make-booking-inner" id="list_make">
+<!--                    --><?php //echo $this->render('pickup/detail.phtml'); ?>
+                </div>
+            </div>
+            <div class="clear"></div>
+
+    </form>
+<script type="text/plain" style="display:none" id="from_template">
+    <div class="mine"><p>{message}</p></div>
+</script>
+<script type="text/plain" style="display:none" id="to_template">
+    <div class="their"><p>{message}</p></div>
+</script>

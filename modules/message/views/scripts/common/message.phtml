@@ -1,0 +1,136 @@
+<?php
+
+$message = Zend_Registry::getInstance()->session->error->message;
+$param =Zend_Registry::getInstance()->session->param->content;
+?>
+<div class="inner register-inner">
+    <div class="title-formlist hide-md active">Message Broadcast Center - Create New</div>
+    <?php
+    if($message){ ?>
+        <span id="message"><p class="alert alert-danger"><?php echo $message; ?></p></span>
+   <?php
+        unset(Zend_Registry::getInstance()->session->error->message);
+    }
+    ?>
+    <div class="tab-content active" id="company-detail-content">
+        <h4><a href="<?php echo BASE_URL ?>/message/broadcast/">Message Box</a></h4>
+        <br>
+        <form action="<?php echo BASE_URL ?>/message/broadcast/send" method="post">
+            <ul class="form-list">
+                <li>
+                    <div class="title"><label>MESSAGE CONTENT<i class="question"></i></label>
+                        <div class="label-content">
+                            <label>MESSAGE CONTENT<i class="question"></i></label>
+                            <p>MESSAGE CONTENT</p>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <textarea name="message"><?php if($param) echo $this->escape($param);
+                            unset(Zend_Registry::getInstance()->session->param->content);
+                            ?></textarea>
+                    </div>
+                </li>
+                <li>
+                    <div class="title">
+                        <label>Customer<i class="question"></i></label>
+                        <div class="label-content">
+                            <label>Customer list<i class="question"></i></label>
+                            <p>Customer list</p>
+                        </div>
+                    </div>
+                    <div class="input-wrapper address-list">
+                        <div class="parent-add">
+                            <input name="customer[] " id="check-all" type="checkbox" value="<?php echo Message_Constant_Client::ALL_CUSTOMER; ?>" onClick=""/>
+                            <span class="optional pseudo"></span>
+                            <label for="pickup_suburb">All Customer</label>
+
+                        <ul>
+                            <?php if(isset($this->customer) && $this->customer != null){ ?>
+                            <?php foreach ($this->customer as $key => $value) { ?>
+                                    <?php if($this->escape($value['full_name']) != '') { ?>
+                                    <li>
+                                        <input id="delivery_suburb<?php echo $key ?>"
+                                               name="customer[]" type="checkbox" value="<?php echo $key ?>"/>
+                                        <label
+                                            for="delivery_suburb<?php echo $key ?>"><?php echo $this->escape($value['full_name']); ?></label>
+                                    </li>
+                                    <?php }
+                                }
+                            } ?>
+
+                        </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="title">
+                        <label>Courier<i class="question"></i></label>
+                        <div class="label-content">
+                            <label>Courier list<i class="question"></i></label>
+                            <p>Courier list</p>
+                        </div>
+                    </div>
+                    <div class="input-wrapper address-list">
+                        <div class="parent-add">
+                            <input name="courier[]" id="check-all" type="checkbox" value="<?php echo Message_Constant_Client::ALL_COURIER; ?>" onClick=""/>
+                            <span class="optional pseudo"></span>
+                            <label for="pickup_suburb">All Courier</label>
+
+                        <ul>
+                            <?php if(isset($this->courier) && $this->courier != null){ ?>
+                                <?php foreach ($this->courier as $key => $value) { ?>
+                            <?php if($this->escape($value['full_name']) != ''){ ?>
+                                    <li>
+                                        <input id="delivery_suburb<?php echo $key ?>"
+                                               name="courier[]" type="checkbox" value="<?php echo $key ?>"/>
+                                        <label
+                                            for="delivery_suburb<?php echo $key ?>"><?php echo $this->escape($value['full_name']) ?></label>
+                                    </li>
+                                <?php }
+                                }
+                            } ?>
+                        </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="title">
+                        <label>Staff<i class="question"></i></label>
+                        <div class="label-content">
+                            <label>Staff list<i class="question"></i></label>
+                            <p>Staff list</p>
+                        </div>
+                    </div>
+                    <div class="input-wrapper address-list">
+                        <div class="parent-add">
+                            <input  name="staff[]" id="check-all" type="checkbox" value="<?php echo Message_Constant_Client::ALL_STAFF; ?>"/>
+                            <span class="optional pseudo"></span>
+                            <label for="pickup_suburb">All Staff</label>
+
+                        <ul>
+                            <?php if(isset($this->staff) && $this->staff != null): ?>
+                                <?php foreach ($this->staff as $key => $value) { ?>
+                            <?php if($this->escape($value['email']) != ''){ ?>
+                                    <li>
+                                        <input id="delivery_suburb<?php echo $key ?>"
+                                               name="staff[]" type="checkbox" value="<?php echo $key ?>"/>
+                                        <label
+                                            for="delivery_suburb<?php echo $key ?>"><?php echo $this->escape($value['email']) ?></label>
+                                    </li>
+                                <?php } }
+                            endif;?>
+                        </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="button-set">
+                        <button name="create" type="submit" class="button register-button"><span>Send</span>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </form>
+    </div>
+</div>
+<div class="clear"></div>

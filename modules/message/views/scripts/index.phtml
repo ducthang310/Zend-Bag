@@ -1,0 +1,66 @@
+<?php
+$auth = Zend_Auth::getInstance();
+if ($auth->getStorage()->read() != null) {
+    $auth_id = $auth->getStorage()->read()->detail->auth_id;
+    $auth_type =  $auth->getStorage()->read()->auth_type;
+    $sort = $this->sort['sortField'];
+    $type_sort_current = $this->sort['sortType'];
+    $type_sort = $this->sort['type'];
+    $icon_sort = 'sort_down.png';
+    ?>
+    <div class="big-inner">
+        <?php ?>
+        <h1 class="title-inner">View Message From Admin</h1>
+        <div class="view-booking-table">
+           <div class="table-wrapper">
+               <?php if (count($this->data) > 0) {;
+               $data = $this->data
+               ?>
+                <table cellpadding="0" cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <th>TIME
+                    </th>
+                    <th>FROM
+                    </th>
+                    <th>TO
+                    </th>
+                    <th>Content
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($data as $key => $value) {
+                    $reader = explode(',',$value['reader']);
+                    $style = (in_array($auth_id,$reader)) ? "read-yes" : "read";
+                    $name = (in_array($auth_id,explode(',',$value['to_login_id']))) ? "Me" : Message_Constant_Client::$_message_label[$auth_type];
+                    ?>
+                            <tr id="item<?php echo $value['id'] ?>"
+                                class="<?php echo $style; ?>"
+                                onclick="MessageController.view(<?php echo $value['id'] ?>)">
+                                <?php $date =  date("d-M-y H:i:s", strtotime($this->escape($value['created'])));   ?>
+                                <td><?php echo $date ?></td>
+                                <td>SYSTEM</td>
+                                <td><?php echo $name ?></td>
+                                <td><?php echo $this->escape($value['content']) ?></td>
+                            </tr>
+                        <?php } ?>
+                </tbody>
+            </table>
+           </div>
+            <div class="paging">
+                <?php echo $this->paginationControl($this->data,
+                    'Sliding',
+                    'pagination.phtml'); ?>
+            </div>
+               <?php }else{ ?>
+                   <span class="alert-error"> No message</span>
+              <?php }?>
+        </div>
+            <div class="form-list make-booking-inner" id="view_message">
+            </div>
+        </div>
+
+<?php } ?>
+
+

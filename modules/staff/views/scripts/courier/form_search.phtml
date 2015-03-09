@@ -1,0 +1,87 @@
+<?php  $status = Courier_Constant_Server::$_STATUS; ?>
+<form id="search_form" method="get" action="<?php echo BASE_URL . $this->url(); ?>">
+    <ul class="form-list">
+        <li>
+            <div class="left input-wrapper">
+                <input
+                    type="radio" <?php if(!isset($this->dataParams['search']['field']['courier.can_assign']) || $this->dataParams['search']['field']['courier.can_assign'] == -1 ){echo 'checked';} ?>
+                    name="search[field][courier.can_assign]" value="-1" id="can_assign">
+                <label>ALL</label>
+            </div>
+            <div class="right input-wrapper">
+                <input
+                    type="radio" <?php echo (isset($this->dataParams['search']['field']['courier.can_assign']) && $this->dataParams['search']['field']['courier.can_assign'] == Courier_Constant_Server::CAN_ASSIGN) ? 'checked' : '' ?>
+                    name="search[field][courier.can_assign]" value="<?php echo Courier_Constant_Server::CAN_ASSIGN ?>" id="can_assign">
+                <label>CAN ASSIGN</label>
+            </div>
+            <div class="left input-wrapper">
+                <input
+                    type="radio" <?php echo (isset($this->dataParams['search']['field']['courier.can_assign']) && $this->dataParams['search']['field']['courier.can_assign']  == Courier_Constant_Server::CAN_NOT_ASSIGN) ? 'checked' : '' ?>
+                    name="search[field][courier.can_assign]" value="<?php echo Courier_Constant_Server::CAN_NOT_ASSIGN ?>" id="can_assign">
+                <label>CAN NOT ASSIGN</label></div>
+            <div class="clear"></div>
+        </li>
+        <li>
+            <label>Search status</label>
+            <div class="input-wrapper">
+                <select name="search[field][courier.head_office_approved]">
+                    <option value="-1" <?php if(!isset($this->dataParams['search']['field']['courier.head_office_approved']) || $this->dataParams['search']['field']['courier.head_office_approved'] == -1 ){echo 'selected';} ?>>ALL</option>
+                    <?php
+                    foreach ($status as $key => $val) {
+                        ?>
+                        <?php if(isset($this->dataParams['search']['field']['courier.head_office_approved'])){ ?>
+                        <option <?php echo $this->dataParams['search']['field']['courier.head_office_approved'] == $key ? 'selected' :''  ?> value="<?php echo $key ?>"><?php echo $val; ?></option>
+
+                    <?php }else{ ?>
+                            <option value="<?php echo $key ?>"><?php echo $val; ?></option>
+                        <?php }
+                    }
+                    ?>
+                </select>
+            </div>
+        </li>
+        <li>
+            <label>Email </label>
+            <input class="input-text" id="app_email" type="text"
+                   value="<?php echo (isset($this->dataParams['search']['field']['app_email'])) ? $this->dataParams['search']['field']['app_email'] : '' ?>"
+                   name="search[field][app_email]" placeholder="App Email"/>
+        </li>
+        <li>
+               <div class="left input-wrapper">
+      <label>Search Contact Name</label>
+            <input class="input-text" id="courier.search_name"
+                   value="<?php echo (isset($this->dataParams['search']['field']['courier.search_name'])) ? $this->dataParams['search']['field']['courier.search_name'] : '' ?>"
+                   type="text" name="search[field][courier.search_name]" placeholder="Search contact name"/>
+     </div>
+      <div class="right input-wrapper">
+        <label>Search Company Name</label>
+            <input class="input-text" id="company_name"
+                   value="<?php echo (isset($this->dataParams['search']['field']['company_name'])) ? $this->dataParams['search']['field']['company_name'] : '' ?>"
+                   type="text" name="search[field][company_name]" placeholder="Search company name"/>
+      </div>
+      <div class="clear"></div>
+            
+        </li>
+
+        <li>
+               <div class="left input-wrapper">
+      <label>Search ABN</label>
+            <input class="input-text" id="abn"
+                   value="<?php echo (isset($this->dataParams['search']['field']['abn'])) ? $this->dataParams['search']['field']['abn'] : '' ?>"
+                   type="text" name="search[field][abn]" placeholder="Search ABN"/>
+     </div>
+      <div class="right input-wrapper">
+         <label>Search Mobile No</label>
+            <input class="input-text" id="mobile"
+                   value="<?php echo (isset($this->dataParams['search']['field']['mobile'])) ? $this->dataParams['search']['field']['mobile'] : '' ?>"
+                   type="text" name="search[field][mobile]" placeholder="Search Mobile"/>
+      </div>
+      <div class="clear"></div>
+            
+        </li>
+        <li>
+            <input type="hidden" name="page" value="<?php echo $this->dataParams['page']; ?>">
+            <input type="submit" value="Search" name="btn_submit" class="button">
+        </li>
+    </ul>
+</form>

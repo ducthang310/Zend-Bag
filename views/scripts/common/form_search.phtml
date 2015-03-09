@@ -1,0 +1,60 @@
+<form id="search_form" method="get" action="<?php echo BASE_URL . $this->url(); ?>">
+  <ul class="form-list">
+    <li>
+      <div class="left input-wrapper">
+        <input
+            type="radio" <?php echo (isset($this->dataParams['search']['filter']['completed']) && $this->dataParams['search']['filter']['completed'] != 'completed') || (!isset($this->dataParams['search']['filter']['completed'])) ? 'checked' : '' ?>
+        name="search[filter][completed]" value="all" id="filter_all">
+        <label>All</label>
+      </div>
+      <div class="right input-wrapper">
+        <input
+        type="radio" <?php echo (isset($this->dataParams['search']['filter']['completed']) && $this->dataParams['search']['filter']['completed']=='completed') ? 'checked' : '' ?>
+        name="search[filter][completed]" value="completed" id="filter_completed">
+        <label>Completed</label>
+      </div>
+      <div class="clear"></div>
+    </li>
+    <li>
+      <label>Destination </label>
+      <input class="input-text" id="destination" type="text"
+      value="<?php echo (isset($this->dataParams['search']['field']['destination'])) ? $this->dataParams['search']['field']['destination'] : '' ?>"
+      name="search[field][destination]" placeholder="Destination"/>
+    </li>
+    <li>
+      <div class="left input-wrapper">
+<label>Date from</label>
+      <input class="input-text" id="date_from"
+      value="<?php echo (isset($this->dataParams['search']['date']['date_from'])) ? $this->dataParams['search']['date']['date_from'] : '' ?>"
+      type="text" name="search[date][date_from]" placeholder="Date from"/>
+      </div>
+      <div class="right input-wrapper">
+<label>Date to</label>
+      <input class="input-text" id="date_to"
+      value="<?php echo (isset($this->dataParams['search']['date']['date_to'])) ? $this->dataParams['search']['date']['date_to'] : '' ?>"
+      type="text" name="search[date][date_to]" placeholder="Date to"/>
+        <span id="error_date" style="color: red"><?php echo isset($this->errorDate) ? $this->errorDate : '' ?></span>
+      </div>
+      <div class="clear"></div>
+      
+    </li>
+<li>
+    <input type="hidden" name="page" value="<?php echo $this->dataParams['page']; ?>">
+    <input type="submit" value="Search" name="btn_submit" onclick="return valDate();" class="button">
+  </li>
+</ul>
+</form>
+
+<script>
+    function valDate() {
+        if ($('#date_to').val() != "") {
+            if ($('#date_to').val() < $('#date_from').val()) {
+                $('#error_date').html("The 'DATE TO' must be greater than or equal to 'DATE FROM'");
+                return false;
+            } else {
+                $('#error_date').html("");
+                return true;
+            }
+        }
+    }
+</script>

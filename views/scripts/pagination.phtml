@@ -1,0 +1,35 @@
+<?php if ($this->pageCount): ?>
+    <div class="paginationControl" align="center">
+        <?php
+        if (isset($this->previous)) {
+            $data = $this->buildParams($this->previous, $this->sort, $this->filter);
+            ?>
+            <li>
+                <a class="prev" href="<?php echo $this->buildUrl($data) ?>">
+                    Previous</a></li>
+        <?php
+        }
+        $i = 0;
+        foreach ($this->pagesInRange as $page) {
+            $i++;
+            if ($page != $this->current) {
+                $data = $this->buildParams($page, $this->sort, $this->filter);
+                ?>
+                <li>
+                    <a href="<?php echo $this->buildUrl($data) ?>"> <?php echo $page ?></a></li>
+            <?php
+            } else {
+                echo "<li class='page-current'><a>" . $page . "</a></li>";
+            }
+        }
+        if (isset($this->next)) {
+            $data = $this->buildParams($this->next, $this->sort, $this->filter);
+            ?>
+            <li>
+                <a class="next" href="<?php echo $this->buildUrl($data) ?>">
+                    Next </a></li>
+        <?php
+        }
+        ?>
+    </div>
+<?php endif; ?>

@@ -1,0 +1,20 @@
+<div class="form-list make-booking-inner" id="list_make">
+    <?php if ($this->question && $this->question != null) {
+        $data = $this->question; ?>
+        <h1>
+            Edit question
+        </h1>
+        <form action="<?php echo BASE_URL ?>/configuration/rating/edit" method="post" id="form_update">
+
+            <input type="text" id="question" maxlength="511" value="<?php echo $data['question'] ?>"/>
+            <input type="hidden" id="id" value="<?php echo $data['id'] ?>"/>
+
+            <div class="button-sets">
+                <button onclick="ConfigurationController.updateRating(<?php echo $data['id'] ?>);return false;"
+                        class="button book-button" name="edit"><span>Save</span></button>
+                <button onclick="ConfigurationController.cancel();return false;"
+                        class="button cancel-button" name="cancel"><span>CANCEL</span></button>
+            </div>
+        </form>
+    <?php } ?>
+</div>

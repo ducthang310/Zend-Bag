@@ -1,0 +1,9 @@
+<div class="inner register-inner">
+    <p class="alert-danger alert">
+        <?php if ($this->message):
+            echo  $this->message;
+        endif; ?>
+    </p>
+    <p><a class="goback" href="<?php echo $this->baseUrl().UDS.$this->moduleName; ?>/register/preferences">Back to edit register detail</a></p>
+    <p>&nbsp;</p>
+</div>

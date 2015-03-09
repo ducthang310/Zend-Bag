@@ -1,0 +1,35 @@
+<div class="big-inner">
+    <?php
+    $result = Zend_Registry::getInstance()->session->success->updatebase;
+    if ($result) { ?>
+        <span id="message"><p class="alert alert-success"><?php echo $result['message']; ?></p></span>
+        <?php
+        Zend_Registry::getInstance()->session->success->updatebase = '';
+    } ?>
+    <h1 class="title-inner">Base Data Configuration</h1>
+    <?php
+    if ($this->configlist) {
+        $data = $this->configlist;
+    } ?>
+    <div class="view-booking-table">
+        <table class="data-table">
+            <tr>
+                <td>Key</td>
+                <td>Value</td>
+            </tr>
+            <?php
+            if ($data != null) {
+                foreach ($data as $key => $value) {
+                    ?>
+                    <tr class="item<?php echo $value['id']?>" onclick="ConfigurationController.editbase(<?php echo $value['id'] ?>)">
+                        <td><?php echo $value['config_label']; ?> (<?php echo $value['config_unit'] ?>)</td>
+                        <td><?php echo $value['config_value']; ?></td>
+                    </tr>
+                <?php
+                }
+            }?>
+        </table>
+    </div>
+    <?php echo $this->render('base/common/update.phtml'); ?>
+</div>
+<div class="clear"></div>

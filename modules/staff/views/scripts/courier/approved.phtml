@@ -1,0 +1,232 @@
+<div class="form-list make-booking-inner" id="list_make">
+<?php if ($this->courier):
+$courier = $this->courier;
+$courier = new Base_Php_Overloader($courier);
+$auth = Zend_Auth::getInstance();
+$auth_id = $auth->getStorage()->read()->id;
+$type = $auth->getStorage()->read()->auth_type;
+$reject = Courier_Constant_Server::REJECTED;
+$approved = Courier_Constant_Server::APPROVED;
+$unapproved = Courier_Constant_Server::UNAPPROVED;
+?>
+<form method="post">
+    <div class="make-booking-inner">
+        <ul class="form-list">
+            <li>
+                <div class="title"><label>Email</label>
+
+                    <div class="label-content">
+                        <label>Note of Pickup location<i class="question"></i></label>
+
+                        <p>Note of Pickup location</p>
+                    </div>
+                </div>
+                <div class="input-wrapper">
+                    <label><?php echo $this->escape($courier->email); ?></label>
+                </div>
+            </li>
+            <li>
+                <div class="title"><label>ABN</label>
+
+                    <div class="label-content">
+                        <label>Note of Pickup location</label>
+
+                        <p>Note of Pickup location</p>
+                    </div>
+                </div>
+                <div class="input-wrapper">
+                    <label><?php echo $this->escape($courier->abn); ?></label>
+                </div>
+            </li>
+            <li>
+                <div class="title"><label>Contact Name</label>
+
+                    <div class="label-content">
+                        <label>Note of Pickup location<i class="question"></i></label>
+
+                        <p>Note of Pickup location</p>
+                    </div>
+                </div>
+                <div class="input-wrapper">
+                    <label><?php echo $this->escape($courier->contact_name); ?></label>
+                </div>
+            </li>
+            <li>
+                <div class="title"><label>Contact Number</label>
+
+                    <div class="label-content">
+                        <label>Note of Pickup location<i class="question"></i></label>
+
+                        <p>Note of Pickup location</p>
+                    </div>
+                </div>
+                <div class="input-wrapper">
+                    <label><?php echo $this->escape($courier->contact_number); ?></label>
+                </div>
+            </li>
+            <li>
+                <div class="title"><label>Mobile</label>
+
+                    <div class="label-content">
+                        <label>Note of Pickup location<i class="question"></i></label>
+
+                        <p>Note of Pickup location</p>
+                    </div>
+                </div>
+                <div class="input-wrapper">
+                    <label><?php echo $this->escape($courier->mobile); ?></label>
+                </div>
+            </li>
+            <?php $area = $this->area; ?>
+            <li>
+                <div class="title"><label>Preferred Pickup</label>
+
+                    <div class="label-content">
+                        <label>Delivery Location<i class="question"></i></label>
+
+                        <p>Delivery Location</p>
+                    </div>
+                </div>
+                <div class="input-wrapper address-list">
+                    <?php foreach ($area['preference_pickup'] as $value) { ?>
+                        <p><?php echo $value['suburb']; ?></p>
+                    <?php } ?>
+                </div>
+            </li>
+            <li>
+                <div class="title"><label>Preferred Delivery</label>
+
+                    <div class="label-content">
+                        <label>Note of Delivery location<i class="question"></i></label>
+
+                        <p>Note of Delivery location</p>
+                    </div>
+                </div>
+                <div class="input-wrapper address-list">
+                    <?php foreach ($area['preference_delivery'] as $value) { ?>
+                        <p><?php echo $value['suburb']; ?></p>
+                    <?php } ?>
+                </div>
+            </li>
+            <li class="prefer">
+                <div class="big-inner pref-date">
+                    <table class="top" width="100%" cellpadding="0" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th colspan="3">Approved For Courier</th>
+                        </tr>
+                        </thead>
+                    </table>
+                    <table class="bottom" width="100%" cellpadding="0" cellspacing="0">
+                        <tbody>
+                        <tr>
+                            <td>Can Assign</td>
+                            <td></td>
+                            <td><select name="can_assign" id="courier_can_assign" class="auto">
+                                    <?php foreach (Courier_Constant_Server::$_CAN_ASSIGN as $key => $value) { ?>
+                                        <option <?php echo $courier->can_assign == $key ? 'selected' : '' ?>
+                                            value="<?php echo $key; ?>"><?php echo $value ?></option>
+                                    <?php } ?>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Upload Photo ID</td>
+                            <td>
+                                <p class="link-download" onclick="StaffController.downloadDocument('photo')">
+                                    <input id="photo" type="hidden" value="<?php echo $courier->photo; ?>"  />
+                                    Download</p>
+                            </td>
+                            <td id="photo_approved"><?php if ($courier->photo_approved && $courier->photo_approved != $unapproved) { ?>
+                                    <p  id="photo_approved" class="<?php echo strtolower(Courier_Constant_Server::$_STATUS[$courier->photo_approved]) ?>"><?php echo Courier_Constant_Server::$_STATUS[$courier->photo_approved] ?></p>
+                                <?php } else { ?>
+                                    <input type="button" name="photo" id="approved"
+                                           value="Approve"
+                                           onclick="StaffController.approvedDocument(<?php echo $courier->id; ?>,'photo_approved',<?php echo $approved ?>)"
+                                        />
+                                    <input type="button" name="photo" id="reject"
+                                           value="Reject"
+                                           onclick="StaffController.rejectDocument(<?php echo $courier->id; ?>,'photo_approved')"
+                                        />
+                                <?php } ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Upload Utility Bill</td>
+                            <td>
+                                <p class="link-download" onclick="StaffController.downloadDocument('utility_bill')">
+                                    <input id="utility_bill" type="hidden" value="<?php echo $courier->utility_bill; ?>"  />
+                                    Download</p>
+                            </td>
+                            <td id="utility_bill_approved"><?php if ($courier->utility_bill_approved && $courier->utility_bill_approved != $unapproved) { ?>
+                                    <p id="utility_bill_approved" class="<?php echo strtolower(Courier_Constant_Server::$_STATUS[$courier->utility_bill_approved]) ?>"><?php echo Courier_Constant_Server::$_STATUS[$courier->utility_bill_approved] ?></p>
+                                <?php } else { ?>
+                                    <input type="button" name="photo" id="approved"
+                                           value="Approve"
+                                           onclick="StaffController.approvedDocument(<?php echo $courier->id; ?>,'utility_bill_approved',<?php echo $approved ?>)"
+                                        />
+                                    <input type="button" name="photo" id="reject"
+                                           value="Reject"
+                                           onclick="StaffController.rejectDocument(<?php echo $courier->id; ?>,'utility_bill_approved')"
+                                        />
+                                <?php } ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Upload Bank Statement</td>
+                            <td>
+                                <p class="link-download" onclick="StaffController.downloadDocument('bank_statement')">
+                                    <input id="bank_statement" type="hidden" value="<?php echo $courier->bank_statement; ?>"  />
+                                    Download</p
+                            </td>
+                            <td id="bank_statement_approved"><?php if ($courier->bank_statement_approved && $courier->bank_statement_approved != $unapproved) { ?>
+                                    <p id="bank_statement_approved" class="<?php echo strtolower(Courier_Constant_Server::$_STATUS[$courier->bank_statement_approved]) ?>"><?php echo Courier_Constant_Server::$_STATUS[$courier->bank_statement_approved] ?></p>
+                                <?php } else { ?>
+                                    <input type="button" name="photo" id="approved"
+                                           value="Approve"
+                                           onclick="StaffController.approvedDocument(<?php echo $courier->id; ?>,'bank_statement_approved',<?php echo $approved ?>)"
+                                        />
+                                    <input type="button" name="photo" id="reject"
+                                           value="Reject"
+                                           onclick="StaffController.rejectDocument(<?php echo $courier->id; ?>,'bank_statement_approved')"
+                                        />
+                                <?php } ?>
+                            </td>
+                        </tr>
+                        <?php $display = "none";
+                        if ($courier->utility_bill_approved == $approved && $courier->bank_statement_approved == $approved && $courier->photo_approved == $approved) {
+                            $display = "";
+                        }
+                        ?>
+                        <tr style="display: <?php echo $display ?>" id="head_office">
+                            <td>Head Office Approved</td>
+                            <td>
+                                <p style="color: green"><?php echo Courier_Constant_Server::$_STATUS[$courier->head_office_approved] ?></p>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="head_office_approved" id="head_office_approved"
+                                       value="<?php echo Courier_Constant_Server::HEAD_OFFICE_APPROVED; ?>"
+                                    <?php if ($display != "none" && $courier->head_office_approved == $approved) {
+                                        echo "checked";
+                                    } ?>/>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="button-sets">
+                          <button
+                                onclick="StaffController.confirm(<?php echo $courier->id; ?>,<?php echo $approved ?>);return false;"
+                                class="button cancel-button"><span>CONFIRM</span></button>
+                        <button onclick="StaffController.close();return false;"
+                                class="button cancel-button"><span>CLOSE</span></button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <?php
+        endif;
+        ?>
+    </div>
+</form>
+</div>

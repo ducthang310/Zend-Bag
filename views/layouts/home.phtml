@@ -1,0 +1,37 @@
+<?php echo $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title><?php echo $this->escape($this->siteName . ' | ' . $this->title); ?></title>
+    <?php echo $this->headMeta(); ?>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php echo $this->optimizeHeadLink(); ?>
+    <?php echo $this->optimizeHeadScript(); ?>
+
+</head>
+
+<body class="home">
+<div class="main home">
+    <div class="container">
+        <div class="top-home">
+            <a href="<?php echo $this->baseUrl(); ?>/<?php echo $this->moduleName; ?>/index/register" title="Register" class="left">Register</a>
+            <a href="<?php echo $this->baseUrl(); ?>/auth" title="Sign in" class="right">Sign In</a>
+        </div>
+        <div class="home-logo">
+            <a href="<?php echo $this->baseUrl(); ?>" title="DL1VR"><img
+                    src="<?php echo Base_Controller_Helper_Path2Url::getInstance()->direct(STATIC_PATH . '/images/logo-home.png'); ?>"
+                    alt="logo" class="logo"></a>
+
+            <p class="wbdd">Walk. Bike. Drive. Deliver.</p>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+        <p><a href="<?php echo $this->baseUrl(); ?>/home/index/policy" title="">Privacy Policy</a><span class="devide">|</span><a href="<?php echo $this->baseUrl(); ?>/home/index/term" title="">TERMS OF USE</a></p>
+    </div>
+</div>
+<!--<div id="loading"><img src="--><?php //echo Base_Controller_Helper_Path2Url::getInstance()->direct(STATIC_PATH . '/images/page-loader.gif'); ?><!--" alt="loading" class=""></div>-->
+</body>
+</html>

@@ -1,0 +1,29 @@
+<div style="text-align: center;">
+    Welcome to Rating Question module !
+    <a href="javascript:history.go(-1);" title="Back">Back</a>
+</div>
+<a href="<?php $this->baseUrl() ?>/configuration/rating/add">Add New Rating Question</a>
+
+<?php if ($this->ratingdata):
+    if(isset($_SESSION['message'])){
+        echo $_SESSION['message'];
+        unset($_SESSION['message']);
+    };
+    $data = $this->ratingdata;?>
+    <table>
+        <tr>
+            <td>No.</td>
+            <td>Question Details</td>
+            <td>Action</td>
+        </tr>
+        <?php $i=1; foreach($data as $key => $value){ ?>
+        <tr>
+            <td><?php echo $i++; ?></td>
+            <td><?php echo $value['question'] ; ?></td>
+            <td><a href="<?php $this->baseUrl() ?>/configuration/rating/edit/id/<?php echo $value['id'] ?>">Edit</a>
+                <a href="<?php $this->baseUrl() ?>/configuration/rating/delete/id/<?php echo $value['id'] ?>">Delete</a>
+            </td>
+        </tr>
+        <?php }?>
+    </table>
+<?php endif; ?>

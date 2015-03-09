@@ -1,0 +1,45 @@
+<div style="text-align: center;">
+    Welcome to Region module !
+    <a href="javascript:history.go(-1);" title="Back">Back</a>
+</div>
+<a href="<?php $this->baseUrl() ?>/configuration/region/add">Add New Region</a>
+<div class="search">
+    <form action="<?php $this->baseUrl() ?>/configuration/region/result" method="get">
+        <input value="" name="key" type="text"/>
+        <input value="search" name="search" type="submit" />
+    </form>
+</div>
+<?php if ($this->configdata):
+    if(isset($_SESSION['message'])){
+        echo $_SESSION['message'];
+        unset($_SESSION['message']);
+    };
+    if($this->result){
+        echo $this->result;
+    };
+    $data = $this->configdata;?>
+    <table>
+        <tr>
+            <td>No.</td>
+            <td>Country</td>
+            <td>State</td>
+            <td>Region</td>
+            <td>Suburb</td>
+            <td>Postcode</td>
+            <td>Action</td>
+        </tr>
+        <?php $i=1; foreach($data as $key => $value){ ?>
+            <tr>
+                <td><?php echo $i++; ?></td>
+                <td><?php echo $value['country'] ; ?></td>
+                <td><?php echo $value['state'] ; ?></td>
+                <td><?php echo $value['region'] ; ?></td>
+                <td><?php echo $value['suburb'] ; ?></td>
+                <td><?php echo $value['postcode'] ; ?></td>
+                <td><a href="<?php $this->baseUrl() ?>/configuration/region/edit/id/<?php echo $value['id'] ?>">Edit</a>
+                    <a href="<?php $this->baseUrl() ?>/configuration/region/delete/id/<?php echo $value['id'] ?>">Delete</a>
+                </td>
+            </tr>
+        <?php }?>
+    </table>
+<?php endif; ?>

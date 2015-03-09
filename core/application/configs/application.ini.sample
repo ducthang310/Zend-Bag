@@ -1,0 +1,90 @@
+
+[production]
+
+phpSettings.display_startup_errors = 0
+phpSettings.display_errors = 0
+phpSettings.error_reporting = 0
+
+bootstrap.path = APPLICATION_PATH "/Bootstrap.php"
+bootstrap.class = "Bootstrap"
+
+plugins.preparing.path = WWW_PATH "/modules/base/plugins/Preparing.php"
+plugins.preparing.class = "Base_Plugin_Preparing"
+plugins.preparing.index = 1
+plugins.acl.path = WWW_PATH "/modules/auth/plugins/Acl.php"
+plugins.acl.class = "Auth_Plugin_Acl"
+plugins.acl.index = 2
+plugins.errorHandler.path =
+plugins.errorHandler.class = "Zend_Controller_Plugin_ErrorHandler"
+plugins.errorHandler.index = 9999
+plugins.errorHandler.params.module = "base"
+plugins.errorHandler.params.controller = "error"
+plugins.errorHandler.params.action = "error"
+plugins.unique.path =
+plugins.unique.class =
+plugins.unique.index =
+
+smsBroadCast.activeBySms = 1
+smsBroadCast.url = "https://api.smsbroadcast.com.au/api-adv.php"
+smsBroadCast.username = "dlivrsms"
+smsBroadCast.password = "$und0wn"
+smsBroadCast.source = "PBI"
+smsBroadCast.reference = "PBI"
+
+paginator.pagerange = 10
+paginator.itemperpage = 5
+
+secure.encryptString = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+cron[] = "pickup"
+
+cron.time_delete_temp = 3600
+
+appnamespace = "Application"
+
+smtp.username = "dlivr.bag@gmail.com"
+smtp.password = "Admin123456"
+smtp.port =   465
+smtp.domain = "smtp.gmail.com"
+smtp.ssl = "ssl"
+
+resources.frontController.params.displayExceptions = 0
+
+resources.frontController.controllerDirectory = APPLICATION_PATH "/controllers"
+resources.frontController.modulecontrollerdirectoryname = "controllers"
+
+resources.frontController.moduleDirectory.app = WWW_PATH "/modules"
+resources.view[] =
+
+resources.view.encoding = "UTF-8"
+resources.db.adapter = "MYSQLI"
+resources.db.params.host = "127.0.0.1"
+resources.db.params.username = "root"
+resources.db.params.password = "root"
+resources.db.params.dbname = "bag"
+resources.db.params.charset = "UTF8"
+
+locale = en_US
+
+resources.frontController.defaultModule = "home"
+resources.frontController.defaultControllerName = "index"
+resources.frontController.defaultAction = "index"
+resources.frontController.prefixDefaultModule = true
+
+siteName = "Delivr"
+
+[staging : production]
+
+[testing : production]
+phpSettings.display_startup_errors = 1
+phpSettings.display_errors = 1
+phpSettings.error_reporting = E_ALL | E_STRICT
+
+[development : production]
+
+phpSettings.display_startup_errors = 1
+phpSettings.display_errors = 1
+phpSettings.error_reporting = E_ALL | E_STRICT
+
+resources.frontController.params.displayExceptions = 1
+

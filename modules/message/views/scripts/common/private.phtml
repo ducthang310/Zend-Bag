@@ -1,0 +1,18 @@
+<div class="content-item">
+    <div id="message_private" style="max-height: 300px; overflow: auto">
+        <?php if($this->message): $data = $this->message;?>
+            <?php foreach($this->message as $key => $value): ?>
+                <div class="<?php echo $value['style'];?>">
+                    <p><?php echo $this->escape($value['content']);?></p>
+                </div>
+            <?php endforeach; ?>
+        <?php endif;  ?>
+<?php
+
+?></div>
+    <div class="form-chat" id="pickup">
+        <input type="hidden" value="1" id="auto-load"/>
+        <input type="text" class="input-text" name="message" placeholder="type message"/>
+        <input type="button" value='send' class="button" onclick="MessageController.send()"/>
+    </div>
+</div>

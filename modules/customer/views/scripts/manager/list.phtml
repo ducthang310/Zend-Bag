@@ -1,0 +1,33 @@
+<h1>Manage Customer page</h1>
+<div>
+    <table align="center" cellpadding="10px" cellspacing="10px" border="1px solid">
+        <tr>
+            <td>No.</td>
+            <td>Image</td>
+            <td>Company Name</td>
+            <td>ABN</td>
+            <td>Contact First name</td>
+            <td>Contact Last name</td>
+            <td>Email</td>
+            <td>Mobile Number</td>
+            <td>Post Code</td>
+            <td>Action</td>
+        </tr>
+       <?php $i=1; foreach($this->listCustomers as $key => $value): ?>
+        <tr>
+            <td><?php echo $i++ ?></td>
+            <td><?php echo $value['image']?></td>
+            <td><?php echo $value['company_name']?></td>
+            <td><?php echo $value['abn']?></td>
+            <td><?php echo $value['contact_firstname']?></td>
+            <td><?php echo $value['contact_lastname']?></td>
+            <td><?php echo $value['email']?></td>
+            <td><?php echo $value['mobile']?></td>
+            <td><?php echo $value['postcode']?></td>
+            <td><a href="<?php $this->baseUrl()?>/customer/manager/profile/id/<?php echo $value['id'] ?>">View Details</a>
+                <a href="" >Disable</a>
+            </td>
+        </tr>
+        <?php endforeach; ?>
+    </table>
+</div>

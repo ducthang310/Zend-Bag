@@ -1,0 +1,34 @@
+<div class="form-list make-booking-inner" id="list_make">
+    <?php
+    if ($this->configdata && $this->configdata != null) {
+        $data = $this->configdata;
+        ?>
+        <div class="big-inner pref-date">
+            <form action="<?php echo $this->baseUrl(); ?>/configuration/base/edit" method="post" id="form_update">
+                <table class="bottom" width="100%" cellpadding="0" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th colspan="3">Edit configuration value</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <input type="hidden" name="key" id="key" value="<?php echo $data['config_key'] ?>"/>
+                    <input type="hidden" name="id" value="<?php echo $data['id'] ?>"/>
+                    <tr>
+                        <td><?php echo $data['config_label'] ?></td>
+                        <td><input type="text" class="input-text" id="config_value" name="config_value" value="<?php echo $this->escape($data['config_value']) ?>"/></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="button-sets">
+                    <button onclick="ConfigurationController.updatebase(<?php echo $data['id'] ?>);return false;"
+                            class="button book-button" name="edit"><span>SAVE</span></button>
+                    <button onclick="ConfigurationController.cancel();return false;"
+                            class="button cancel-button" name="cancel"><span>CANCEL</span></button>
+                </div>
+            </form>
+        </div>
+    <?php
+    }
+    ?>
+</div>

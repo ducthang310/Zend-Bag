@@ -1,0 +1,193 @@
+<script>
+    $('#list_form').keydown(function(event){
+        if(event.keyCode == 13) {
+            event.preventDefault();
+            return false;
+        }
+    });
+</script>
+<div class="form-list make-booking-inner" id="list_make">
+    <?php if ($this->detail):
+        $value = $this->detail;
+        $current_sts = $value->status;
+        $req_tmp = $value['created'];
+        $req_date = date("d M Y", strtotime($req_tmp));
+        $req_time = date("g:i A", strtotime($req_tmp));
+        $tmp = $value['delivered_active_time'];
+        $time = $value['delivered_active_time'] ? strtotime($tmp) : (strtotime($value['created']) + $this->config[4] * 60 * 60);
+        $due_date = date("d M Y", $time);
+        $due_time = date("g:i A", $time);
+        ?>
+        <form method="post" id="list_form">
+            <div class="maps" id="map-canvas">
+            </div>
+            <div class="make-booking-inner">
+                <ul class="form-list">
+                    <li>
+                        <div class="title"><label>Pickup location</label>
+                            <div class="label-content">
+                                <label>Pickup location<i class="question"></i></label>
+                                <p>Pickup location</p>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <input type="hidden" id="pickup_address" value="<?php echo $value['from_address']; ?>">
+                            <?php echo nl2br($this->escape($value['from_address'])); ?>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title"><label>Note of Pickup location</label>
+                            <div class="label-content">
+                                <label>Note of Pickup location<i class="question"></i></label>
+                                <p>Note of Pickup location</p>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <?php echo nl2br($this->escape($value['note_from_address'])); ?>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title"><label>Delivery Location</label>
+                            <div class="label-content">
+                                <label>Delivery Location<i class="question"></i></label>
+                                <p>Delivery Location</p>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <input type="hidden" id="delivery_address" value="<?php echo $value['to_address']; ?>">
+                            <?php echo nl2br($this->escape($value['to_address'])); ?>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title"><label>Note of Delivery Location</label>
+                            <div class="label-content">
+                                <label>Note of Delivery Location<i class="question"></i></label>
+                                <p>Note of Delivery Location</p>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <?php echo nl2br($this->escape($value['note_to_address'])); ?>
+                        </div>
+                    </li>
+                    <li class="prefer">
+                        <div class="big-inner pref-date">
+                            <table class="top" width="100%" cellpadding="0" cellspacing="0">
+                                <thead>
+                                <tr>
+                                    <th colspan="3">Summary</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>REQUEST DATE:</td>
+                                    <td><?php echo $req_date; ?> </td>
+                                    <td>TIME: <?php echo $req_time; ?></td>
+                                </tr>
+                                <tr>
+                                    <td>DUE DATE:</td>
+                                    <td><?php echo $due_date ?> </td>
+                                    <td>TIME: <?php echo $due_time; ?></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <table class="bottom" width="100%" cellpadding="0" cellspacing="0">
+                                <thead>
+                                <tr>
+                                    <th colspan="3">Fees and charges</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Base Pickup Fee</td>
+                                    <td>$<?php echo number_format((float)$value['base_charge_fee'], 2, '.', '') ?></td>
+                                    <td></td>
+                                </tr>
+                                <?php if ($value['delivery_insure_fee'] > 0) { ?>
+                                    <tr>
+                                        <td>Insurance</td>
+                                        <td>$<?php echo number_format((float)$value['delivery_insure_fee'], 2, '.', '') ?></td>
+                                        <td></td>
+                                    </tr>
+                                <?php }
+                                if ($value['delivery_signature_fee'] > 0) {?>
+                                    <tr>
+                                        <td>Signature on delivery</td>
+                                        <td>$<?php echo number_format((float)$value['delivery_signature_fee'], 2, '.', '') ?></td>
+                                        <td></td>
+                                    </tr>
+                                <?php } ?>
+                                <tr>
+                                    <td>Credit card fee</td>
+                                    <td>$<span id="credit_fee"><?php echo number_format((float)$value['credit_fee'], 2, '.', ''); ?></span></td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                                <tfoot>
+                                <tr>
+                                    <td>TOTAL</td>
+                                    <td>$<span id="total_fee"><?php echo number_format((float)$value['total_fee'], 2, '.', '') ?></span></td>
+                                    <td></td>
+                                </tr>
+                                <?php
+                                if(Pickup_Constant_Server::CANCELLED == $current_sts){ ?>
+                                    <tr>
+                                        <td>CANCEL FEE</td>
+                                        <td>$<span id="cancel_fee"><?php echo number_format((float)$value['cancel_fee'], 2, '.', '') ?></span></td>
+                                        <td></td>
+                                    </tr>
+                                <?php } ?>
+                                </tfoot>
+                            </table>
+                            <div class="button-sets">
+                                <input type="hidden" id="cur_status" value="<?php echo $current_sts ?>">
+                                <input type="hidden" id="new_status" value="<?php echo $current_sts + 1 ?>">
+                                <?php
+                                if ($value['courier_rate_flag'] == 1) {
+                                    $btn_name = 'View Courier Ratings';
+                                } else {
+                                    $btn_name = 'Add Rate';
+                                }
+                                switch (true) {
+                                    case Pickup_Constant_Server::AWAITING == $current_sts:
+                                        ?>
+                                        <button onclick="PickupController.changeStatusPickup(<?php echo $value['id'] ?>);return false;" class="button book-button" name="assign" value="assign"><span>Assign</span></button>
+                                        <?php
+                                        break;
+                                    case Pickup_Constant_Server::ASSIGNED == $current_sts:
+                                        ?>
+                                        <button onclick="PickupController.changeStatusPickup(<?php echo $value['id'] ?>);return false;" class="button book-button" name="assign" value="assign"><span>Pickup</span></button>
+                                        <button onclick="PickupController.unassignPickup(<?php echo $value['id'] ?>);return false;" class="button book-button" name="assign" value="assign"><span>Unassign</span></button>
+                                        <?php
+                                        break;
+                                    case Pickup_Constant_Server::CANCELLED == $current_sts:
+                                        break;
+                                    case Pickup_Constant_Server::PICKED_UP == $current_sts:
+                                        ?>
+                                        <button onclick="PickupController.changeStatusPickup(<?php echo $value['id'] ?>);return false;" class="button book-button" name="assign" value="assign"><span>Deliver</span></button>
+                                        <?php
+                                        break;
+                                    case Pickup_Constant_Server::DELIVERED == $current_sts:
+                                    case Pickup_Constant_Server::ACCEPTED == $current_sts:
+                                        ?>
+                                        <button onclick="PickupController.rateCustomerPickup(<?php echo $value['id'] ?>);return false;" class="button button-auto"><span><?php echo $btn_name ?></span></button>
+                                        <?php
+                                        break;
+                                    case Pickup_Constant_Server::RATED == $current_sts:
+                                        ?>
+                                        <button onclick="PickupController.rateCustomerPickup(<?php echo $value['id'] ?>);return false;" class="button button-auto"><span><?php echo $btn_name ?></span></button>
+                                        <button onclick="PickupController.rateCourierPickup(<?php echo $value['id'] ?>);return false;" class="button button-auto"><span>View Customer Ratings</span></button>
+                                        <?php
+                                        break;
+                                    default:
+                                        break;
+                                }
+                                ?>
+                                <button onclick="PickupController.cancel();return false;" class="button cancel-button"><span>Close</span></button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </form>
+    <?php endif; ?>
+</div>

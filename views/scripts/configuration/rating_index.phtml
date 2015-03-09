@@ -1,0 +1,41 @@
+<div class="big-inner">
+    <?php
+    $msg_success = Zend_Registry::getInstance()->session->success->rating;
+    $msg_error = Zend_Registry::getInstance()->session->error->rating;
+    if ($msg_success) { ?>
+        <p class="alert alert-success"><?php echo $msg_success['message']; ?></p>
+        <?php
+        Zend_Registry::getInstance()->session->success->rating = '';
+    } elseif ($msg_error) { ?>
+        <p class="alert alert-error"><?php echo $msg_error['message']; ?></p>
+        <?php
+        Zend_Registry::getInstance()->session->error->rating = '';
+    }
+    ?>
+    <h1 class="title-inner">Rating Configuration !</h1>
+    <?php
+    if ($this->ratinglist) {
+        $data = $this->ratinglist;
+    }
+    ?>
+    <div class="view-booking-table">
+        <table>
+            <tr>
+                <td>No.</td>
+                <td>Question Details</td>
+                <td colspan="2">Action</td>
+            </tr>
+            <?php $i = 1;
+            foreach ($data as $key => $value) { ?>
+                <tr>
+                    <td><?php echo $i++; ?></td>
+                    <td><?php echo $value['question']; ?></td>
+                    <td onclick="ConfigurationController.editRating(<?php echo $value['id'] ?>)"> Edit </td>
+                    <td onclick="ConfigurationController.activeRating(<?php echo $value['id'] ?>)"><?php echo Configuration_Constant_Server::getStatusLabel($value['active']) ?></td>
+                </tr>
+            <?php } ?>
+        </table>
+    </div>
+    <?php echo $this->render('rating/common/update.phtml'); ?>
+</div>
+<div class="clear"></div>

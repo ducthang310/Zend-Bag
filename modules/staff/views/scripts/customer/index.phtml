@@ -1,0 +1,128 @@
+<?php
+$auth = Zend_Auth::getInstance();
+if ($auth->getStorage()->read() != null):
+//    $id = $auth->getStorage()->read()->id;
+    $sort = $this->sort['sortField'];
+    $type_sort_current = $this->sort['sortType'];
+    $type_sort = $this->sort['type'];
+    $icon_sort = 'sort_down.png';
+    ?>
+    <div class="big-inner">
+        <h1 class="title-inner">Manage Customer</h1>
+        <?php echo $this->render('customer/form_search.phtml'); ?>
+        <div class="view-booking-table">
+           <div class="table-wrapper">
+    <?php if (count($this->data) > 0) {?>
+            <table cellpadding="0" cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <th>Date
+                        <a href="
+                                <?php echo $this->buildUrl(array(
+                            'page' => 1,
+                            'sort[sort_type]' => ($sort == 'created') ? $type_sort : 'ASC',
+                            'sort[sort_field]' => 'created',
+                        )) ?>">
+                            <?php
+                            if ($sort) {
+                                if ($sort) {
+                                    $icon_sort = $this->buildIcon($sort, $type_sort_current, 'created');
+                                }
+                            }
+                            ?>
+                            <img
+                                src="<?php echo BASE_URL . UDS . 'static' . UDS . 'images' . UDS . $icon_sort; ?>"
+                                alt="<?php echo $icon_sort ?>">
+                        </a>
+                    </th>
+
+                    <th>Full name
+                        <a href="
+                                <?php echo $this->buildUrl(array(
+                            'page' => 1,
+                            'sort[sort_type]' => ($sort == 'lastname') ? $type_sort : 'ASC',
+                            'sort[sort_field]' => 'lastname',
+                        )) ?>">
+                            <?php
+                            if ($sort) {
+                                $icon_sort = $this->buildIcon($sort, $type_sort_current, 'lastname');
+                            }
+                            ?>
+                            <img
+                                src="<?php echo BASE_URL . UDS . 'static' . UDS . 'images' . UDS . $icon_sort; ?>"
+                                alt="<?php echo $icon_sort ?>">
+                        </a>
+                    </th>
+                    <th>Mobile
+                        <a href="
+                                <?php echo $this->buildUrl(array(
+                            'page' => 1,
+                            'sort[sort_type]' => ($sort == 'mobile') ? $type_sort : 'ASC',
+                            'sort[sort_field]' => 'mobile',
+                        )) ?>">
+                            <?php
+                            if ($sort) {
+                                $icon_sort = $this->buildIcon($sort, $type_sort_current, 'mobile');
+                            }
+                            ?>
+                            <img
+                                src="<?php echo BASE_URL . UDS . 'static' . UDS . 'images' . UDS . $icon_sort; ?>"
+                                alt="<?php echo $icon_sort ?>">
+                        </a>
+                    </th>
+                    <th>Status
+                        <a href="
+                                <?php echo $this->buildUrl(array(
+                            'page' => 1,
+                            'sort[sort_type]' => ($sort == 'disabled') ? $type_sort : 'ASC',
+                            'sort[sort_field]' => 'disabled',
+                        )) ?>">
+                            <?php
+                            if ($sort) {
+                                $icon_sort = $this->buildIcon($sort, $type_sort_current, 'disabled');
+                            }
+                            ?>
+                            <img
+                                src="<?php echo BASE_URL . UDS . 'static' . UDS . 'images' . UDS . $icon_sort; ?>"
+                                alt="<?php echo $icon_sort ?>">
+                        </a>
+                    </th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <?php
+                    $i = 1;
+                    foreach ($this->data as $customer) {
+                        $customer = new Base_Php_Overloader($customer);
+                        ?>
+                        <tr class="user<?php echo $this->escape($customer->auth_id) ?>" onclick="StaffController.profileCustomer(<?php echo $this->escape($customer->auth_id); ?>)">
+                            <?php $date =  date("d-M", strtotime($this->escape($customer->created)));   ?>
+                            <td><?php echo $date?></td>
+                            <td><?php echo $this->escape($customer->firstname) ?>&nbsp;<?php echo $this->escape($customer->lastname) ?></td>
+                            <td><?php echo $this->escape($customer->mobile)?></td>
+                            <td><?php echo isset(Customer_Constant_Server::$_STATUS[$customer->disabled]) ? Customer_Constant_Server::$_STATUS[$customer->disabled] : ''?></td>
+                        </tr>
+                    <?php
+                    }
+                    ?>
+                    <input type="hidden" value="<?php echo $i - 1; ?><!--" id="total-list"/>
+                </tbody>
+            </table>
+    <?php
+    } else {
+        ?>
+        <p class="no-result-search a-center a-center" >No results found</p>
+    <?php
+    }?>
+        </div>
+            <div class="paging">
+                <?php echo $this->paginationControl($this->data,
+                    'Sliding',
+                    'pagination.phtml', array('sort' => $this->sort,
+                        'filter' => $this->dataParams)); ?>
+            </div>
+            <?php echo $this->render('customer/profile.phtml'); ?>
+        </div>
+    </div>
+<?php endif; ?>

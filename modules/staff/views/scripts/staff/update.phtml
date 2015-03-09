@@ -1,0 +1,86 @@
+
+<?php
+$auth = Zend_Auth::getInstance()->getStorage()->read();
+$auth_role = $auth->detail->role;
+    if ($this->staff && $this->staff != null) {
+        $data = $this->staff;
+        ?>
+        <div class="big-inner pref-date">
+             <form>
+                <table class="top" width="100%" cellpadding="0" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th colspan="3">EDIT STAFF PROFILE</th>
+                    </tr>
+                    <tr>
+                       <th>
+                           <p class="error alert-danger" style="display: none">Oops. Looks like there is a problem with email, please check it and try again</p>
+                       </th>  </tr>
+                    </thead>
+
+                </table>
+
+                <table class="bottom" width="100%" cellpadding="0" cellspacing="0">
+                    <tbody>
+                    <input type="hidden" name="key" id="auth_id" value="<?php echo $data['staff']['auth_id'] ?>"/>
+                    <input type="hidden" name="id" value="<?php echo $data['staff']['id'] ?>"/>
+                    <tr>
+                        <td><label>Email</label></td>
+                        <td><input class="input-text" onblur="ValidateController.checkUpdate(this.id,'email',this.value,'dri')" type="text" id="email" value="<?php echo $this->escape($data['staff']['email']); ?>" />
+                        <h5 id="email" style="display: none">Email address has error syntax</h5>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td><label>Role</label></td>
+                        <td><select id="role" class="select-role">
+                                <?php $role = Auth_Constant_Server::getRole($auth_role);
+                                ?>
+                                <?php foreach ($role as $key => $value){?>
+                                <option value="<?php echo $key ?>" <?php if($key == $this->escape($data['staff']['role'])){ echo "selected";} ?>><?php echo $value['label'] ?></option>
+                                <?php
+                                } ?>
+                        </select></td>
+                        
+                    </tr>
+                    <tr id="area">
+                        <td><label>Area</label></td>
+                        <td><select multiple id="area_ids">
+                                <?php $area_ids = explode(',',$this->escape($data['staff']['area_ids'])); ?>
+                                <?php foreach ($data['suburbs'] as $key => $value){ ?>
+                                <option <?php if(in_array($value['id'],$area_ids)){
+                                    echo 'selected';
+                                }; ;?> value="<?php echo $this->escape($value['id']) ?>"><?php echo $this->escape($value['suburb']) ?></option>
+                                <?php } ?>
+                            </select>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td><label>Password</label></td>
+                        <td><input class="input-text" type="password" id="app_password"  value="" />
+                        <span id="password" style="display: none"></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="button-sets">
+                    <button onclick="StaffController.update(<?php echo $data['staff']['id'] ?>);return false;"
+                            class="button book-button" name="edit"><span>SAVE</span></button>
+                    <button onclick="StaffController.cancel();return false;"
+                            class="button cancel-button" name="cancel"><span>CANCEL</span></button>
+                </div>
+            </form>
+        </div>
+    <?php
+    }
+    ?>
+<script type="text/javascript">
+
+    $(".select-role").change(function () {
+        var role = this.value;
+        if(role == <?php echo Auth_Constant_Server::LOCAL_AREA_ADMIN ?> || role == <?php echo Auth_Constant_Server::LOCAL_AREA_STAFF ?>){
+            $("#area").show();
+        }else{
+            $("#area").hide();
+        }
+    });
+</script>

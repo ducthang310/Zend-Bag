@@ -1,0 +1,30 @@
+<?php
+$auth = Zend_Auth::getInstance();
+if ($auth->getStorage()->read() != null):
+    $user = $auth->getStorage()->read();
+    $userDetail = $auth->getStorage()->read()->detail;
+    ?>
+    <h1>My Profile</h1>
+    <?php
+
+    echo 'ID:' . $user->id . '<br>';
+    echo 'Username:' . $user->app_email . '<br>';
+    echo 'Password:' . $user->app_password . '<br>';
+    echo 'Disabled:' . $user->disabled . '<br>';
+    echo 'Role:' . $user->role . '<br>';
+    ?>
+    <div>
+        <form role="form" method="post" action="update">
+            <input id="staff_id" type="hidden" value="<?php echo $user->id ?>"/>
+
+            <input type="submit" id="update" name="update" value="Save"/>
+            <a type="button" class="btn btn-default" id="back_to_list"
+               href="/<?php echo $this->moduleName; ?>/staff/list">Back to list</a>
+
+        </form>
+    </div>
+    <script type="text/plain" id="image-template">
+    <img src="{url}" class="img-thumbnail img-responsive" />
+
+    </script>
+<?php endif; ?>

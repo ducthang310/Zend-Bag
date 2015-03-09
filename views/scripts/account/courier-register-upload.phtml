@@ -1,0 +1,67 @@
+<div class="title-formlist hide-md">Upload ID</div>
+<?php
+$data = Zend_Registry::getInstance()->session->courierRegister->upload_temp;
+$data = new Base_Php_Overloader($data);
+?>
+<div class="tab-content <?php if ($this->active == 'upload') echo 'active'; ?>" id="cupload-id-content">
+    <?php if((int)Zend_Registry::getInstance()->session->courierRegister->step >= Courier_RegisterController::$upload): ?>
+    <form action="<?php echo $this->baseUrl(); ?>/<?php echo $this->moduleName; ?>/register/upload" method="post"
+          accept-charset="utf-8" enctype="multipart/form-data">
+        <ul class="form-list">
+            <li>
+                <div class="title">
+                    <label>Upload Photo ID<i class="question"></i></label>
+                    <div class="label-content">
+                        <label>Photo ID<i class="question"></i></label>
+                        <p><?php echo $this->escape($this->getIntro('photo','registration','courier_company')); ?></p>
+                    </div>
+                </div>
+                <div class="input-wrapper">
+                    <input type="file"  name="photo" class=""  placeholder="" />
+                    <input type="hidden" value="<?php echo ($data && $data->photo)?$data->photo:''; ?>" name="photo_temp" />
+                    <?php echo ($data && $data->photo)?'<p>File Name: '.$data->photo.'</p>':''; ?>
+                    <span style="display: none" class="validate validate-error"></span>
+                    <span class="required pseudo"></span>
+                </div>
+            </li>
+            <li>
+                <div class="title">
+                    <label>Upload Utility Bill</label>
+                    <div class="label-content">
+                        <label>File<i class="question"></i></label>
+                    </div>
+                </div>
+                <div class="input-wrapper">
+                    <input type="file"  name="utility_bill" class=""  placeholder="" />
+                    <input type="hidden" value="<?php echo ($data && $data->utility_bill)?$data->utility_bill:''; ?>" name="utility_bill_temp" />
+                    <?php echo ($data && $data->utility_bill)?'<p>File Name: '.$data->utility_bill.'</p>':''; ?>
+                    <span style="display: none" class="validate validate-error"></span>
+                    <span class="required pseudo"></span>
+                </div>
+            </li>
+            <li>
+                <div class="title">
+                    <label>Upload Bank Statement</label>
+                    <div class="label-content">
+                        <label>File<i class="question"></i></label>
+                    </div>
+                </div>
+                <div class="input-wrapper">
+                    <input type="file" name="bank_statement" class="" placeholder="" />
+                    <input type="hidden" value="<?php echo ($data && $data->bank_statement)?$data->bank_statement:''; ?>" name="bank_statement_temp" />
+                    <?php echo ($data && $data->bank_statement)?'<p>File Name: '.$data->bank_statement.'</p>':''; ?>
+                    <span style="display: none" class="validate validate-error"></span>
+                    <span class="required pseudo"></span>
+                </div>
+            </li>
+
+            <li>
+                <div class="button-set">
+                    <button type="submit" value="1" name="register_upload" class="button register-button">
+                        <span>Upload</span></button>
+                </div>
+            </li>
+        </ul>
+    </form>
+    <?php endif;?>
+</div>

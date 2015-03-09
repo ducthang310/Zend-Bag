@@ -1,0 +1,470 @@
+@charset "UTF-8";
+
+/**
+ * for module, module also include layout
+ * module.css ~ layout.css, system.css ~ layout.css (share layout)
+*/
+.user-body {
+    background-color: white;
+}
+
+.user-vdict-space {
+    line-height: 20px;
+    height: 20px;
+}
+
+.user-container {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.user-content-outter {
+    background-color: transparent;
+    float: none;
+    margin: 0 auto;
+    padding: 0px;
+    width: 540px;
+}
+
+.user-content {
+    margin: 0 auto;
+    padding: 0px 10px;
+}
+
+.user-content-outter .user-content > .row-fluid {
+    margin-bottom: 20px;
+}
+
+.user-content-outter .user-content > .row-fluid:last-child {
+    margin-bottom: 0px;
+}
+
+/**
+ * thiết đặt action
+*/
+.user-content .user-list-post > div {
+    margin-bottom: 20px;
+}
+
+.user-content .user-list-post > div:last-child {
+    margin-bottom: 0px;
+}
+
+.user-content .user-list-post > div.user-post {
+    border-top: 1px solid blue;
+    padding-top: 5px;
+}
+
+.user-content .user-search > div {
+    margin-bottom: 5px;
+}
+
+.user-content .user-search > div:last-child {
+    margin-bottom: 0px;
+}
+
+.user-content .user-new-post > div {
+    margin-bottom: 5px;
+}
+
+.user-content .user-new-post > div:last-child {
+    margin-bottom: 0px;
+}
+
+.user-list-post .user-post > div:not([class*="clearfix"]) {
+    margin-bottom: 5px;
+}
+
+.user-list-post .user-post > div:last-child {
+    margin-bottom: 0px;
+}
+
+.user-list-comment > .user-content-comment {
+    margin-bottom: 5px;
+}
+
+.user-list-comment > .user-content-comment:last-child {
+    margin-bottom: 0px;
+}
+
+.user-content-comment > div {
+    margin-bottom: 2px;
+}
+
+.user-content-comment > div:last-child {
+    margin-bottom: 0px;
+}
+
+.user-search {
+    width: 500px;
+    margin: 0px 10px;
+    border: 1px solid transparent;
+    background-color: white;
+}
+
+.user-tag {
+
+}
+
+.user-new-post {
+    width: 500px;
+    padding: 0px;
+    margin: 0px 10px;
+    border: 1px solid transparent;
+    cursor: text;
+    background-color: white;
+}
+
+.user-new-post .input-append:first-child {
+    padding: 4px 0px;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+}
+
+.user-new-post .input-append {
+    margin-bottom: 0px;
+}
+
+.user-new-post .btn {
+    border-color: transparent;
+}
+
+.user-extra-post {
+    width: 522px;
+    background-color: transparent;
+    text-align: center;
+}
+
+.user-extra-comment {
+    width: 500px;
+    background-color: transparent;
+    text-align: left;
+    line-height: 12px
+}
+
+.user-list-post {
+    background: transparent;
+}
+
+.user-post {
+    width: 500px;
+    margin: 0px 10px;
+    border: 1px solid transparent;
+    background-color: white;
+    position: relative;
+}
+
+.user-search .user-search-input-container {
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    padding: 4px 0px;
+    border-top: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+    width: 50%;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.user-search .user-search-input,
+.user-search .user-search-input:focus {
+    width: 100%;
+    border: none;
+    padding: 0px;
+    box-shadow: none;
+    outline: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    ie-dummy: expression(this.hideFocus=true);
+}
+
+.user-content-part {
+    margin: 0px;
+}
+
+.user-content-part .btn {
+    border-color: transparent;
+}
+
+.user-content .user-radius-none {
+    behavior: url(PIE.min.htc);
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+}
+
+.user-content .user-radius-none:last-child {
+    behavior: url(PIE.min.htc);
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+}
+
+.user-tag-fix {
+    text-align: justify;
+}
+
+.user-tag-temp {
+    text-align: justify;
+}
+
+.user-tag-fix .user-tag-text {
+    color: #12C;
+}
+
+.user-tag-temp .user-tag-text {
+    color: black;
+}
+
+.user-tag .user-tag-text:hover {
+    text-decoration: underline;
+}
+
+.user-tag-text {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.user-tag-text:last-child {
+    margin-right: 0px;
+}
+
+.user-draft-button {
+
+}
+
+.user-post-button {
+
+}
+
+.user-new-post .user-new-post-content,
+.user-new-post .user-new-post-content:focus {
+    width: 486px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    ie-dummy: expression(this.hideFocus=true);
+}
+
+.user-list-post .user-new-comment,
+.user-list-post .user-new-comment:focus {
+    padding: 4px 0px;
+    width: 500px;
+    box-shadow: none;
+    border: 1px solid #CCC;
+    border-left: none;
+    border-right: none;
+    color: #F89406;
+    outline: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    ie-dummy: expression(this.hideFocus=true);
+}
+
+.user-list-post .user-post-fail-reason,
+.user-list-post .user-post-fail-reason:focus {
+    padding: 4px 0px;
+    width: 500px;
+    color: crimson;
+    box-shadow: none;
+    border: 1px solid #CCC;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    ie-dummy: expression(this.hideFocus=true);
+}
+
+.user-post-fail-reason-show {
+    padding: 0px;
+    width: 500px;
+    border: none;
+    margin: 0px;
+    text-align: justify;
+    color: crimson;
+}
+
+.user-post-info-detail {
+    padding: 0px;
+    width: 500px;
+    border: none;
+    margin: 0px;
+    text-align: justify;
+    color: #2F96B4;
+}
+
+.user-content-comment {
+    padding: 0px;
+    width: 500px;
+    text-align: justify;
+    color: #F89406;
+}
+
+.user-content-post {
+    padding: 0px;
+    width: 500px;
+    border: none;
+    margin: 0px;
+    text-align: justify;
+}
+
+.user-index {
+    margin: 0px 2px 0px 2px;
+    float: left;
+    padding: 2px;
+    color: #D14;
+    background-color: #F7F7F9;
+    border: 1px solid #E1E1E8;
+    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+    font-size: 12px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+.user-list-comment {
+}
+
+.user-action {
+    padding: 4px;
+}
+
+.user-notice {
+    font-size: 12px;
+    line-height: 12px;
+    min-height: 0px;
+    margin-left: 0px;
+    cursor: default;
+    margin: 0px;
+}
+
+.user-notice [class*="user-"] {
+    cursor: pointer;
+    color: #12C;
+}
+
+.user-notice [class*="user-"]:hover {
+    text-decoration: underline;
+}
+
+.user-notice-comment {
+    font-size: 12px;
+    line-height: 12px;
+    min-height: 0px;
+    margin-left: 0px;
+    cursor: default;
+    margin: 0px;
+}
+
+.user-notice-comment [class*="user-"] {
+    cursor: pointer;
+    color: #12C;
+}
+
+.user-notice-comment [class*="user-"]:hover {
+    text-decoration: underline;
+}
+
+.controls.placeholder-containter {
+    float: left;
+}
+
+.user-comment {
+}
+
+.user-spam {
+}
+
+.user-seen {
+}
+
+.user-agree {
+}
+
+.user-protest {
+}
+
+.user-good {
+}
+
+.user-bad {
+}
+
+.user-unselectable {
+
+}
+
+.user-post-info {
+    font-size: 12px;
+    line-height: 12px;
+    height: 12px;
+}
+
+.user-post-info [class*=user-] {
+    cursor: pointer;
+    color: #12C;
+}
+
+.user-post-info [class*=user-]:hover {
+    text-decoration: underline;
+}
+
+.user-post-info .user-post-owner {
+}
+
+.user-commentator {
+    color: #12C;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.user-commentator:hover {
+    text-decoration: underline;
+}
+
+.btn.btn-large {
+    outline: none;
+}
+
+.user-extra-post .user-get-post {
+    color: #12C;
+    cursor: pointer;
+}
+
+.user-extra-post .user-get-post:hover {
+    text-decoration: underline;
+}
+
+.user-extra-comment .user-get-comment {
+    font-size: 12px;
+    line-height: 12px;
+    color: #12C;
+    cursor: pointer;
+}
+
+.user-extra-comment .user-get-comment:hover {
+    text-decoration: underline;
+}
+
+.user-post-detail {
+    font-size: 12px;
+    line-height: 12px;
+    min-height: 0px;
+    margin-left: 0px;
+}
+
+.user-post-detail span:first-child {
+    color: #08C;
+    cursor: pointer;
+    cursor: pointer;
+    color: #12C;
+}
+
+.user-post-detail span:first-child:hover {
+    text-decoration: underline;
+}

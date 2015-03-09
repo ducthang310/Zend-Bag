@@ -1,0 +1,30 @@
+
+        <div class="big-inner">
+            <?php
+            $msg_success = Zend_Registry::getInstance()->session->success->rating;
+            $msg_error = Zend_Registry::getInstance()->session->error->rating;
+            if ($msg_success) {
+                ?>
+                <h2><span id="message"><?php echo $msg_success['message']; ?></span></h2>
+                <?php
+                Zend_Registry::getInstance()->session->success->rating = '';
+            }
+            elseif ($msg_error) {
+                ?>
+                <h2><span id="message"><?php echo $msg_error['message']; ?></span></h2>
+                <?php
+                Zend_Registry::getInstance()->session->error->rating = '';
+            }
+            ?>
+            <h4>Create New Rating Question</h4>
+            <form method="post" action="<?php echo BASE_URL; ?>/configuration/rating/add" role="form"  >
+                <textarea name="question" maxlength="511"></textarea>
+                <div class="button-sets">
+                    <button type="submit" class="button book-button" id="add" name="add" value="add"><span>ADD</span>
+                    </button>
+                    <button class="button cancel-button" name="cancel" id="cancel" value="cancel"><span>CANCEL</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="clear"></div>

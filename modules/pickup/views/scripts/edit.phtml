@@ -1,0 +1,121 @@
+<h1>Pickup detail</h1>
+<?php
+//echo 'ID:' . $this->pickup->id . '<br>';
+//echo 'Customer:' . $this->customer . '<br>';
+//echo 'Courier:' . $this->courier . '<br>';
+echo 'Status:' . $this->pickup->status . '<br>';
+//echo 'Pickup Address:' . $this->pickup->from_address . '<br>';
+//echo 'Delivery Address:' . $this->pickup->to_address . '<br>';
+//echo 'Total fee:' . $this->pickup->total_fee . '<br>';
+?>
+<div>
+    <form role="form" method="post" action="<?php echo $this->baseUrl()?>/pickup/index/update">
+        <input type="hidden" id="id" name="id" value="<?php echo $this->pickup->id?>">
+        <h3>EDIT <span class="label label-default"> A Pickup</span></h3>
+        <div class="form-group">
+            <label for="product_name">Pickup Address</label>
+            <input type="text" class="form-control" placeholder="Pickup Address" id="from_address"
+                   value="<?php echo $this->pickup->from_address?>" name="from_address"/>
+        </div>
+        <div class="form-group">
+            <label for="description">Delivery Address</label>
+            <input type="text" class="form-control" placeholder="Delivery Address" id="to_address"
+                   value="<?php echo $this->pickup->to_address?>" name="to_address"/>
+        </div>
+        <?php
+        $current_sts = $this->pickup->status;
+        $auth = Zend_Auth::getInstance();
+        $auth_id = $auth->getStorage()->read()->id;
+        $type= $auth->getStorage()->read()->auth_type;
+        switch(true){
+            case Pickup_Constant_Server::AWAITING==$current_sts && $type == Auth_Constant_Server::CUSTOMER_TYPE:
+                ?>
+                <a type="button" class="btn btn-default" id="cancel"
+                   href="/<?php echo $this->moduleName; ?>/index/cancel/id/<?php echo $this->pickup->id ?>">Cancel</a>
+                <input type="submit" name="update" class="button" value="Save">
+                <?php
+                break;
+            case Pickup_Constant_Server::AWAITING==$current_sts && $type == Auth_Constant_Server::COURIER_TYPE:
+                ?>
+                <a type="button" class="btn btn-default" id="assign"
+                   href="/<?php echo $this->moduleName; ?>/index/assigned/id/<?php echo $this->pickup->id?>">Assigned</a>
+                <?php
+                break;
+            case Pickup_Constant_Server::AWAITING==$current_sts && $type == Auth_Constant_Server::STAFF_TYPE:
+                ?>
+                <a type="button" class="btn btn-default" id="cancel"
+                   href="/<?php echo $this->moduleName; ?>/index/cancel/id/<?php echo $this->pickup->id ?>">Cancel</a>
+                <input type="submit" name="update" class="button" value="Save">
+                <a type="button" class="btn btn-default" id="assign"
+                   href="/<?php echo $this->moduleName; ?>/index/changestatus">Assigned</a>
+                <?php
+                break;
+            case Pickup_Constant_Server::ASSIGNED==$current_sts && $type == Auth_Constant_Server::CUSTOMER_TYPE:
+                ?>
+                <a type="button" class="btn btn-default" id="cancel"
+                   href="/<?php echo $this->moduleName; ?>/index/cancel/id/<?php echo $this->pickup->id ?>">Cancel</a>
+                <?php
+                break;
+            case Pickup_Constant_Server::ASSIGNED == $current_sts && $type == Auth_Constant_Server::COURIER_TYPE:
+                ?>
+                <input type="hidden" name="sts" value="<?php Pickup_Constant_Server::PICKEDUP?>">
+                <a type="button" class="btn btn-default" id="assign"
+                   href="/<?php echo $this->moduleName; ?>/index/changestatus">PickedUp</a>
+                <?php
+                break;
+            case Pickup_Constant_Server::ASSIGNED==$current_sts && $type == Auth_Constant_Server::STAFF_TYPE:
+                break;
+            case Pickup_Constant_Server::CANCELLED==$current_sts && $type == Auth_Constant_Server::CUSTOMER_TYPE:
+                break;
+            case Pickup_Constant_Server::CANCELLED==$current_sts && $type == Auth_Constant_Server::COURIER_TYPE:
+                break;
+            case Pickup_Constant_Server::CANCELLED==$current_sts && $type == Auth_Constant_Server::STAFF_TYPE:
+                break;
+            case Pickup_Constant_Server::PICKEDUP==$current_sts && $type == Auth_Constant_Server::CUSTOMER_TYPE:
+                break;
+            case Pickup_Constant_Server::PICKEDUP==$current_sts && $type == Auth_Constant_Server::COURIER_TYPE:
+                ?>
+                <input type="hidden" name="sts" value="<?php Pickup_Constant_Server::DELIVERED?>">
+                <a type="button" class="btn btn-default"
+                   href="/<?php echo $this->moduleName; ?>/index/changestatus">Delivered</a>
+                <?php
+                break;
+            case Pickup_Constant_Server::PICKEDUP==$current_sts && $type == Auth_Constant_Server::STAFF_TYPE:
+                break;
+            case Pickup_Constant_Server::DELIVERED==$current_sts && $type == Auth_Constant_Server::CUSTOMER_TYPE:
+                ?>
+                <input type="hidden" name="sts" value="<?php Pickup_Constant_Server::ACCEPTED?>">
+                <a type="button" class="btn btn-default"
+                   href="/<?php echo $this->moduleName; ?>/index/changestatus">Accepted</a>
+                <?php
+                break;
+            case Pickup_Constant_Server::DELIVERED==$current_sts && $type == Auth_Constant_Server::COURIER_TYPE:
+                break;
+            case Pickup_Constant_Server::DELIVERED==$current_sts && $type == Auth_Constant_Server::STAFF_TYPE:
+                break;
+            case Pickup_Constant_Server::ACCEPTED==$current_sts && $type == Auth_Constant_Server::CUSTOMER_TYPE:
+                ?>
+                <input type="hidden" name="sts" value="<?php Pickup_Constant_Server::RATED?>">
+                <a type="button" class="btn btn-default"
+                   href="/<?php echo $this->moduleName; ?>/index/changestatus">Rated</a>
+                <?php
+                break;
+            case Pickup_Constant_Server::ACCEPTED==$current_sts && $type == Auth_Constant_Server::COURIER_TYPE:
+                break;
+            case Pickup_Constant_Server::ACCEPTED==$current_sts && $type == Auth_Constant_Server::STAFF_TYPE:
+                break;
+            case Pickup_Constant_Server::RATED==$current_sts && $type == Auth_Constant_Server::CUSTOMER_TYPE:
+                break;
+            case Pickup_Constant_Server::RATED==$current_sts && $type == Auth_Constant_Server::COURIER_TYPE:
+                break;
+            case Pickup_Constant_Server::RATED==$current_sts && $type == Auth_Constant_Server::STAFF_TYPE:
+                break;
+            default:
+                echo 'sts:::'.$current_sts.'type='.$type;
+                die('break;');
+                break;
+        }
+        ?>
+        <a type="button" class="btn btn-default" id="back_to_list" href="/<?php echo $this->moduleName; ?>/index/list">Back to list</a>
+    </form>
+</div>

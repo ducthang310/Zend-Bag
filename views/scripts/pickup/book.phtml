@@ -1,0 +1,239 @@
+<?php
+$tmp = time();
+$delivery_time = $tmp;
+if (count($this->config) > 4) {
+    $delivery_time = $tmp + $this->config[4] * 60 * 60;
+}
+$booking = Zend_Registry::getInstance()->session->error->booking;
+$messages = $booking ? $booking['message'] : array();
+$payment_checkbox = $booking ? $booking['payment_checkbox'] : array();
+$booking = new Base_Php_Overloader($booking);
+Zend_Registry::getInstance()->session->error->booking = '';
+$insure_flag = '';
+$signed_flag = '';
+$total_fee = $this->config[0];
+if($payment_checkbox){
+    foreach($payment_checkbox as $val){
+        if($val == 2){
+            $insure_flag = 'checked';
+            $total_fee += $this->config[2];
+        }
+        if($val == 1){
+            $signed_flag = 'checked';
+            $total_fee += $this->config[1];
+        }
+    }
+}
+$credit_fee = $total_fee * $this->config[3] / 100;
+$total_fee += $total_fee * $this->config[3] / 100;
+?>
+<script src="<?php echo $this->baseUrl() ?>/static/jquery.datepicker/jquery-ui.js"></script>
+<script>
+    $(function () {
+        $("#datepicker").datepicker();
+    });
+</script>
+<form id="book" action="<?php echo $this->baseUrl() . '/' . $this->moduleName ?>/index/add" method="post"
+      accept-charset="utf-8">
+    <div class="big-inner">
+        <h1 class="title-inner">Make a Booking</h1>
+        <div class="maps" id="map-canvas">
+        </div>
+        <div class="make-booking-inner">
+            <ul class="form-list">
+                <li>
+                    <div class="title"><label>Pickup location<i class="question"></i></label>
+                        <div class="label-content">
+                            <label>Pickup location<i class="question"></i></label>
+                            <p>Pickup location</p>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <input onblur="PickupController.check(this.id,this.value)" id="pickup_address" value="<?php echo $booking->pickup_address ? $booking->pickup_address : $this->prefer_address['pickup_address']?>" type="text" class="input-text" name="pickup_address" required placeholder="">
+                        <span style="display: none" class="validate validate-error"></span>
+                        <span class="optional pseudo"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="title"><label>Note for Pickup location<i class="question"></i></label>
+                        <div class="label-content">
+                            <label>Note for Pickup location<i class="question"></i></label>
+                            <p>Note for Pickup location</p>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <textarea type="text" rows="2" class="input-text" name="note_pickup_address" rows="2"><?php echo $booking->note_pickup_address ? $booking->note_pickup_address : ''?></textarea>
+                    </div>
+                </li>
+                <li>
+                    <div class="title"><label>Delivery Location<i class="question"></i></label>
+                        <div class="label-content">
+                            <label>Delivery Location<i class="question"></i></label>
+                            <p>Delivery Location</p>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <input onblur="PickupController.check(this.id,this.value)" type="text" id="delivery_address" value="<?php echo $booking->delivery_address ? $booking->delivery_address : $this->prefer_address['delivery_address']?>" placeholder="" required class="input-text" name="delivery_address" >
+                        <span style="display: none" class="validate validate-error"></span>
+                        <span class="optional pseudo"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="title"><label>Note for Delivery Location<i class="question"></i></label>
+
+                        <div class="label-content">
+                            <label>Note for Delivery Location<i class="question"></i></label>
+
+                            <p>Note for Delivery Location</p>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <textarea type="text" rows="2" class="input-text" name="note_delivery_address"  rows="2"><?php echo $booking->note_delivery_address ? $booking->note_delivery_address : ''?></textarea>
+                    </div>
+                </li>
+                <li>
+                    <div class="title"><label>Preferred Pickup Time and Date<i class="question"></i></label>
+
+                        <div class="label-content">
+                            <label>Preferred Pickup Time and Date<i class="question"></i></label>
+
+                            <p>Preferred Pickup Time and Date</p>
+                        </div>
+                    </div>
+                    <div class="left input-wrapper">
+                        <div class="left input-wrapper">
+                            <select name="pickup_hour">
+                                <option value="-1" <?php echo (!$booking->pickup_hour ? 'selected' : '') ?>>HH</option>
+                                <?php
+                                for ($idx = 0; $idx <= 23; $idx++) {
+                                    echo '<option value="' . $idx . '" ' .($booking->pickup_hour ? ($booking->pickup_hour == $idx ? 'selected' : '') : ' ') .'>' . $idx . 'h</option>';
+                                }
+                                ?>
+                            </select>
+                        </div>
+                        <div class="right input-wrapper">
+                            <select name="pickup_minute">
+                                <option value="-1" <?php echo ($booking->pickup_minute && $booking->pickup_minute == $idx) ? 'selected' : '' ?>>MM</option>
+                                <?php
+                                for ($idx = 0; $idx < 4; $idx++) {
+                                    echo '<option value="' . $idx . '" ' .($booking->pickup_minute ? ( $booking->pickup_minute == $idx ? 'selected' : '') : '' ).'>' . ($idx * 15) . '</option>';
+                                }
+                                ?>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="right input-wrapper">
+                        <input onblur="PickupController.check(this.id,this.value)" type="text" name="pickup_date" class="input-text" id="datepicker" value="<?php echo ($booking->pickup_date ? $booking->pickup_date : date("m/d/Y", time())); ?>">
+                        <span style="display: none" class="validate validate-error"></span>
+                        <span class="optional pseudo"></span>
+                    </div>
+                    <div class="clear"></div>
+                </li>
+                <li class="prefer">
+                    <div class="title"><label>Preferred Pickup DATE<i class="question"></i></label>
+                        <div class="label-content">
+                            <label>Preferred Pickup DATE<i class="question"></i></label>
+                            <p>Preferred Pickup DATE</p>
+                        </div>
+                    </div>
+                    <div class="big-inner pref-date">
+                        <table class="top" width="100%" cellpadding="0" cellspacing="0">
+                            <thead>
+                            <tr>
+                                <th colspan="3">Summary</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>REQUEST DATE:</td>
+                                <td><?php echo date("d M Y", $tmp) ?></td>
+                                <td>TIME: <?php echo date("g:iA", $tmp) ?> </td>
+                            </tr>
+                            <tr>
+                                <td>DUE DATE:</td>
+                                <td><?php echo date("d M Y", $delivery_time) ?> </td>
+                                <td>TIME: <?php echo date("g:iA", $delivery_time) ?></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table class="bottom" width="100%" cellpadding="0" cellspacing="0" name="fee_charge" id="book">
+                            <thead>
+                            <tr>
+                                <th colspan="3">Fees and charges</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Base Pickup Fee:</td>
+                                <td id="base_fee"> $<?php echo number_format((float)$this->config[0], 2, '.', '') ?></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Insurance</td>
+                                <td>$<?php echo number_format((float)$this->config[2], 2, '.', '') ?></td>
+                                <td><input class="checkbox-x" type="checkbox" name="payment_checkbox[]" id="insure_fee" value="2" click="changeTotalFee();" <?php echo $insure_flag?>>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Signature on delivery</td>
+                                <td>$<?php echo number_format((float)$this->config[1], 2, '.', '') ?></td>
+                                <td><input class="checkbox-x" type="checkbox" name="payment_checkbox[]" id="sign_fee" value="1" click="changeTotalFee();" <?php echo $signed_flag?>>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Credit Card Charge  <?php echo $this->config[3] . '%' ?></td>
+                                <td>$<span id="credit_fee"><?php echo number_format((float)$credit_fee, 2, '.', '') ?></span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <td>TOTAL</td>
+                                <td>$<span id="total_fee"><?php echo number_format((float)$total_fee, 2, '.', '') ?></span></td>
+                                <td></td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                        <div class="check-tc">
+                            <input class="checkbox" required type="checkbox" name="term" id="term" value="1" <?php echo ($booking->term ? 'checked' : ''); ?>>
+                            <label for="remember">I have read and agree to the Terms and Conditions</label>
+                            <span style="display: none" class="validate validate-error"></span>
+                            <span class="required pseudo"></span>
+                        </div>
+                        <div class="button-sets">
+                            <button type="submit" class="button book-button" name="book" value="book"><span>Book Now</span> </button>
+                                <input type="button" class="button cancel-button" value="Cancel" onclick="window.location.href = '<?php echo BASE_URL.UDS?>customer';">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="clear"></div>
+</form>
+<script type="text/javascript">
+    var base = <?php echo $this->config[0]?>,
+        insure = <?php echo $this->config[2]?>,
+        sign = <?php echo $this->config[1]?>,
+        credit = <?php echo $this->config[3]?>;
+    <?php
+
+    if($messages != null){
+        foreach($messages as $key => $val){
+            $element = '*[name="'.$key.'"]';
+            $parent = 'parent()';
+            ?>
+        $('<?php echo $element ?>').<?php echo $parent ?>.find('.validate-error').css('display', 'block');
+        $('<?php echo $element ?>').<?php echo $parent ?>.find('.validate-error').html("<?php echo $this->escape($val) ?>");
+        <?php }
+    }
+    ?>
+    $(".validate-error").click(function () {
+        $(this).hide();
+    });
+
+    if($('.make-booking-inner').length){
+        $('.make-booking-inner')[0].scrollIntoView( true );
+    }
+</script>

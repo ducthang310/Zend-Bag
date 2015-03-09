@@ -1,0 +1,112 @@
+<div class="form-list make-booking-inner" id="list_make">
+    <?php if ($this->customer):
+    $customer = $this->customer;
+    $customer = new Base_Php_Overloader($customer);
+    $auth = Zend_Auth::getInstance();
+    $auth_id = $auth->getStorage()->read()->id;
+    $type = $auth->getStorage()->read()->auth_type;
+    ?>
+    <form method="post" id="list_make">
+        <div class="make-booking-inner">
+            <ul class="form-list">
+                <li>
+                    <div class="title"><label>Email</label>
+
+                        <div class="label-content">
+                            <label>Note of Pickup location<i class="question"></i></label>
+
+                            <p>Note of Pickup location</p>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <label><?php echo  $this->escape($customer->email) ?></label>
+                    </div>
+                </li>
+                <li>
+                    <div class="title"><label>ABN</label>
+
+                        <div class="label-content">
+                            <label>Note of Pickup location</label>
+
+                            <p>Note of Pickup location</p>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <label><?php echo  $this->escape($customer->abn) ?></label>
+                    </div>
+                </li>
+                <li>
+                    <div class="title"><label>Contact Name</label>
+
+                        <div class="label-content">
+                            <label>Note of Pickup location<i class="question"></i></label>
+
+                            <p>Note of Pickup location</p>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <label><?php echo  $this->escape($customer->contact_name) ?></label>
+                    </div>
+                </li>
+                <li>
+                    <div class="title"><label>Contact Number</label>
+
+                        <div class="label-content">
+                            <label>Note of Pickup location<i class="question"></i></label>
+
+                            <p>Note of Pickup location</p>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <label><?php echo  $this->escape($customer->contact_number) ?></label>
+                    </div>
+                </li>
+                <li>
+                    <div class="title"><label>Mobile</label>
+
+                        <div class="label-content">
+                            <label>Note of Pickup location<i class="question"></i></label>
+
+                            <p>Note of Pickup location</p>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <label><?php echo $this->escape($customer->mobile) ?></label>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="title"><label>Suburb</label>
+                        <div class="label-content">
+                            <label>Delivery Location<i class="question"></i></label>
+                            <p>Delivery Location</p>
+                        </div>
+                    </div>
+                    <div class="input-wrapper address-list">
+                            <p><?php echo $customer->suburb; ?></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="title"><label>State</label>
+                        <div class="label-content">
+                            <label>Note of Delivery location<i class="question"></i></label>
+
+                            <p>Note of Delivery location</p>
+                        </div>
+                    </div>
+                    <div class="input-wrapper address-list">
+                        <p><?php echo $customer->customer_state; ?></p>
+                    </div>
+                </li>
+                    <div class="button-sets">
+                        <button onclick="StaffController.close();return false;"
+                                class="button cancel-button"><span>CLOSE</span></button>
+                    </div>
+            </ul>
+            <?php
+            endif;
+            ?>
+        </div>
+
+    </form>
+</div>

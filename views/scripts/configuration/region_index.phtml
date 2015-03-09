@@ -1,0 +1,73 @@
+<div class="big-inner">
+    <?php
+    $sort = $this->sort['sortField'];
+    $type_sort_current = $this->sort['sortType'];
+    $type_sort = $this->sort['type'];
+    $icon_sort = 'sort_down.png';
+    $msg_success = Zend_Registry::getInstance()->session->success->region;
+    $msg_error = Zend_Registry::getInstance()->session->error->region;
+    if ($msg_success) { ?>
+        <p class="alert alert-success"><?php echo $msg_success['message']; ?></p>
+        <?php
+        Zend_Registry::getInstance()->session->success->region = '';
+    } elseif ($msg_error) {
+        ?>
+        <p class="alert alert-error"><?php echo $msg_error['message']; ?></p>
+        <?php
+        Zend_Registry::getInstance()->session->error->region = '';
+    }
+    ?>
+    <h1 class="title-inner">Regions Configuration!</h1>
+    <a type="button" class="btn btn-default" id="add" href="/<?php echo $this->moduleName; ?>/region/add">Add New Region</a>
+    <div class="view-booking-table">
+        <div class="table-wrapper">
+            <table cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                    <?php
+                    $dataHeadTitle = $this->dataHeadTitle;
+                    foreach ($dataHeadTitle as $data) { ?>
+                        <th><?php
+                            echo $this->escape($data['title']);
+                            $sort_data['sortType'] = $sort == $data['sort_field'] ? $type_sort : 'ASC';
+                            $sort_data['sortField'] = $data['sort_field'];
+                            $data_Sort = $this->buildParams(1, $sort_data, $this->dataParams);
+                            ?>
+                            <a href=" <?php echo $this->buildUrl($data_Sort); ?>">
+                                <?php
+                                if ($sort) {
+                                    if ($sort) {
+                                        $icon_sort = $this->buildIcon($sort, $type_sort_current, $data['sort_field']);
+                                    }
+                                }
+                                ?>
+                                <img src="<?php echo BASE_URL . UDS . 'static' . UDS . 'images' . UDS . $icon_sort; ?>" alt="<?php echo $icon_sort ?>">
+                            </a>
+                        </th>
+                    <?php } ?>
+                    <th colspan="2">Action
+                    </td>
+                </tr>
+                <?php
+                foreach ($this->configlist as $value) {
+                    ?>
+                    <tr>
+                        <td><?php echo $value['id']; ?></td>
+                        <td><?php echo $value['country']; ?></td>
+                        <td><?php echo $value['state']; ?></td>
+                        <td><?php echo $value['region']; ?></td>
+                        <td><?php echo $value['suburb']; ?></td>
+                        <td><?php echo $value['postcode']; ?></td>
+                        <td onclick="ConfigurationController.editRegion(<?php echo $value['id'] ?>)">Edit</td>
+                        <td onclick="confirm('Are you sure?')"><a href="<?php $this->baseUrl() ?>/configuration/region/delete/id/<?php echo $value['id'] ?>">Delete</a>
+                        </td>
+                    </tr>
+                <?php } ?>
+            </table>
+        </div>
+        <div class="paging">
+            <?php echo $this->paginationControl($this->configlist, 'Sliding', 'pagination.phtml', array('sort' => $this->sort, 'filter' => $this->dataParams)); ?>
+        </div>
+    </div>
+    <?php echo $this->render('region/common/update.phtml'); ?>
+</div>
+<div class="clear"></div>

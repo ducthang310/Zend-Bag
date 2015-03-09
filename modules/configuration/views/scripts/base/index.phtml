@@ -1,0 +1,40 @@
+<div style="text-align: center;">
+    Welcome to Configuration module !
+    <a href="javascript:history.go(-1);" title="Back">Back</a>
+</div>
+
+<?php
+if(isset($_SESSION['message'])){
+    echo $_SESSION['message'];
+    unset($_SESSION['message']);
+}
+if ($this->configdata) {
+    $data = $this->configdata;
+}
+?>
+<div>
+    <td><a href="<?php echo $this->baseUrl(); ?>/configuration/base/add">Create New Configuration</a></td>
+    <table>
+        <tr>
+            <td>Key</td>
+            <td>Value</td>
+            <td>Action</td>
+        </tr>
+        <?php
+        if ($data != null) {
+            foreach ($data as $key => $value) {
+                ?>
+                <tr>
+                    <td><?php echo $value['config_label']; ?> (<?php echo $value['config_unit'] ?>)</td>
+                    <td><?php echo $value['config_value']; ?></td>
+                    <td><a href="<?php echo $this->baseUrl(); ?>/configuration/base/edit/id/<?php echo $value['id']; ?>">Edit</a></td>
+                    <td><a href="<?php echo $this->baseUrl(); ?>/configuration/base/delete/id/<?php echo $value['id']; ?>">Delete</a>
+                    </td>
+                </tr>
+            <?php
+            }
+        } else {
+
+        }?>
+    </table>
+</div>

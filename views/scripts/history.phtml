@@ -1,0 +1,109 @@
+<?php
+$auth = Zend_Auth::getInstance();
+if ($auth->getStorage()->read() != null):
+    $id = $auth->getStorage()->read()->id;
+    $sort = $this->sort['sortField'];
+    $type_sort_current = $this->sort['sortType'];
+    $type_sort = $this->sort['type'];
+    $icon_sort = 'sort_down.png';
+    ?>
+        <div class="big-inner">
+            <?php
+            $msg_success = Zend_Registry::getInstance()->session->success->pickup;
+            $msg_error = Zend_Registry::getInstance()->session->error->pickup;
+            if ($msg_success) {
+                ?>
+                <span id="message"><p class="alert alert-success"><?php echo $msg_success['message']; ?></p></span>
+
+                <?php
+                Zend_Registry::getInstance()->session->success->pickup = '';
+            }
+            if ($msg_error) {
+                ?>
+                <span id="message"><p class="alert alert-error"><?php echo $msg_error['message']; ?></p></span>
+
+                <?php
+                Zend_Registry::getInstance()->session->error->pickup = '';
+            }
+            ?>
+            <span id="alert_changed" class="alert-danger"></span>
+            <input type="hidden" value="1" id="check_status"/>
+            <h1 class="title-inner">View History</h1>
+            <?php echo $this->render('common/form_search.phtml'); ?>
+            <div class="view-booking-table">
+                <div class="table-wrapper">
+            <?php
+                if (count($this->pickups) > 0) {
+                ?>
+                <table cellpadding="0" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <?php
+                        $dataHeadTitle = $this->dataHeadTitle;
+                        foreach ($dataHeadTitle as $data) {
+                            ?>
+                            <th><?php
+                                echo $this->escape($data['title']);
+                                $sort_data['sortType'] = $sort == $data['sort_field'] ? $type_sort : 'ASC';
+                                $sort_data['sortField'] = $data['sort_field'];
+                                $data_Sort = $this->buildParams(1, $sort_data, $this->dataParams);
+                                ?>
+                                <a href="
+                                <?php echo $this->buildUrl($data_Sort);?>">
+                                    <?php
+                                    if ($sort) {
+                                        if ($sort) {
+                                            $icon_sort = $this->buildIcon($sort, $type_sort_current, $data['sort_field']);
+                                        }
+                                    }
+                                    ?>
+                                    <img
+                                        src="<?php echo BASE_URL . UDS . 'static' . UDS . 'images' . UDS . $icon_sort; ?>"
+                                        alt="<?php echo $icon_sort ?>">
+                                </a>
+                            </th>
+                        <?php
+                        }
+                        ?>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                        $i = 1;
+                        foreach ($this->pickups as $pickup) {
+                            $pickup = new Base_Php_Overloader($pickup);
+                            ?>
+                            <tr onclick="PickupController.view(<?php echo $this->escape($pickup->id) ?>)" id="item<?php echo $this->escape($pickup->id) ?>">
+                                <input type="hidden" name="pickup[]" value="<?php echo $this->escape($pickup->id) ?>"/>
+                                <input type="hidden" name="status[]" value="<?php echo $this->escape($pickup->status) ?>"/>
+                                <td><?php echo $this->escape($pickup->id) ?></td>
+                                <td><?php echo date("d-M", strtotime($this->escape($this->escape($pickup->created)))) ?></td>
+                                <td><?php echo $this->escape($pickup->from_address) ?></td>
+                                <td><?php echo $this->escape($pickup->to_address) ?></td>
+                                <td><?php echo $this->escape(Pickup_Constant_Server::$_STATUS[$pickup->status]) ?></td>
+                            </tr>
+                        <?php
+                        }
+                        ?>
+                        <input type="hidden" value="<?php echo $i - 1; ?><!--" id="total-list"/>
+                    </tbody>
+                </table>
+                    <?php
+                    }else{
+                        ?>
+                    <p class="no-result-search a-center a-center" >No results found</p>
+                    <?php
+                    }?>
+            </div>
+                <div class="paging">
+                    <?php echo $this->paginationControl($this->pickups,
+                        'Sliding',
+                        'pagination.phtml', array('sort' => $this->sort,
+                            'filter' => $this->dataParams)); ?>
+                </div>
+            </div>
+            <?php echo $this->render('pickup/customer_view.phtml'); ?>
+            <?php echo $this->render('pickup/rate_customer.phtml'); ?>
+            <?php echo $this->render('pickup/rate_courier.phtml'); ?>
+        </div>
+<?php endif; ?>

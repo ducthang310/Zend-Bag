@@ -1,0 +1,41 @@
+
+    <form action="" method="post" accept-charset="utf-8">
+            <div class="inner signin-inner">
+                <div>
+                    <ul class="form-list">
+                        <li>
+                            <div class="title"><label>Email</label></div>
+                            <div class="input-wrapper">
+                                <input type="email" name="email" id="email" class="input-text" value="" onchange="ValidateController.check(this.id,'email',this.value,'login')">
+                                <span style="display: none" class="validate validate-error">Oops. Looks like there is a problem with your email, please check it and try again.</span>
+                                <span class="required pseudo"></span>
+                            </div>
+
+                        </li>
+                        <li class="button-sets">
+                            <div class="button-set">
+                                <button type="submit" name="login" class="button signin-button"><span>Send Password</span></button>
+                            </div>
+                        </li>
+                        <li class="link">
+                            <p><a href="<?php echo $this->baseUrl(); ?>/<?php echo $this->moduleName; ?>/index/login" title="">Login page</a></p>
+
+                        </li>
+                    </ul>
+                </div>
+                <?php if ($this->error): ?>
+                    <p class="alert alert-danger"><?php echo $this->error; ?></p>
+                <?php endif; ?>
+
+                <?php if ( Zend_Registry::getInstance()->session->forgot->success): ?>
+                    <p class="alert alert-success"><?php echo  Zend_Registry::getInstance()->session->forgot->success; ?></p>
+                <?php endif; ?>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <?php
+        if(Zend_Registry::getInstance()->session->forgot->success){
+            unset(Zend_Registry::getInstance()->session->forgot->success);
+        }
+        ?>
+</form>

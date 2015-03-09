@@ -1,0 +1,52 @@
+<form action="" method="post" accept-charset="utf-8">
+            <div class="inner signin-inner">
+                <div>
+                    <ul class="form-list">
+                        <li>
+                            <div class="title"><label>Email</label></div>
+                            <div class="input-wrapper">
+                                <input id="email" type="email" onchange="ValidateController.check(this.id,'email',this.value,'')" name="email" class="input-text"
+                                       value="<?php if($this->email){echo $this->email;}?>">
+                                <span style="display: none" class="validate validate-error">Oops. Looks like there is a problem with your email, please check it and try again.</span>
+                                <span class="required pseudo"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title"><label>Password</label></div>
+                            <div class="input-wrapper">
+                                <input id="password" type="password" onchange="ValidateController.check(this.id,'password',this.value,'')" name="password" class="input-text" >
+                                <span style="display: none" class="validate validate-error">Password must be at least 8 characters.</span>
+                                <span class="required pseudo"></span>
+                            </div>
+                        </li>
+                        <li class="control remember">
+                            <input class="checkbox" type="checkbox" name="remember" id="remember" value="1">
+                            <label for="remember">Remember Me</label>
+                        </li>
+                        <li class="button-sets">
+                            <div class="button-set">
+                                <button type="submit" name="login" class="button signin-button"><span>Sign In</span></button>
+                            </div>
+                        </li>
+                        <li class="link">
+                            <p><a href="<?php echo $this->baseUrl(); ?>/<?php echo $this->moduleName; ?>/index/forgot" title="">Forgotten Password?</a></p>
+
+                        </li>
+                    </ul>
+                </div>
+                <?php if ($this->success): ?>
+                    <p class="alert alert-danger"><?php echo $this->success; ?></p>
+                <?php endif; ?>
+                <?php if ($this->existEmail): ?>
+                    <p class="alert alert-danger"><?php echo $this->existEmail; ?></p>
+                <?php endif; ?>
+                <?php if ($this->error): ?>
+                    <p class="alert alert-danger"><?php echo $this->error; ?></p>
+                <?php endif; ?>
+                <?php if ($this->count_fail): ?>
+                    <p class="alert alert-danger"><?php echo $this->count_fail; ?></p>
+                <?php endif; ?>
+            </div>
+        </div>
+        <div class="clear"></div>
+</form>

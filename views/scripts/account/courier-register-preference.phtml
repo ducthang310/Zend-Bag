@@ -1,0 +1,156 @@
+<div class="title-formlist hide-md">Preferences</div>
+<?php
+if ((int)Zend_Registry::getInstance()->session->courierRegister->step >= Courier_RegisterController::$preferences):
+    $preferences = Zend_Registry::getInstance()->session->courierRegister->preferences_temp;
+    $subId = $preferences['preferred_pickup_suburb_ids'];
+    $devSubs = $preferences['preferred_delivery_suburb_ids'];
+    $preferences = new Base_Php_Overloader($preferences);
+?>
+<div class="tab-content <?php if ($this->active == 'preferences') echo 'active'; ?>" id="cpreferences-content">
+    <form action="<?php echo $this->baseUrl(); ?>/<?php echo $this->moduleName; ?>/register/preferences" method="post"
+          accept-charset="utf-8" enctype="multipart/form-data">
+        <ul class="form-list">
+            <li>
+                <div class="title">
+                    <label>Preferred SERVICE Region<i class="question"></i></label>
+
+                    <div class="label-content">
+                        <label>Preferred SERVICE Region<i class="question"></i></label>
+                        <p><?php echo $this->escape($this->getIntro('preferred_region','registration','courier_preferences')); ?></p>
+                    </div>
+                </div>
+                <div class="input-wrapper">
+                    <select name="preferred_region" id="preferred_region" onchange="AjaxController.getSurbub(this.value,'#pickup_suburb_box','preferred_pickup_suburb_ids');AjaxController.getSurbub(this.value,'#delivery_suburb_box','preferred_delivery_suburb_ids')">
+                        <option value="">-- Please Select --</option>
+                        <?php foreach($this->regions as $region): ?>
+                                <option value="<?php echo $region["region"]; ?>"
+                                    <?php echo ($preferences && $preferences->preferred_region == $region["region"]) ? 'selected = "selected"': '' ; ?>  >
+                                    <?php echo $region["region"]; ?>
+                                </option>
+                            <?php
+                            endforeach;
+                        ?>
+                    </select>
+                    <span style="z-index:999;display: none" class="validate validate-error">You must enter Service Region</span>
+                    <span class="required pseudo"></span>
+                </div>
+            </li>
+            <li style="display: none" class="service-area">
+                <div class="title">
+                    <label>Preferred SERVICE Area</label>
+
+                    <div class="label-content">
+                        <label>Preferred SERVICE Area<i class="question"></i></label>
+                        <p><?php echo $this->escape($this->getIntro('preferred_region','registration','courier_preferences')); ?></p>
+                    </div>
+                </div>
+                <div class="input-wrapper">
+                    <?php $serviceArea = Courier_Constant_Server::$_AREA;
+                    foreach($serviceArea as $key => $value){ ?>
+
+                        <input type="radio" name="preference_area" id="<?php echo strtolower($this->escape($key)) ?>"
+                               value="<?php echo $this->escape($value['value']) ?>"
+                            <?php
+                            if($preferences && $value['value'] == $preferences->preference_area ){
+                                echo "checked=checked";
+                            }elseif(!$preferences && $value['value'] == Courier_Constant_Server::ALL_AREA){
+                                echo "checked";
+                            }
+                            ?>
+                            />
+                        <label for="preference_area"><?php echo $this->escape($value['label']) ?></label></br>
+                    <?php     }
+                    ?>
+                </div>
+            </li>
+            <li style="display: none" class="pickup-suburbs">
+                <div class="title">
+                    <label>Preferred Pick UP Suburbs<i class="question"></i></label>
+
+                    <div class="label-content">
+                        <label>Address<i class="question"></i></label>
+
+                        <p><?php echo $this->escape($this->getIntro('preferred_pickup_suburb_ids','registration','courier_preferences')); ?></p>
+                    </div>
+                </div>
+                <div class="input-wrapper address-list">
+                    <div class="parent-add">
+                        <input id="pickup_suburb" type="checkbox" value="" onClick=""/>
+                        <span class="required pseudo"></span>
+                        <span style="display: none" class="validate validate-error">You must select Pick UP Suburbs</span>
+                        <label for="pickup_suburb" class="suburb_box_label"><?php echo ($preferences->preferred_region)?'Select all':'--Please Select Region--' ?></label>
+                    </div>
+                    <ul id="pickup_suburb_box">
+                        <?php
+                        if($preferences){
+                            $suburbs = Configuration_Model_DbTable_Suburb::getInstance()->getSuburbByRegion($preferences->preferred_region);
+                        }else{
+                            $suburbs = $this->suburbs;
+                        }
+
+                        if($preferences):
+                            foreach ($suburbs as $suburb) {
+                                ?>
+                                <li>
+                                    <input id="pickup_suburb<?php echo $suburb['id']; ?>" class="pickup_suburb"
+                                        <?php if(is_array($subId)) foreach($subId as $id){
+                                            echo ($id == $suburb['id']) ? 'checked="checked"' : '';
+                                        } ?>
+                                           name="preferred_pickup_suburb_ids[]" type="checkbox" value="<?php echo $suburb['id']; ?>"/>
+                                    <label for="pickup_suburb<?php echo $suburb['id']; ?>"><?php echo $this->escape($suburb['suburb']); ?></label>
+                                </li>
+                            <?php }
+                        endif;
+                        ?>
+                    </ul>
+                </div>
+            </li>
+            <li style="display: none" class="delivery-suburbs">
+                <div class="title">
+                    <label>Preferred Delivery Suburbs<i class="question"></i></label>
+
+                    <div class="label-content">
+                        <label>Suburbs<i class="question"></i></label>
+
+                        <p><?php echo $this->escape($this->getIntro('preferred_delivery_suburb_ids','registration','courier_preferences')); ?></p>
+                    </div>
+                </div>
+                <div class="input-wrapper address-list">
+                    <div class="parent-add">
+                        <input id="delivery_suburb" type="checkbox" value=""/>
+                        <span style="display: none" class="validate validate-error">You must select Delivery Suburbs</span>
+                        <span class="required pseudo"></span>
+                        <label for="delivery_suburb" class="suburb_box_label"><?php echo ($preferences->preferred_region)?'Select all':'--Please Select Region--' ?></label>
+                    </div>
+                    <ul id="delivery_suburb_box">
+                        <?php
+                        if ($preferences):
+                            foreach ($suburbs as $suburb) {
+                                ?>
+                                <li>
+                                    <input id="delivery_suburb<?php echo $suburb['id']; ?>" class="delivery_suburb"
+                                        <?php if(is_array($devSubs)) foreach ($devSubs as $devSubId) {
+                                            echo ($devSubId == $suburb['id']) ? 'checked="checked"' : '';
+                                        } ?>
+                                           name="preferred_delivery_suburb_ids[]" type="checkbox"
+                                           value="<?php echo $suburb['id']; ?>"/>
+                                    <label for="delivery_suburb<?php echo $suburb['id']; ?>"><?php echo $this->escape($suburb['suburb']); ?></label>
+                                </li>
+                            <?php }
+                        endif;
+                        ?>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="button-set">
+                    <button type="submit" value="1" name="register_preferences" class="button register-button"><span>Register</span>
+                    </button>
+                </div>
+            </li>
+        </ul>
+    </form>
+</div>
+</div>
+<?php endif; ?>
+<div class="clear"></div>

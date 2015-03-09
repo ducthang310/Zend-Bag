@@ -1,0 +1,31 @@
+<?php  $status = Courier_Constant_Server::$_STATUS; ?>
+<form id="search_form" method="get" action="<?php echo BASE_URL . $this->url(); ?>">
+    <ul class="form-list">
+        <li>
+            <label>Email </label>
+            <input class="input-text" id="app_email" type="text"
+                   value="<?php echo (isset($this->dataParams['search']['field']['app_email'])) ? $this->dataParams['search']['field']['app_email'] : '' ?>"
+                   name="search[field][app_email]" placeholder="App Email"/>
+        </li>
+        <li>
+             <div class="left input-wrapper">
+        <label>Search Contact Name</label>
+            <input class="input-text" id="customer.search_name"
+                   value="<?php echo (isset($this->dataParams['search']['field']['customer.search_name'])) ? $this->dataParams['search']['field']['customer.search_name'] : '' ?>"
+                   type="text" name="search[field][customer.search_name]" placeholder="Search contact name"/>
+     </div>
+            <div class="right input-wrapper">
+                <label>Search Mobile No</label>
+                <input class="input-text" id="mobile"
+                       value="<?php echo (isset($this->dataParams['search']['field']['mobile'])) ? $this->dataParams['search']['field']['mobile'] : '' ?>"
+                       type="text" name="search[field][mobile]" placeholder="Search Mobile"/>
+            </div>
+      <div class="clear"></div>
+          
+        </li>
+        <li>
+            <input type="hidden" name="page" value="<?php echo $this->dataParams['page']; ?>">
+            <input type="submit" value="Search" name="btn_submit" class="button">
+        </li>
+    </ul>
+</form>

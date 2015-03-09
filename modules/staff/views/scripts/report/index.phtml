@@ -1,0 +1,133 @@
+	<div class="main">
+			<div class="big-inner reporting-dashboard">
+				<table width="100%" cellspacing="0" cellpadding="0">
+					<caption style="font-size: 24px">Today</caption>
+					<thead>
+						<tr>
+							<th>New Orders</th>
+							<th>Fullfilled Orders</th>
+							<th>Unfullfilled Orders</th>
+							<th>Cancelled Orders</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><?php if($this->newOrderDay){echo $this->newOrderDay;}else{echo "0";}?></td>
+							<td><?php if($this->fullFillDay){echo $this->fullFillDay;}else{echo "0";}?></td>
+							<td><?php if($this->unFullFillDay){echo $this->unFullFillDay;}else{echo "0";}?></td>
+							<td><?php if($this->cancelleDay){echo $this->cancelleDay;}else{echo "0";}?></td>
+						</tr>
+					</tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="4">
+                            <form action="/staff/report/export">
+                                <div class="button-set">
+                                    <input type="hidden" name="period" value="day" />
+                                    <button name="exportcsv" type="submit" class="button register-button hide-xs export-csv"><span>Export CSV for today</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </td>
+                    </tr>
+                    </tfoot>
+				</table>
+				<table width="100%" cellspacing="0" cellpadding="0">
+                    <caption style="font-size: 24px">This Week</caption>
+					<thead>
+						<tr>
+							<th>New Orders</th>
+							<th>Fullfilled Orders</th>
+							<th>Unfullfilled Orders</th>
+							<th>Cancelled Orders</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+                            <td><?php if($this->newOrderW){echo $this->newOrderW;}else{echo "0";}?></td>
+                            <td><?php if($this->fullFillW){echo $this->fullFillW;}else{echo "0";}?></td>
+                            <td><?php if($this->unFullFillW){echo $this->unFullFillW;}else{echo "0";}?></td>
+                            <td><?php if($this->cancelleW){echo $this->cancelleW;}else{echo "0";}?></td>
+						</tr>
+					</tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="4">
+                            <form action="/staff/report/export">
+                                <div class="button-set">
+                                    <input type="hidden" name="period" value="week" />
+                                    <button name="exportcsv" type="submit" class="button register-button hide-xs export-csv"><span>Export CSV for this week</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </td>
+                    </tr>
+                    </tfoot>
+				</table>
+				<table width="100%" cellspacing="0" cellpadding="0">
+                    <caption style="font-size: 24px">This Month</caption>
+					<thead>
+						<tr>
+							<th>New Orders</th>
+							<th>Fullfilled Orders</th>
+							<th>Unfullfilled Orders</th>
+							<th>Cancelled Orders</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+                            <td><?php if($this->newOrderMon){echo $this->newOrderMon;}else{echo "0";}?></td>
+                            <td><?php if($this->fullFillMon){echo $this->fullFillMon;}else{echo "0";}?></td>
+                            <td><?php if($this->unFullFillMon){echo $this->unFullFillMon;}else{echo "0";}?></td>
+                            <td><?php if($this->cancelleMon){echo $this->cancelleMon;}else{echo "0";}?></td>
+						</tr>
+					</tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="4">
+                            <form action="/staff/report/export">
+                                <div class="button-set">
+                                    <input type="hidden" name="period" value="month" />
+                                    <button name="exportcsv" type="submit" class="button register-button hide-xs export-csv"><span>Export CSV for this month</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </td>
+                    </tr>
+                    </tfoot>
+				</table>
+				<table width="100%" cellspacing="0" cellpadding="0">
+                    <caption style="font-size: 24px">This Year</caption>
+					<thead>
+						<tr>
+							<th>New Orders</th>
+							<th>Fullfilled Orders</th>
+							<th>Unfullfilled Orders</th>
+							<th>Cancelled Orders</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+                            <td><?php if($this->newOrderY){echo $this->newOrderY;}else{echo "0";}?></td>
+                            <td><?php if($this->fullFillY){echo $this->fullFillY;}else{echo "0";}?></td>
+                            <td><?php if($this->unFullFillY){echo $this->unFullFillY;}else{echo "0";}?></td>
+                            <td><?php if($this->cancelleY){echo $this->cancelleY;}else{echo "0";}?></td>
+						</tr>
+					</tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="4">
+                            <form action="/staff/report/export">
+                                <div class="button-set">
+                                    <input type="hidden" name="period" value="year" />
+                                    <button name="exportcsv" type="submit" class="button register-button hide-xs export-csv"><span>Export CSV for this year</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </td>
+                    </tr>
+                    </tfoot>
+				</table>
+			</div>
+			<div class="clear"></div>
+	</div>

@@ -1,0 +1,57 @@
+<div class="inner">
+    <?php
+    $msg_success = Zend_Registry::getInstance()->session->success->region;
+    $msg_error = Zend_Registry::getInstance()->session->error->region;
+    if ($msg_success) {
+        ?>
+        <p class="alert alert-success"><?php echo $msg_success['message']; ?></p>
+        <?php
+        Zend_Registry::getInstance()->session->success->rating = '';
+    } elseif ($msg_error) {
+        ?>
+        <p class="alert alert-error"><?php echo $msg_error['message']; ?></p>
+        <?php
+        Zend_Registry::getInstance()->session->error->region = '';
+    }
+    ?>
+    <h3>Create New Region</h3>
+
+    <p>&nbsp;</p>
+
+    <form method="post" action="<?php echo BASE_URL; ?>/configuration/region/add" role="form">
+        <ul class="form-list">
+            <li>
+                <label>Country</label>
+                <select name="country">
+                    <?php
+                    foreach ($this->configdata as $value): ?>
+                        <option value="<?php echo $value ?>"><?php echo $value ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </li>
+            <li>
+                <label>State</label>
+                <input class="input-text" type="text" value="" name="state" maxlength="7"/>
+            </li>
+            <li>
+                <label>Region</label>
+                <input class="input-text" type="text" value="" name="region" maxlength="255"/>
+            </li>
+            <li>
+                <label>Suburb</label>
+                <input class="input-text" type="text" value="" name="suburb" maxlength="255"/>
+            </li>
+            <li>
+                <label>Postcode</label>
+                <input class="input-text" type="text" pattern="\d*" value="" name="postcode" maxlength="5"/>
+            </li>
+            <li>
+                <div class="button-sets">
+                    <button type="submit" class="button button-two" id="add" name="add" value="add"><span>ADD</span> </button>
+                    <button class="button button-two" name="cancel" id="cancel" value="cancel"><span>CANCEL</span></button>
+                </div>
+            </li>
+        </ul>
+    </form>
+</div>
+<div class="clear"></div>

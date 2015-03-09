@@ -1,0 +1,126 @@
+<div class="form-list make-booking-inner" id="list_make">
+
+<?php
+$auth = Zend_Auth::getInstance();
+if ($auth->getStorage()->read() != null):
+    $user = $auth->getStorage()->read();
+    $userDetail = $auth->getStorage()->read()->detail;
+    $profile = $this->staff ;
+    ?>
+    <div class="inner register-inner">
+        <?php
+        $result_e = Zend_Registry::getInstance()->session->success->updateprofile;
+        if ($result_e) {
+            ?>
+            <span id="message"><p class="alert alert-success"><?php echo $result_e['message']; ?></span>
+            <?php
+            unset(Zend_Registry::getInstance()->session->success->updateprofile);
+        }
+        ?>
+        <div class="title-formlist hide-md active">Company Details</div>
+        <div class="tab-content active" id="company-detail-content">
+            <form action="<?php echo BASE_URL ?>/staff/profile/update" method="post">
+                <ul class="form-list">
+                    <li>
+                        <div class="title"><label>App Email</label>
+                            <div class="label-content">
+                                <label>App Email<i class="question"></i></label>
+                                <p>App Email Login</p>
+                            </div>
+                        </div>
+                        <div class="input-wrapper"><?php echo $user->app_email; ?>
+                        <span style="display: none"
+                              class="validate validate-error">We’re Sorry, that email is taken</span>
+                        </div>
+                    </li>
+                    <?php
+                    $result = Zend_Registry::getInstance()->session->error->updateprofile;?>
+                    <li>
+                        <div class="title"><label>Contact Email<i class="question"></i></label>
+
+                            <div class="label-content">
+                                <label>Contact Email<i class="question"></i></label>
+                                <p>Contact Email</p>
+                            </div>
+                        </div>
+                        <div class="input-wrapper"><input type="email" name="email" id="email" class="input-text" value="<?php if($profile['email'] ){echo $profile['email'];}; ?>" required
+                                                          onblur="ValidateController.check(this.id,'email',this.value,'dri')"
+                                                          placeholder="">
+                            <?php  if ($result) { ?>
+                            <span style="display: block"
+                                  class="validate validate-error"><?php echo $result['message'] ?></span>
+                            <?php
+                                Zend_Registry::getInstance()->session->error->updateprofile = '';
+                            }else{ ?>
+                                <span style="display: none"
+                                      class="validate validate-error"></span>
+                           <?php } ?>
+                            <span class="required pseudo"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title"><label>Role</label>
+
+                            <div class="label-content">
+                                <label>Role<i class="question"></i></label>
+                                <p>Role</p>
+                            </div>
+                        </div>
+                        <div class="input-wrapper"><?php if($userDetail->role == Auth_Constant_Server::SUPER_ADMIN){
+                                echo Auth_Constant_Server::getSuperAdmin($userDetail->role);
+                            }else{
+                                echo Auth_Constant_Server::getLabelRoleByKey($userDetail->role);
+                            }; ?>
+                        <span style="display: none"
+                              class="validate validate-error">We’re Sorry, that email is taken</span>
+
+                        </div>
+                    </li>
+                    <?php if($userDetail->role == Auth_Constant_Server::LOCAL_AREA_STAFF || $userDetail->role == Auth_Constant_Server::LOCAL_AREA_ADMIN){ ?>
+                    <li>
+                        <div class="title"><label>Manage Area</label>
+
+                            <div class="label-content">
+                                <label>Manage Area<i class="question"></i></label>
+
+                                <p>Manage Area</p>
+                            </div>
+                        </div>
+                        <div class="input-wrapper address-list">
+                            <?php foreach ($profile['area_ids'] as $key => $value) { ?>
+                                <p><?php echo $value['suburb']; ?></p>
+                            <?php } ?>
+                        </div>
+                    </li>
+                    <?php } ?>
+                    <li>
+                        <div class="title"><label>Password<i class="question"></i></label>
+                            <div class="label-content">
+                                <label>Password<i class="question"></i></label>
+                                <p>Password</p>
+                            </div>
+                        </div>
+                        <div class="input-wrapper"><input type="password" id="app_password" name="app_password" class="input-text" value=""
+                                                          placeholder="">
+                            <span style="display: none"
+                                  class="validate validate-error"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="button-set">
+                            <button name="update" type="submit" class="button register-button"><span>Save</span>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+    <div class="clear"></div>
+<?php endif; ?>
+</div>
+    <script type="text/javascript">
+    $(".validate-error").click(function(){
+        $(this).hide();
+    });
+</script>
