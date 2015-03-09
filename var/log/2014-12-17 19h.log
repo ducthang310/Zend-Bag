@@ -1,0 +1,1989 @@
+﻿<h1>An error occurred</h1>
+<h2>Page not found</h2>
+The error is logged. Please come back later.
+<h3>Exception information:</h3>
+<p>
+    <b>Message:</b> Invalid controller specified (images)</p>
+
+<h3>Stack trace:</h3>
+<pre>#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}</pre>
+
+<h3>Request Parameters:</h3>
+<pre>array (
+  'controller' => 'images',
+  'action' => 'logo-mobile.png',
+  'module' => 'home',
+)</pre>
+<h3>Server information:</h3>
+<p>
+<pre>array (
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_REDIRECT_STATUS' => '200',
+  'REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_STATUS' => '200',
+  'HTTP_APPLICATION_ENV' => 'development',
+  'HTTP_PROJECT_HOST' => 'bag.local',
+  'HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'HTTP_HOST' => 'bag.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://bag.local/staff/history?search%5Bfield%5D%5Bdestination%5D=&search%5Bdate%5D%5Bdate_from%5D=&search%5Bdate%5D%5Bdate_to%5D=&search%5Bfield%5D%5Bpickup.id%5D=&search%5Bfield%5D%5Bcourier.search_name%5D=&search%5Bfield%5D%5Bpickup.status%5D=4&search%5Bfield%5D%5Bcustomer.search_name%5D=&page=1&btn_submit=Search',
+  'HTTP_COOKIE' => 'b6589fc6ab0dc82cf12099d1c2d40ab994e8410c=63gt559s72mafm4aejcka2jpv3',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;D:\\server\\mysql\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;D:\\server\\apache\\bin;D:\\server\\php;D:\\server\\mysql\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache/2.2.19 (Win32) mod_ssl/2.2.19 OpenSSL/0.9.8r PHP/5.4.35',
+  'SERVER_NAME' => 'bag.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/project/bag',
+  'SERVER_ADMIN' => 'admin@pc87.com',
+  'SCRIPT_FILENAME' => 'D:/project/bag/core/public/index.php',
+  'REMOTE_PORT' => '59470',
+  'REDIRECT_URL' => '/core/public/images/logo-mobile.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/images/logo-mobile.png',
+  'SCRIPT_NAME' => '/core/public/index.php',
+  'PHP_SELF' => '/core/public/index.php',
+  'REQUEST_TIME_FLOAT' => 1418803465.1040001,
+  'REQUEST_TIME' => 1418803465,
+)</pre></p>﻿Invalid controller specified (images)#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}﻿<h1>An error occurred</h1>
+<h2>Page not found</h2>
+The error is logged. Please come back later.
+<h3>Exception information:</h3>
+<p>
+    <b>Message:</b> Invalid controller specified (images)</p>
+
+<h3>Stack trace:</h3>
+<pre>#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}</pre>
+
+<h3>Request Parameters:</h3>
+<pre>array (
+  'controller' => 'images',
+  'action' => 'logo-mobile.png',
+  'module' => 'home',
+)</pre>
+<h3>Server information:</h3>
+<p>
+<pre>array (
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_REDIRECT_STATUS' => '200',
+  'REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_STATUS' => '200',
+  'HTTP_APPLICATION_ENV' => 'development',
+  'HTTP_PROJECT_HOST' => 'bag.local',
+  'HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'HTTP_HOST' => 'bag.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://bag.local/staff/history?search%5Bfield%5D%5Bdestination%5D=&search%5Bdate%5D%5Bdate_from%5D=&search%5Bdate%5D%5Bdate_to%5D=&search%5Bfield%5D%5Bpickup.id%5D=&search%5Bfield%5D%5Bcourier.search_name%5D=&search%5Bfield%5D%5Bpickup.status%5D=4&search%5Bfield%5D%5Bcustomer.search_name%5D=&page=1&btn_submit=Search',
+  'HTTP_COOKIE' => 'b6589fc6ab0dc82cf12099d1c2d40ab994e8410c=63gt559s72mafm4aejcka2jpv3',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;D:\\server\\mysql\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;D:\\server\\apache\\bin;D:\\server\\php;D:\\server\\mysql\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache/2.2.19 (Win32) mod_ssl/2.2.19 OpenSSL/0.9.8r PHP/5.4.35',
+  'SERVER_NAME' => 'bag.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/project/bag',
+  'SERVER_ADMIN' => 'admin@pc87.com',
+  'SCRIPT_FILENAME' => 'D:/project/bag/core/public/index.php',
+  'REMOTE_PORT' => '59546',
+  'REDIRECT_URL' => '/core/public/images/logo-mobile.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/images/logo-mobile.png',
+  'SCRIPT_NAME' => '/core/public/index.php',
+  'PHP_SELF' => '/core/public/index.php',
+  'REQUEST_TIME_FLOAT' => 1418803488.654,
+  'REQUEST_TIME' => 1418803488,
+)</pre></p>﻿Invalid controller specified (images)#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}﻿<h1>An error occurred</h1>
+<h2>Page not found</h2>
+The error is logged. Please come back later.
+<h3>Exception information:</h3>
+<p>
+    <b>Message:</b> Invalid controller specified (images)</p>
+
+<h3>Stack trace:</h3>
+<pre>#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}</pre>
+
+<h3>Request Parameters:</h3>
+<pre>array (
+  'controller' => 'images',
+  'action' => 'logo-mobile.png',
+  'module' => 'home',
+)</pre>
+<h3>Server information:</h3>
+<p>
+<pre>array (
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_REDIRECT_STATUS' => '200',
+  'REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_STATUS' => '200',
+  'HTTP_APPLICATION_ENV' => 'development',
+  'HTTP_PROJECT_HOST' => 'bag.local',
+  'HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'HTTP_HOST' => 'bag.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://bag.local/staff/history?search%5Bfield%5D%5Bdestination%5D=&search%5Bdate%5D%5Bdate_from%5D=&search%5Bdate%5D%5Bdate_to%5D=&search%5Bfield%5D%5Bpickup.id%5D=&search%5Bfield%5D%5Bcourier.search_name%5D=&search%5Bfield%5D%5Bpickup.status%5D=4&search%5Bfield%5D%5Bcustomer.search_name%5D=&page=1&btn_submit=Search',
+  'HTTP_COOKIE' => 'b6589fc6ab0dc82cf12099d1c2d40ab994e8410c=63gt559s72mafm4aejcka2jpv3',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;D:\\server\\mysql\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;D:\\server\\apache\\bin;D:\\server\\php;D:\\server\\mysql\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache/2.2.19 (Win32) mod_ssl/2.2.19 OpenSSL/0.9.8r PHP/5.4.35',
+  'SERVER_NAME' => 'bag.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/project/bag',
+  'SERVER_ADMIN' => 'admin@pc87.com',
+  'SCRIPT_FILENAME' => 'D:/project/bag/core/public/index.php',
+  'REMOTE_PORT' => '59558',
+  'REDIRECT_URL' => '/core/public/images/logo-mobile.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/images/logo-mobile.png',
+  'SCRIPT_NAME' => '/core/public/index.php',
+  'PHP_SELF' => '/core/public/index.php',
+  'REQUEST_TIME_FLOAT' => 1418803509.0350001,
+  'REQUEST_TIME' => 1418803509,
+)</pre></p>﻿Invalid controller specified (images)#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}﻿<h1>An error occurred</h1>
+<h2>Page not found</h2>
+The error is logged. Please come back later.
+<h3>Exception information:</h3>
+<p>
+    <b>Message:</b> Invalid controller specified (images)</p>
+
+<h3>Stack trace:</h3>
+<pre>#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}</pre>
+
+<h3>Request Parameters:</h3>
+<pre>array (
+  'controller' => 'images',
+  'action' => 'logo-mobile.png',
+  'module' => 'home',
+)</pre>
+<h3>Server information:</h3>
+<p>
+<pre>array (
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_REDIRECT_STATUS' => '200',
+  'REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_STATUS' => '200',
+  'HTTP_APPLICATION_ENV' => 'development',
+  'HTTP_PROJECT_HOST' => 'bag.local',
+  'HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'HTTP_HOST' => 'bag.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://bag.local/staff/history?search%5Bfield%5D%5Bdestination%5D=&search%5Bdate%5D%5Bdate_from%5D=&search%5Bdate%5D%5Bdate_to%5D=&search%5Bfield%5D%5Bpickup.id%5D=&search%5Bfield%5D%5Bcourier.search_name%5D=&search%5Bfield%5D%5Bpickup.status%5D=4&search%5Bfield%5D%5Bcustomer.search_name%5D=&page=1&btn_submit=Search',
+  'HTTP_COOKIE' => 'b6589fc6ab0dc82cf12099d1c2d40ab994e8410c=63gt559s72mafm4aejcka2jpv3',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;D:\\server\\mysql\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;D:\\server\\apache\\bin;D:\\server\\php;D:\\server\\mysql\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache/2.2.19 (Win32) mod_ssl/2.2.19 OpenSSL/0.9.8r PHP/5.4.35',
+  'SERVER_NAME' => 'bag.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/project/bag',
+  'SERVER_ADMIN' => 'admin@pc87.com',
+  'SCRIPT_FILENAME' => 'D:/project/bag/core/public/index.php',
+  'REMOTE_PORT' => '59558',
+  'REDIRECT_URL' => '/core/public/images/logo-mobile.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/images/logo-mobile.png',
+  'SCRIPT_NAME' => '/core/public/index.php',
+  'PHP_SELF' => '/core/public/index.php',
+  'REQUEST_TIME_FLOAT' => 1418803511.618,
+  'REQUEST_TIME' => 1418803511,
+)</pre></p>﻿Invalid controller specified (images)#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}﻿<h1>An error occurred</h1>
+<h2>Page not found</h2>
+The error is logged. Please come back later.
+<h3>Exception information:</h3>
+<p>
+    <b>Message:</b> Invalid controller specified (images)</p>
+
+<h3>Stack trace:</h3>
+<pre>#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}</pre>
+
+<h3>Request Parameters:</h3>
+<pre>array (
+  'controller' => 'images',
+  'action' => 'logo-mobile.png',
+  'module' => 'home',
+)</pre>
+<h3>Server information:</h3>
+<p>
+<pre>array (
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_REDIRECT_STATUS' => '200',
+  'REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_STATUS' => '200',
+  'HTTP_APPLICATION_ENV' => 'development',
+  'HTTP_PROJECT_HOST' => 'bag.local',
+  'HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'HTTP_HOST' => 'bag.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://bag.local/staff/history?search%5Bfield%5D%5Bdestination%5D=&search%5Bdate%5D%5Bdate_from%5D=&search%5Bdate%5D%5Bdate_to%5D=&search%5Bfield%5D%5Bpickup.id%5D=&search%5Bfield%5D%5Bcourier.search_name%5D=&search%5Bfield%5D%5Bpickup.status%5D=4&search%5Bfield%5D%5Bcustomer.search_name%5D=&page=1&btn_submit=Search',
+  'HTTP_COOKIE' => 'b6589fc6ab0dc82cf12099d1c2d40ab994e8410c=63gt559s72mafm4aejcka2jpv3',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;D:\\server\\mysql\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;D:\\server\\apache\\bin;D:\\server\\php;D:\\server\\mysql\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache/2.2.19 (Win32) mod_ssl/2.2.19 OpenSSL/0.9.8r PHP/5.4.35',
+  'SERVER_NAME' => 'bag.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/project/bag',
+  'SERVER_ADMIN' => 'admin@pc87.com',
+  'SCRIPT_FILENAME' => 'D:/project/bag/core/public/index.php',
+  'REMOTE_PORT' => '59576',
+  'REDIRECT_URL' => '/core/public/images/logo-mobile.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/images/logo-mobile.png',
+  'SCRIPT_NAME' => '/core/public/index.php',
+  'PHP_SELF' => '/core/public/index.php',
+  'REQUEST_TIME_FLOAT' => 1418803574.9200001,
+  'REQUEST_TIME' => 1418803574,
+)</pre></p>﻿Invalid controller specified (images)#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}﻿<h1>An error occurred</h1>
+<h2>Page not found</h2>
+The error is logged. Please come back later.
+<h3>Exception information:</h3>
+<p>
+    <b>Message:</b> Invalid controller specified (images)</p>
+
+<h3>Stack trace:</h3>
+<pre>#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}</pre>
+
+<h3>Request Parameters:</h3>
+<pre>array (
+  'controller' => 'images',
+  'action' => 'logo-mobile.png',
+  'module' => 'home',
+)</pre>
+<h3>Server information:</h3>
+<p>
+<pre>array (
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_REDIRECT_STATUS' => '200',
+  'REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_STATUS' => '200',
+  'HTTP_APPLICATION_ENV' => 'development',
+  'HTTP_PROJECT_HOST' => 'bag.local',
+  'HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'HTTP_HOST' => 'bag.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://bag.local/staff/history?search%5Bfield%5D%5Bdestination%5D=&search%5Bdate%5D%5Bdate_from%5D=&search%5Bdate%5D%5Bdate_to%5D=&search%5Bfield%5D%5Bpickup.id%5D=&search%5Bfield%5D%5Bcourier.search_name%5D=&search%5Bfield%5D%5Bpickup.status%5D=4&search%5Bfield%5D%5Bcustomer.search_name%5D=&page=1&btn_submit=Search',
+  'HTTP_COOKIE' => 'b6589fc6ab0dc82cf12099d1c2d40ab994e8410c=63gt559s72mafm4aejcka2jpv3',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;D:\\server\\mysql\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;D:\\server\\apache\\bin;D:\\server\\php;D:\\server\\mysql\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache/2.2.19 (Win32) mod_ssl/2.2.19 OpenSSL/0.9.8r PHP/5.4.35',
+  'SERVER_NAME' => 'bag.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/project/bag',
+  'SERVER_ADMIN' => 'admin@pc87.com',
+  'SCRIPT_FILENAME' => 'D:/project/bag/core/public/index.php',
+  'REMOTE_PORT' => '59608',
+  'REDIRECT_URL' => '/core/public/images/logo-mobile.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/images/logo-mobile.png',
+  'SCRIPT_NAME' => '/core/public/index.php',
+  'PHP_SELF' => '/core/public/index.php',
+  'REQUEST_TIME_FLOAT' => 1418803628.448,
+  'REQUEST_TIME' => 1418803628,
+)</pre></p>﻿Invalid controller specified (images)#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}﻿<h1>An error occurred</h1>
+<h2>Page not found</h2>
+The error is logged. Please come back later.
+<h3>Exception information:</h3>
+<p>
+    <b>Message:</b> Invalid controller specified (images)</p>
+
+<h3>Stack trace:</h3>
+<pre>#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}</pre>
+
+<h3>Request Parameters:</h3>
+<pre>array (
+  'controller' => 'images',
+  'action' => 'logo-mobile.png',
+  'module' => 'home',
+)</pre>
+<h3>Server information:</h3>
+<p>
+<pre>array (
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_REDIRECT_STATUS' => '200',
+  'REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_STATUS' => '200',
+  'HTTP_APPLICATION_ENV' => 'development',
+  'HTTP_PROJECT_HOST' => 'bag.local',
+  'HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'HTTP_HOST' => 'bag.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://bag.local/staff/history?search%5Bfield%5D%5Bdestination%5D=&search%5Bdate%5D%5Bdate_from%5D=&search%5Bdate%5D%5Bdate_to%5D=&search%5Bfield%5D%5Bpickup.id%5D=&search%5Bfield%5D%5Bcourier.search_name%5D=&search%5Bfield%5D%5Bpickup.status%5D=4&search%5Bfield%5D%5Bcustomer.search_name%5D=&page=1&btn_submit=Search',
+  'HTTP_COOKIE' => 'b6589fc6ab0dc82cf12099d1c2d40ab994e8410c=63gt559s72mafm4aejcka2jpv3',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;D:\\server\\mysql\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;D:\\server\\apache\\bin;D:\\server\\php;D:\\server\\mysql\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache/2.2.19 (Win32) mod_ssl/2.2.19 OpenSSL/0.9.8r PHP/5.4.35',
+  'SERVER_NAME' => 'bag.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/project/bag',
+  'SERVER_ADMIN' => 'admin@pc87.com',
+  'SCRIPT_FILENAME' => 'D:/project/bag/core/public/index.php',
+  'REMOTE_PORT' => '59617',
+  'REDIRECT_URL' => '/core/public/images/logo-mobile.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/images/logo-mobile.png',
+  'SCRIPT_NAME' => '/core/public/index.php',
+  'PHP_SELF' => '/core/public/index.php',
+  'REQUEST_TIME_FLOAT' => 1418803641.5090001,
+  'REQUEST_TIME' => 1418803641,
+)</pre></p>﻿Invalid controller specified (images)#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}﻿<h1>An error occurred</h1>
+<h2>Page not found</h2>
+The error is logged. Please come back later.
+<h3>Exception information:</h3>
+<p>
+    <b>Message:</b> Invalid controller specified (images)</p>
+
+<h3>Stack trace:</h3>
+<pre>#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}</pre>
+
+<h3>Request Parameters:</h3>
+<pre>array (
+  'controller' => 'images',
+  'action' => 'logo-mobile.png',
+  'module' => 'home',
+)</pre>
+<h3>Server information:</h3>
+<p>
+<pre>array (
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_REDIRECT_STATUS' => '200',
+  'REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_STATUS' => '200',
+  'HTTP_APPLICATION_ENV' => 'development',
+  'HTTP_PROJECT_HOST' => 'bag.local',
+  'HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'HTTP_HOST' => 'bag.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://bag.local/staff/history?search%5Bfield%5D%5Bdestination%5D=&search%5Bdate%5D%5Bdate_from%5D=&search%5Bdate%5D%5Bdate_to%5D=&search%5Bfield%5D%5Bpickup.id%5D=&search%5Bfield%5D%5Bcourier.search_name%5D=&search%5Bfield%5D%5Bpickup.status%5D=4&search%5Bfield%5D%5Bcustomer.search_name%5D=&page=1&btn_submit=Search',
+  'HTTP_COOKIE' => 'b6589fc6ab0dc82cf12099d1c2d40ab994e8410c=63gt559s72mafm4aejcka2jpv3',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;D:\\server\\mysql\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;D:\\server\\apache\\bin;D:\\server\\php;D:\\server\\mysql\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache/2.2.19 (Win32) mod_ssl/2.2.19 OpenSSL/0.9.8r PHP/5.4.35',
+  'SERVER_NAME' => 'bag.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/project/bag',
+  'SERVER_ADMIN' => 'admin@pc87.com',
+  'SCRIPT_FILENAME' => 'D:/project/bag/core/public/index.php',
+  'REMOTE_PORT' => '59627',
+  'REDIRECT_URL' => '/core/public/images/logo-mobile.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/images/logo-mobile.png',
+  'SCRIPT_NAME' => '/core/public/index.php',
+  'PHP_SELF' => '/core/public/index.php',
+  'REQUEST_TIME_FLOAT' => 1418803694.7679999,
+  'REQUEST_TIME' => 1418803694,
+)</pre></p>﻿Invalid controller specified (images)#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}﻿<h1>An error occurred</h1>
+<h2>Page not found</h2>
+The error is logged. Please come back later.
+<h3>Exception information:</h3>
+<p>
+    <b>Message:</b> Invalid controller specified (images)</p>
+
+<h3>Stack trace:</h3>
+<pre>#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}</pre>
+
+<h3>Request Parameters:</h3>
+<pre>array (
+  'controller' => 'images',
+  'action' => 'logo-mobile.png',
+  'module' => 'home',
+)</pre>
+<h3>Server information:</h3>
+<p>
+<pre>array (
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_REDIRECT_STATUS' => '200',
+  'REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_STATUS' => '200',
+  'HTTP_APPLICATION_ENV' => 'development',
+  'HTTP_PROJECT_HOST' => 'bag.local',
+  'HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'HTTP_HOST' => 'bag.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://bag.local/staff/history?search%5Bfield%5D%5Bdestination%5D=&search%5Bdate%5D%5Bdate_from%5D=&search%5Bdate%5D%5Bdate_to%5D=&search%5Bfield%5D%5Bpickup.id%5D=&search%5Bfield%5D%5Bcourier.search_name%5D=&search%5Bfield%5D%5Bpickup.status%5D=4&search%5Bfield%5D%5Bcustomer.search_name%5D=&page=1&btn_submit=Search',
+  'HTTP_COOKIE' => 'b6589fc6ab0dc82cf12099d1c2d40ab994e8410c=63gt559s72mafm4aejcka2jpv3',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;D:\\server\\mysql\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;D:\\server\\apache\\bin;D:\\server\\php;D:\\server\\mysql\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache/2.2.19 (Win32) mod_ssl/2.2.19 OpenSSL/0.9.8r PHP/5.4.35',
+  'SERVER_NAME' => 'bag.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/project/bag',
+  'SERVER_ADMIN' => 'admin@pc87.com',
+  'SCRIPT_FILENAME' => 'D:/project/bag/core/public/index.php',
+  'REMOTE_PORT' => '59627',
+  'REDIRECT_URL' => '/core/public/images/logo-mobile.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/images/logo-mobile.png',
+  'SCRIPT_NAME' => '/core/public/index.php',
+  'PHP_SELF' => '/core/public/index.php',
+  'REQUEST_TIME_FLOAT' => 1418803708.6429999,
+  'REQUEST_TIME' => 1418803708,
+)</pre></p>﻿Invalid controller specified (images)#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}﻿<h1>An error occurred</h1>
+<h2>Page not found</h2>
+The error is logged. Please come back later.
+<h3>Exception information:</h3>
+<p>
+    <b>Message:</b> Invalid controller specified (images)</p>
+
+<h3>Stack trace:</h3>
+<pre>#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}</pre>
+
+<h3>Request Parameters:</h3>
+<pre>array (
+  'controller' => 'images',
+  'action' => 'logo-mobile.png',
+  'module' => 'home',
+)</pre>
+<h3>Server information:</h3>
+<p>
+<pre>array (
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_REDIRECT_STATUS' => '200',
+  'REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_STATUS' => '200',
+  'HTTP_APPLICATION_ENV' => 'development',
+  'HTTP_PROJECT_HOST' => 'bag.local',
+  'HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'HTTP_HOST' => 'bag.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://bag.local/staff/history?search%5Bfield%5D%5Bdestination%5D=&search%5Bdate%5D%5Bdate_from%5D=&search%5Bdate%5D%5Bdate_to%5D=&search%5Bfield%5D%5Bpickup.id%5D=&search%5Bfield%5D%5Bcourier.search_name%5D=&search%5Bfield%5D%5Bpickup.status%5D=4&search%5Bfield%5D%5Bcustomer.search_name%5D=&page=1&btn_submit=Search',
+  'HTTP_COOKIE' => 'b6589fc6ab0dc82cf12099d1c2d40ab994e8410c=63gt559s72mafm4aejcka2jpv3',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;D:\\server\\mysql\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;D:\\server\\apache\\bin;D:\\server\\php;D:\\server\\mysql\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache/2.2.19 (Win32) mod_ssl/2.2.19 OpenSSL/0.9.8r PHP/5.4.35',
+  'SERVER_NAME' => 'bag.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/project/bag',
+  'SERVER_ADMIN' => 'admin@pc87.com',
+  'SCRIPT_FILENAME' => 'D:/project/bag/core/public/index.php',
+  'REMOTE_PORT' => '59646',
+  'REDIRECT_URL' => '/core/public/images/logo-mobile.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/images/logo-mobile.png',
+  'SCRIPT_NAME' => '/core/public/index.php',
+  'PHP_SELF' => '/core/public/index.php',
+  'REQUEST_TIME_FLOAT' => 1418803797.043,
+  'REQUEST_TIME' => 1418803797,
+)</pre></p>﻿Invalid controller specified (images)#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}﻿<h1>An error occurred</h1>
+<h2>Page not found</h2>
+The error is logged. Please come back later.
+<h3>Exception information:</h3>
+<p>
+    <b>Message:</b> Invalid controller specified (images)</p>
+
+<h3>Stack trace:</h3>
+<pre>#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}</pre>
+
+<h3>Request Parameters:</h3>
+<pre>array (
+  'controller' => 'images',
+  'action' => 'logo-mobile.png',
+  'module' => 'home',
+)</pre>
+<h3>Server information:</h3>
+<p>
+<pre>array (
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_REDIRECT_STATUS' => '200',
+  'REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_STATUS' => '200',
+  'HTTP_APPLICATION_ENV' => 'development',
+  'HTTP_PROJECT_HOST' => 'bag.local',
+  'HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'HTTP_HOST' => 'bag.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://bag.local/staff/history?search%5Bfield%5D%5Bdestination%5D=&search%5Bdate%5D%5Bdate_from%5D=&search%5Bdate%5D%5Bdate_to%5D=&search%5Bfield%5D%5Bpickup.id%5D=&search%5Bfield%5D%5Bcourier.search_name%5D=&search%5Bfield%5D%5Bpickup.status%5D=4&search%5Bfield%5D%5Bcustomer.search_name%5D=&page=1&btn_submit=Search',
+  'HTTP_COOKIE' => 'b6589fc6ab0dc82cf12099d1c2d40ab994e8410c=63gt559s72mafm4aejcka2jpv3',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;D:\\server\\mysql\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;D:\\server\\apache\\bin;D:\\server\\php;D:\\server\\mysql\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache/2.2.19 (Win32) mod_ssl/2.2.19 OpenSSL/0.9.8r PHP/5.4.35',
+  'SERVER_NAME' => 'bag.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/project/bag',
+  'SERVER_ADMIN' => 'admin@pc87.com',
+  'SCRIPT_FILENAME' => 'D:/project/bag/core/public/index.php',
+  'REMOTE_PORT' => '59700',
+  'REDIRECT_URL' => '/core/public/images/logo-mobile.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/images/logo-mobile.png',
+  'SCRIPT_NAME' => '/core/public/index.php',
+  'PHP_SELF' => '/core/public/index.php',
+  'REQUEST_TIME_FLOAT' => 1418804272.244,
+  'REQUEST_TIME' => 1418804272,
+)</pre></p>﻿Invalid controller specified (images)#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}﻿<h1>An error occurred</h1>
+<h2>Page not found</h2>
+The error is logged. Please come back later.
+<h3>Exception information:</h3>
+<p>
+    <b>Message:</b> Invalid controller specified (images)</p>
+
+<h3>Stack trace:</h3>
+<pre>#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}</pre>
+
+<h3>Request Parameters:</h3>
+<pre>array (
+  'controller' => 'images',
+  'action' => 'logo-mobile.png',
+  'module' => 'home',
+)</pre>
+<h3>Server information:</h3>
+<p>
+<pre>array (
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_REDIRECT_STATUS' => '200',
+  'REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_STATUS' => '200',
+  'HTTP_APPLICATION_ENV' => 'development',
+  'HTTP_PROJECT_HOST' => 'bag.local',
+  'HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'HTTP_HOST' => 'bag.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://bag.local/staff/history?search%5Bfield%5D%5Bdestination%5D=&search%5Bdate%5D%5Bdate_from%5D=&search%5Bdate%5D%5Bdate_to%5D=&search%5Bfield%5D%5Bpickup.id%5D=&search%5Bfield%5D%5Bcourier.search_name%5D=&search%5Bfield%5D%5Bpickup.status%5D=4&search%5Bfield%5D%5Bcustomer.search_name%5D=&page=1&btn_submit=Search',
+  'HTTP_COOKIE' => 'b6589fc6ab0dc82cf12099d1c2d40ab994e8410c=63gt559s72mafm4aejcka2jpv3',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;D:\\server\\mysql\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;D:\\server\\apache\\bin;D:\\server\\php;D:\\server\\mysql\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache/2.2.19 (Win32) mod_ssl/2.2.19 OpenSSL/0.9.8r PHP/5.4.35',
+  'SERVER_NAME' => 'bag.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/project/bag',
+  'SERVER_ADMIN' => 'admin@pc87.com',
+  'SCRIPT_FILENAME' => 'D:/project/bag/core/public/index.php',
+  'REMOTE_PORT' => '59709',
+  'REDIRECT_URL' => '/core/public/images/logo-mobile.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/images/logo-mobile.png',
+  'SCRIPT_NAME' => '/core/public/index.php',
+  'PHP_SELF' => '/core/public/index.php',
+  'REQUEST_TIME_FLOAT' => 1418804305.059,
+  'REQUEST_TIME' => 1418804305,
+)</pre></p>﻿Invalid controller specified (images)#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}﻿<h1>An error occurred</h1>
+<h2>Page not found</h2>
+The error is logged. Please come back later.
+<h3>Exception information:</h3>
+<p>
+    <b>Message:</b> Invalid controller specified (images)</p>
+
+<h3>Stack trace:</h3>
+<pre>#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}</pre>
+
+<h3>Request Parameters:</h3>
+<pre>array (
+  'controller' => 'images',
+  'action' => 'logo-mobile.png',
+  'module' => 'home',
+)</pre>
+<h3>Server information:</h3>
+<p>
+<pre>array (
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_REDIRECT_STATUS' => '200',
+  'REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_STATUS' => '200',
+  'HTTP_APPLICATION_ENV' => 'development',
+  'HTTP_PROJECT_HOST' => 'bag.local',
+  'HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'HTTP_HOST' => 'bag.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://bag.local/staff/history?search%5Bfield%5D%5Bdestination%5D=&search%5Bdate%5D%5Bdate_from%5D=&search%5Bdate%5D%5Bdate_to%5D=&search%5Bfield%5D%5Bpickup.id%5D=&search%5Bfield%5D%5Bcourier.search_name%5D=&search%5Bfield%5D%5Bpickup.status%5D=4&search%5Bfield%5D%5Bcustomer.search_name%5D=&page=1&btn_submit=Search',
+  'HTTP_COOKIE' => 'b6589fc6ab0dc82cf12099d1c2d40ab994e8410c=63gt559s72mafm4aejcka2jpv3',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;D:\\server\\mysql\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;D:\\server\\apache\\bin;D:\\server\\php;D:\\server\\mysql\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache/2.2.19 (Win32) mod_ssl/2.2.19 OpenSSL/0.9.8r PHP/5.4.35',
+  'SERVER_NAME' => 'bag.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/project/bag',
+  'SERVER_ADMIN' => 'admin@pc87.com',
+  'SCRIPT_FILENAME' => 'D:/project/bag/core/public/index.php',
+  'REMOTE_PORT' => '59743',
+  'REDIRECT_URL' => '/core/public/images/logo-mobile.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/images/logo-mobile.png',
+  'SCRIPT_NAME' => '/core/public/index.php',
+  'PHP_SELF' => '/core/public/index.php',
+  'REQUEST_TIME_FLOAT' => 1418804417.8340001,
+  'REQUEST_TIME' => 1418804417,
+)</pre></p>﻿Invalid controller specified (images)#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}﻿<h1>An error occurred</h1>
+<h2>Page not found</h2>
+The error is logged. Please come back later.
+<h3>Exception information:</h3>
+<p>
+    <b>Message:</b> Invalid controller specified (images)</p>
+
+<h3>Stack trace:</h3>
+<pre>#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}</pre>
+
+<h3>Request Parameters:</h3>
+<pre>array (
+  'controller' => 'images',
+  'action' => 'logo-mobile.png',
+  'module' => 'home',
+)</pre>
+<h3>Server information:</h3>
+<p>
+<pre>array (
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_REDIRECT_STATUS' => '200',
+  'REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_STATUS' => '200',
+  'HTTP_APPLICATION_ENV' => 'development',
+  'HTTP_PROJECT_HOST' => 'bag.local',
+  'HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'HTTP_HOST' => 'bag.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://bag.local/staff/history?search%5Bfield%5D%5Bdestination%5D=&search%5Bdate%5D%5Bdate_from%5D=&search%5Bdate%5D%5Bdate_to%5D=&search%5Bfield%5D%5Bpickup.id%5D=&search%5Bfield%5D%5Bcourier.search_name%5D=&search%5Bfield%5D%5Bpickup.status%5D=4&search%5Bfield%5D%5Bcustomer.search_name%5D=&page=1&btn_submit=Search',
+  'HTTP_COOKIE' => 'b6589fc6ab0dc82cf12099d1c2d40ab994e8410c=63gt559s72mafm4aejcka2jpv3',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;D:\\server\\mysql\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;D:\\server\\apache\\bin;D:\\server\\php;D:\\server\\mysql\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache/2.2.19 (Win32) mod_ssl/2.2.19 OpenSSL/0.9.8r PHP/5.4.35',
+  'SERVER_NAME' => 'bag.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/project/bag',
+  'SERVER_ADMIN' => 'admin@pc87.com',
+  'SCRIPT_FILENAME' => 'D:/project/bag/core/public/index.php',
+  'REMOTE_PORT' => '59743',
+  'REDIRECT_URL' => '/core/public/images/logo-mobile.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/images/logo-mobile.png',
+  'SCRIPT_NAME' => '/core/public/index.php',
+  'PHP_SELF' => '/core/public/index.php',
+  'REQUEST_TIME_FLOAT' => 1418805031.974,
+  'REQUEST_TIME' => 1418805031,
+)</pre></p>﻿Invalid controller specified (images)#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}﻿<h1>An error occurred</h1>
+<h2>Page not found</h2>
+The error is logged. Please come back later.
+<h3>Exception information:</h3>
+<p>
+    <b>Message:</b> Invalid controller specified (images)</p>
+
+<h3>Stack trace:</h3>
+<pre>#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}</pre>
+
+<h3>Request Parameters:</h3>
+<pre>array (
+  'controller' => 'images',
+  'action' => 'logo-mobile.png',
+  'module' => 'home',
+)</pre>
+<h3>Server information:</h3>
+<p>
+<pre>array (
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_REDIRECT_STATUS' => '200',
+  'REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_STATUS' => '200',
+  'HTTP_APPLICATION_ENV' => 'development',
+  'HTTP_PROJECT_HOST' => 'bag.local',
+  'HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'HTTP_HOST' => 'bag.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://bag.local/staff/history?search%5Bfield%5D%5Bdestination%5D=&search%5Bdate%5D%5Bdate_from%5D=&search%5Bdate%5D%5Bdate_to%5D=&search%5Bfield%5D%5Bpickup.id%5D=&search%5Bfield%5D%5Bcourier.search_name%5D=&search%5Bfield%5D%5Bpickup.status%5D=4&search%5Bfield%5D%5Bcustomer.search_name%5D=&page=1&btn_submit=Search',
+  'HTTP_COOKIE' => 'b6589fc6ab0dc82cf12099d1c2d40ab994e8410c=63gt559s72mafm4aejcka2jpv3',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;D:\\server\\mysql\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;D:\\server\\apache\\bin;D:\\server\\php;D:\\server\\mysql\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache/2.2.19 (Win32) mod_ssl/2.2.19 OpenSSL/0.9.8r PHP/5.4.35',
+  'SERVER_NAME' => 'bag.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/project/bag',
+  'SERVER_ADMIN' => 'admin@pc87.com',
+  'SCRIPT_FILENAME' => 'D:/project/bag/core/public/index.php',
+  'REMOTE_PORT' => '59887',
+  'REDIRECT_URL' => '/core/public/images/logo-mobile.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/images/logo-mobile.png',
+  'SCRIPT_NAME' => '/core/public/index.php',
+  'PHP_SELF' => '/core/public/index.php',
+  'REQUEST_TIME_FLOAT' => 1418805225.592,
+  'REQUEST_TIME' => 1418805225,
+)</pre></p>﻿Invalid controller specified (images)#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}﻿<h1>An error occurred</h1>
+<h2>Page not found</h2>
+The error is logged. Please come back later.
+<h3>Exception information:</h3>
+<p>
+    <b>Message:</b> Invalid controller specified (images)</p>
+
+<h3>Stack trace:</h3>
+<pre>#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}</pre>
+
+<h3>Request Parameters:</h3>
+<pre>array (
+  'controller' => 'images',
+  'action' => 'logo-mobile.png',
+  'module' => 'home',
+)</pre>
+<h3>Server information:</h3>
+<p>
+<pre>array (
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_REDIRECT_STATUS' => '200',
+  'REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_STATUS' => '200',
+  'HTTP_APPLICATION_ENV' => 'development',
+  'HTTP_PROJECT_HOST' => 'bag.local',
+  'HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'HTTP_HOST' => 'bag.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://bag.local/staff/history?search%5Bfield%5D%5Bdestination%5D=&search%5Bdate%5D%5Bdate_from%5D=&search%5Bdate%5D%5Bdate_to%5D=&search%5Bfield%5D%5Bpickup.id%5D=&search%5Bfield%5D%5Bcourier.search_name%5D=&search%5Bfield%5D%5Bpickup.status%5D=5&search%5Bfield%5D%5Bcustomer.search_name%5D=&page=1&btn_submit=Search',
+  'HTTP_COOKIE' => 'b6589fc6ab0dc82cf12099d1c2d40ab994e8410c=63gt559s72mafm4aejcka2jpv3',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;D:\\server\\mysql\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;D:\\server\\apache\\bin;D:\\server\\php;D:\\server\\mysql\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache/2.2.19 (Win32) mod_ssl/2.2.19 OpenSSL/0.9.8r PHP/5.4.35',
+  'SERVER_NAME' => 'bag.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/project/bag',
+  'SERVER_ADMIN' => 'admin@pc87.com',
+  'SCRIPT_FILENAME' => 'D:/project/bag/core/public/index.php',
+  'REMOTE_PORT' => '59896',
+  'REDIRECT_URL' => '/core/public/images/logo-mobile.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/images/logo-mobile.png',
+  'SCRIPT_NAME' => '/core/public/index.php',
+  'PHP_SELF' => '/core/public/index.php',
+  'REQUEST_TIME_FLOAT' => 1418805233.224,
+  'REQUEST_TIME' => 1418805233,
+)</pre></p>﻿Invalid controller specified (images)#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}﻿<h1>An error occurred</h1>
+<h2>Page not found</h2>
+The error is logged. Please come back later.
+<h3>Exception information:</h3>
+<p>
+    <b>Message:</b> Invalid controller specified (images)</p>
+
+<h3>Stack trace:</h3>
+<pre>#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}</pre>
+
+<h3>Request Parameters:</h3>
+<pre>array (
+  'controller' => 'images',
+  'action' => 'logo-mobile.png',
+  'module' => 'home',
+)</pre>
+<h3>Server information:</h3>
+<p>
+<pre>array (
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_REDIRECT_STATUS' => '200',
+  'REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_STATUS' => '200',
+  'HTTP_APPLICATION_ENV' => 'development',
+  'HTTP_PROJECT_HOST' => 'bag.local',
+  'HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'HTTP_HOST' => 'bag.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://bag.local/staff/history?search%5Bfield%5D%5Bdestination%5D=&search%5Bdate%5D%5Bdate_from%5D=&search%5Bdate%5D%5Bdate_to%5D=&search%5Bfield%5D%5Bpickup.id%5D=&search%5Bfield%5D%5Bcourier.search_name%5D=&search%5Bfield%5D%5Bpickup.status%5D=5&search%5Bfield%5D%5Bcustomer.search_name%5D=&page=1&btn_submit=Search',
+  'HTTP_COOKIE' => 'b6589fc6ab0dc82cf12099d1c2d40ab994e8410c=63gt559s72mafm4aejcka2jpv3',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;D:\\server\\mysql\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;D:\\server\\apache\\bin;D:\\server\\php;D:\\server\\mysql\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache/2.2.19 (Win32) mod_ssl/2.2.19 OpenSSL/0.9.8r PHP/5.4.35',
+  'SERVER_NAME' => 'bag.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/project/bag',
+  'SERVER_ADMIN' => 'admin@pc87.com',
+  'SCRIPT_FILENAME' => 'D:/project/bag/core/public/index.php',
+  'REMOTE_PORT' => '59901',
+  'REDIRECT_URL' => '/core/public/images/logo-mobile.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/images/logo-mobile.png',
+  'SCRIPT_NAME' => '/core/public/index.php',
+  'PHP_SELF' => '/core/public/index.php',
+  'REQUEST_TIME_FLOAT' => 1418805256.7869999,
+  'REQUEST_TIME' => 1418805256,
+)</pre></p>﻿Invalid controller specified (images)#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}﻿<h1>An error occurred</h1>
+<h2>Page not found</h2>
+The error is logged. Please come back later.
+<h3>Exception information:</h3>
+<p>
+    <b>Message:</b> Invalid controller specified (images)</p>
+
+<h3>Stack trace:</h3>
+<pre>#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}</pre>
+
+<h3>Request Parameters:</h3>
+<pre>array (
+  'controller' => 'images',
+  'action' => 'logo-mobile.png',
+  'module' => 'home',
+)</pre>
+<h3>Server information:</h3>
+<p>
+<pre>array (
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_REDIRECT_STATUS' => '200',
+  'REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_STATUS' => '200',
+  'HTTP_APPLICATION_ENV' => 'development',
+  'HTTP_PROJECT_HOST' => 'bag.local',
+  'HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'HTTP_HOST' => 'bag.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://bag.local/staff/history?search%5Bfield%5D%5Bdestination%5D=&search%5Bdate%5D%5Bdate_from%5D=&search%5Bdate%5D%5Bdate_to%5D=&search%5Bfield%5D%5Bpickup.id%5D=&search%5Bfield%5D%5Bcourier.search_name%5D=&search%5Bfield%5D%5Bpickup.status%5D=5&search%5Bfield%5D%5Bcustomer.search_name%5D=&page=1&btn_submit=Search',
+  'HTTP_COOKIE' => 'b6589fc6ab0dc82cf12099d1c2d40ab994e8410c=63gt559s72mafm4aejcka2jpv3',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;D:\\server\\mysql\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;D:\\server\\apache\\bin;D:\\server\\php;D:\\server\\mysql\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache/2.2.19 (Win32) mod_ssl/2.2.19 OpenSSL/0.9.8r PHP/5.4.35',
+  'SERVER_NAME' => 'bag.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/project/bag',
+  'SERVER_ADMIN' => 'admin@pc87.com',
+  'SCRIPT_FILENAME' => 'D:/project/bag/core/public/index.php',
+  'REMOTE_PORT' => '59924',
+  'REDIRECT_URL' => '/core/public/images/logo-mobile.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/images/logo-mobile.png',
+  'SCRIPT_NAME' => '/core/public/index.php',
+  'PHP_SELF' => '/core/public/index.php',
+  'REQUEST_TIME_FLOAT' => 1418805307.0009999,
+  'REQUEST_TIME' => 1418805307,
+)</pre></p>﻿Invalid controller specified (images)#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}﻿<h1>An error occurred</h1>
+<h2>Page not found</h2>
+The error is logged. Please come back later.
+<h3>Exception information:</h3>
+<p>
+    <b>Message:</b> Invalid controller specified (images)</p>
+
+<h3>Stack trace:</h3>
+<pre>#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}</pre>
+
+<h3>Request Parameters:</h3>
+<pre>array (
+  'controller' => 'images',
+  'action' => 'logo-mobile.png',
+  'module' => 'home',
+)</pre>
+<h3>Server information:</h3>
+<p>
+<pre>array (
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_REDIRECT_STATUS' => '200',
+  'REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_STATUS' => '200',
+  'HTTP_APPLICATION_ENV' => 'development',
+  'HTTP_PROJECT_HOST' => 'bag.local',
+  'HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'HTTP_HOST' => 'bag.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://bag.local/staff/history?search%5Bfield%5D%5Bdestination%5D=&search%5Bdate%5D%5Bdate_from%5D=&search%5Bdate%5D%5Bdate_to%5D=&search%5Bfield%5D%5Bpickup.id%5D=&search%5Bfield%5D%5Bcourier.search_name%5D=&search%5Bfield%5D%5Bpickup.status%5D=5&search%5Bfield%5D%5Bcustomer.search_name%5D=&page=1&btn_submit=Search',
+  'HTTP_COOKIE' => 'b6589fc6ab0dc82cf12099d1c2d40ab994e8410c=63gt559s72mafm4aejcka2jpv3',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;D:\\server\\mysql\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;D:\\server\\apache\\bin;D:\\server\\php;D:\\server\\mysql\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache/2.2.19 (Win32) mod_ssl/2.2.19 OpenSSL/0.9.8r PHP/5.4.35',
+  'SERVER_NAME' => 'bag.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/project/bag',
+  'SERVER_ADMIN' => 'admin@pc87.com',
+  'SCRIPT_FILENAME' => 'D:/project/bag/core/public/index.php',
+  'REMOTE_PORT' => '59933',
+  'REDIRECT_URL' => '/core/public/images/logo-mobile.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/images/logo-mobile.png',
+  'SCRIPT_NAME' => '/core/public/index.php',
+  'PHP_SELF' => '/core/public/index.php',
+  'REQUEST_TIME_FLOAT' => 1418805320.773,
+  'REQUEST_TIME' => 1418805320,
+)</pre></p>﻿Invalid controller specified (images)#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}﻿<h1>An error occurred</h1>
+<h2>Page not found</h2>
+The error is logged. Please come back later.
+<h3>Exception information:</h3>
+<p>
+    <b>Message:</b> Invalid controller specified (images)</p>
+
+<h3>Stack trace:</h3>
+<pre>#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}</pre>
+
+<h3>Request Parameters:</h3>
+<pre>array (
+  'controller' => 'images',
+  'action' => 'logo-mobile.png',
+  'module' => 'home',
+)</pre>
+<h3>Server information:</h3>
+<p>
+<pre>array (
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_REDIRECT_STATUS' => '200',
+  'REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_STATUS' => '200',
+  'HTTP_APPLICATION_ENV' => 'development',
+  'HTTP_PROJECT_HOST' => 'bag.local',
+  'HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'HTTP_HOST' => 'bag.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://bag.local/staff/history?search%5Bfield%5D%5Bdestination%5D=&search%5Bdate%5D%5Bdate_from%5D=&search%5Bdate%5D%5Bdate_to%5D=&search%5Bfield%5D%5Bpickup.id%5D=&search%5Bfield%5D%5Bcourier.search_name%5D=&search%5Bfield%5D%5Bpickup.status%5D=5&search%5Bfield%5D%5Bcustomer.search_name%5D=&page=1&btn_submit=Search',
+  'HTTP_COOKIE' => 'b6589fc6ab0dc82cf12099d1c2d40ab994e8410c=63gt559s72mafm4aejcka2jpv3',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;D:\\server\\mysql\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;D:\\server\\apache\\bin;D:\\server\\php;D:\\server\\mysql\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache/2.2.19 (Win32) mod_ssl/2.2.19 OpenSSL/0.9.8r PHP/5.4.35',
+  'SERVER_NAME' => 'bag.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/project/bag',
+  'SERVER_ADMIN' => 'admin@pc87.com',
+  'SCRIPT_FILENAME' => 'D:/project/bag/core/public/index.php',
+  'REMOTE_PORT' => '59933',
+  'REDIRECT_URL' => '/core/public/images/logo-mobile.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/images/logo-mobile.png',
+  'SCRIPT_NAME' => '/core/public/index.php',
+  'PHP_SELF' => '/core/public/index.php',
+  'REQUEST_TIME_FLOAT' => 1418805323.7130001,
+  'REQUEST_TIME' => 1418805323,
+)</pre></p>﻿Invalid controller specified (images)#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}﻿<h1>An error occurred</h1>
+<h2>Page not found</h2>
+The error is logged. Please come back later.
+<h3>Exception information:</h3>
+<p>
+    <b>Message:</b> Invalid controller specified (images)</p>
+
+<h3>Stack trace:</h3>
+<pre>#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}</pre>
+
+<h3>Request Parameters:</h3>
+<pre>array (
+  'controller' => 'images',
+  'action' => 'logo-mobile.png',
+  'module' => 'home',
+)</pre>
+<h3>Server information:</h3>
+<p>
+<pre>array (
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_REDIRECT_STATUS' => '200',
+  'REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_STATUS' => '200',
+  'HTTP_APPLICATION_ENV' => 'development',
+  'HTTP_PROJECT_HOST' => 'bag.local',
+  'HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'HTTP_HOST' => 'bag.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://bag.local/staff/history?search%5Bfield%5D%5Bdestination%5D=&search%5Bdate%5D%5Bdate_from%5D=&search%5Bdate%5D%5Bdate_to%5D=&search%5Bfield%5D%5Bpickup.id%5D=&search%5Bfield%5D%5Bcourier.search_name%5D=&search%5Bfield%5D%5Bpickup.status%5D=5&search%5Bfield%5D%5Bcustomer.search_name%5D=&page=1&btn_submit=Search',
+  'HTTP_COOKIE' => 'b6589fc6ab0dc82cf12099d1c2d40ab994e8410c=63gt559s72mafm4aejcka2jpv3',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;D:\\server\\mysql\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;D:\\server\\apache\\bin;D:\\server\\php;D:\\server\\mysql\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache/2.2.19 (Win32) mod_ssl/2.2.19 OpenSSL/0.9.8r PHP/5.4.35',
+  'SERVER_NAME' => 'bag.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/project/bag',
+  'SERVER_ADMIN' => 'admin@pc87.com',
+  'SCRIPT_FILENAME' => 'D:/project/bag/core/public/index.php',
+  'REMOTE_PORT' => '59945',
+  'REDIRECT_URL' => '/core/public/images/logo-mobile.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/images/logo-mobile.png',
+  'SCRIPT_NAME' => '/core/public/index.php',
+  'PHP_SELF' => '/core/public/index.php',
+  'REQUEST_TIME_FLOAT' => 1418805392.1500001,
+  'REQUEST_TIME' => 1418805392,
+)</pre></p>﻿Invalid controller specified (images)#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}﻿<h1>An error occurred</h1>
+<h2>Page not found</h2>
+The error is logged. Please come back later.
+<h3>Exception information:</h3>
+<p>
+    <b>Message:</b> Invalid controller specified (images)</p>
+
+<h3>Stack trace:</h3>
+<pre>#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}</pre>
+
+<h3>Request Parameters:</h3>
+<pre>array (
+  'controller' => 'images',
+  'action' => 'logo-mobile.png',
+  'module' => 'home',
+)</pre>
+<h3>Server information:</h3>
+<p>
+<pre>array (
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_REDIRECT_STATUS' => '200',
+  'REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_STATUS' => '200',
+  'HTTP_APPLICATION_ENV' => 'development',
+  'HTTP_PROJECT_HOST' => 'bag.local',
+  'HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'HTTP_HOST' => 'bag.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://bag.local/staff/history?search%5Bfield%5D%5Bdestination%5D=&search%5Bdate%5D%5Bdate_from%5D=&search%5Bdate%5D%5Bdate_to%5D=&search%5Bfield%5D%5Bpickup.id%5D=&search%5Bfield%5D%5Bcourier.search_name%5D=&search%5Bfield%5D%5Bpickup.status%5D=5&search%5Bfield%5D%5Bcustomer.search_name%5D=&page=1&btn_submit=Search',
+  'HTTP_COOKIE' => 'b6589fc6ab0dc82cf12099d1c2d40ab994e8410c=63gt559s72mafm4aejcka2jpv3',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;D:\\server\\mysql\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;D:\\server\\apache\\bin;D:\\server\\php;D:\\server\\mysql\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache/2.2.19 (Win32) mod_ssl/2.2.19 OpenSSL/0.9.8r PHP/5.4.35',
+  'SERVER_NAME' => 'bag.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/project/bag',
+  'SERVER_ADMIN' => 'admin@pc87.com',
+  'SCRIPT_FILENAME' => 'D:/project/bag/core/public/index.php',
+  'REMOTE_PORT' => '59957',
+  'REDIRECT_URL' => '/core/public/images/logo-mobile.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/images/logo-mobile.png',
+  'SCRIPT_NAME' => '/core/public/index.php',
+  'PHP_SELF' => '/core/public/index.php',
+  'REQUEST_TIME_FLOAT' => 1418805434.7420001,
+  'REQUEST_TIME' => 1418805434,
+)</pre></p>﻿Invalid controller specified (images)#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}﻿<h1>An error occurred</h1>
+<h2>Page not found</h2>
+The error is logged. Please come back later.
+<h3>Exception information:</h3>
+<p>
+    <b>Message:</b> Invalid controller specified (images)</p>
+
+<h3>Stack trace:</h3>
+<pre>#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}</pre>
+
+<h3>Request Parameters:</h3>
+<pre>array (
+  'controller' => 'images',
+  'action' => 'logo-mobile.png',
+  'module' => 'home',
+)</pre>
+<h3>Server information:</h3>
+<p>
+<pre>array (
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_REDIRECT_STATUS' => '200',
+  'REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_STATUS' => '200',
+  'HTTP_APPLICATION_ENV' => 'development',
+  'HTTP_PROJECT_HOST' => 'bag.local',
+  'HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'HTTP_HOST' => 'bag.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://bag.local/staff/history?search%5Bfield%5D%5Bdestination%5D=&search%5Bdate%5D%5Bdate_from%5D=&search%5Bdate%5D%5Bdate_to%5D=&search%5Bfield%5D%5Bpickup.id%5D=&search%5Bfield%5D%5Bcourier.search_name%5D=&search%5Bfield%5D%5Bpickup.status%5D=5&search%5Bfield%5D%5Bcustomer.search_name%5D=&page=1&btn_submit=Search',
+  'HTTP_COOKIE' => 'b6589fc6ab0dc82cf12099d1c2d40ab994e8410c=63gt559s72mafm4aejcka2jpv3',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;D:\\server\\mysql\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;D:\\server\\apache\\bin;D:\\server\\php;D:\\server\\mysql\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache/2.2.19 (Win32) mod_ssl/2.2.19 OpenSSL/0.9.8r PHP/5.4.35',
+  'SERVER_NAME' => 'bag.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/project/bag',
+  'SERVER_ADMIN' => 'admin@pc87.com',
+  'SCRIPT_FILENAME' => 'D:/project/bag/core/public/index.php',
+  'REMOTE_PORT' => '59982',
+  'REDIRECT_URL' => '/core/public/images/logo-mobile.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/images/logo-mobile.png',
+  'SCRIPT_NAME' => '/core/public/index.php',
+  'PHP_SELF' => '/core/public/index.php',
+  'REQUEST_TIME_FLOAT' => 1418805476.312,
+  'REQUEST_TIME' => 1418805476,
+)</pre></p>﻿Invalid controller specified (images)#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}﻿<h1>An error occurred</h1>
+<h2>Page not found</h2>
+The error is logged. Please come back later.
+<h3>Exception information:</h3>
+<p>
+    <b>Message:</b> Invalid controller specified (images)</p>
+
+<h3>Stack trace:</h3>
+<pre>#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}</pre>
+
+<h3>Request Parameters:</h3>
+<pre>array (
+  'controller' => 'images',
+  'action' => 'logo-mobile.png',
+  'module' => 'home',
+)</pre>
+<h3>Server information:</h3>
+<p>
+<pre>array (
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_REDIRECT_STATUS' => '200',
+  'REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_STATUS' => '200',
+  'HTTP_APPLICATION_ENV' => 'development',
+  'HTTP_PROJECT_HOST' => 'bag.local',
+  'HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'HTTP_HOST' => 'bag.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://bag.local/staff/history?search%5Bfield%5D%5Bdestination%5D=&search%5Bdate%5D%5Bdate_from%5D=&search%5Bdate%5D%5Bdate_to%5D=&search%5Bfield%5D%5Bpickup.id%5D=&search%5Bfield%5D%5Bcourier.search_name%5D=&search%5Bfield%5D%5Bpickup.status%5D=5&search%5Bfield%5D%5Bcustomer.search_name%5D=&page=1&btn_submit=Search',
+  'HTTP_COOKIE' => 'b6589fc6ab0dc82cf12099d1c2d40ab994e8410c=63gt559s72mafm4aejcka2jpv3',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;D:\\server\\mysql\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;D:\\server\\apache\\bin;D:\\server\\php;D:\\server\\mysql\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache/2.2.19 (Win32) mod_ssl/2.2.19 OpenSSL/0.9.8r PHP/5.4.35',
+  'SERVER_NAME' => 'bag.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/project/bag',
+  'SERVER_ADMIN' => 'admin@pc87.com',
+  'SCRIPT_FILENAME' => 'D:/project/bag/core/public/index.php',
+  'REMOTE_PORT' => '60032',
+  'REDIRECT_URL' => '/core/public/images/logo-mobile.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/images/logo-mobile.png',
+  'SCRIPT_NAME' => '/core/public/index.php',
+  'PHP_SELF' => '/core/public/index.php',
+  'REQUEST_TIME_FLOAT' => 1418805954.8050001,
+  'REQUEST_TIME' => 1418805954,
+)</pre></p>﻿Invalid controller specified (images)#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}﻿<h1>An error occurred</h1>
+<h2>Page not found</h2>
+The error is logged. Please come back later.
+<h3>Exception information:</h3>
+<p>
+    <b>Message:</b> Invalid controller specified (images)</p>
+
+<h3>Stack trace:</h3>
+<pre>#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}</pre>
+
+<h3>Request Parameters:</h3>
+<pre>array (
+  'controller' => 'images',
+  'action' => 'logo-mobile.png',
+  'module' => 'home',
+)</pre>
+<h3>Server information:</h3>
+<p>
+<pre>array (
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_REDIRECT_STATUS' => '200',
+  'REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_STATUS' => '200',
+  'HTTP_APPLICATION_ENV' => 'development',
+  'HTTP_PROJECT_HOST' => 'bag.local',
+  'HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'HTTP_HOST' => 'bag.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://bag.local/staff/history?search%5Bfield%5D%5Bdestination%5D=&search%5Bdate%5D%5Bdate_from%5D=&search%5Bdate%5D%5Bdate_to%5D=&search%5Bfield%5D%5Bpickup.id%5D=&search%5Bfield%5D%5Bcourier.search_name%5D=&search%5Bfield%5D%5Bpickup.status%5D=4&search%5Bfield%5D%5Bcustomer.search_name%5D=&page=1&btn_submit=Search',
+  'HTTP_COOKIE' => 'b6589fc6ab0dc82cf12099d1c2d40ab994e8410c=63gt559s72mafm4aejcka2jpv3',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;D:\\server\\mysql\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;D:\\server\\apache\\bin;D:\\server\\php;D:\\server\\mysql\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache/2.2.19 (Win32) mod_ssl/2.2.19 OpenSSL/0.9.8r PHP/5.4.35',
+  'SERVER_NAME' => 'bag.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/project/bag',
+  'SERVER_ADMIN' => 'admin@pc87.com',
+  'SCRIPT_FILENAME' => 'D:/project/bag/core/public/index.php',
+  'REMOTE_PORT' => '60032',
+  'REDIRECT_URL' => '/core/public/images/logo-mobile.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/images/logo-mobile.png',
+  'SCRIPT_NAME' => '/core/public/index.php',
+  'PHP_SELF' => '/core/public/index.php',
+  'REQUEST_TIME_FLOAT' => 1418805959.9419999,
+  'REQUEST_TIME' => 1418805959,
+)</pre></p>﻿Invalid controller specified (images)#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}﻿<h1>An error occurred</h1>
+<h2>Page not found</h2>
+The error is logged. Please come back later.
+<h3>Exception information:</h3>
+<p>
+    <b>Message:</b> Invalid controller specified (images)</p>
+
+<h3>Stack trace:</h3>
+<pre>#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}</pre>
+
+<h3>Request Parameters:</h3>
+<pre>array (
+  'controller' => 'images',
+  'action' => 'logo-mobile.png',
+  'module' => 'home',
+)</pre>
+<h3>Server information:</h3>
+<p>
+<pre>array (
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_REDIRECT_STATUS' => '200',
+  'REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_STATUS' => '200',
+  'HTTP_APPLICATION_ENV' => 'development',
+  'HTTP_PROJECT_HOST' => 'bag.local',
+  'HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'HTTP_HOST' => 'bag.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://bag.local/staff/history?search%5Bfield%5D%5Bdestination%5D=&search%5Bdate%5D%5Bdate_from%5D=&search%5Bdate%5D%5Bdate_to%5D=&search%5Bfield%5D%5Bpickup.id%5D=&search%5Bfield%5D%5Bcourier.search_name%5D=&search%5Bfield%5D%5Bpickup.status%5D=4&search%5Bfield%5D%5Bcustomer.search_name%5D=&page=1&btn_submit=Search',
+  'HTTP_COOKIE' => 'b6589fc6ab0dc82cf12099d1c2d40ab994e8410c=63gt559s72mafm4aejcka2jpv3',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;D:\\server\\mysql\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;D:\\server\\apache\\bin;D:\\server\\php;D:\\server\\mysql\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache/2.2.19 (Win32) mod_ssl/2.2.19 OpenSSL/0.9.8r PHP/5.4.35',
+  'SERVER_NAME' => 'bag.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/project/bag',
+  'SERVER_ADMIN' => 'admin@pc87.com',
+  'SCRIPT_FILENAME' => 'D:/project/bag/core/public/index.php',
+  'REMOTE_PORT' => '60096',
+  'REDIRECT_URL' => '/core/public/images/logo-mobile.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/images/logo-mobile.png',
+  'SCRIPT_NAME' => '/core/public/index.php',
+  'PHP_SELF' => '/core/public/index.php',
+  'REQUEST_TIME_FLOAT' => 1418806130.237,
+  'REQUEST_TIME' => 1418806130,
+)</pre></p>﻿Invalid controller specified (images)#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}﻿<h1>An error occurred</h1>
+<h2>Page not found</h2>
+The error is logged. Please come back later.
+<h3>Exception information:</h3>
+<p>
+    <b>Message:</b> Invalid controller specified (images)</p>
+
+<h3>Stack trace:</h3>
+<pre>#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}</pre>
+
+<h3>Request Parameters:</h3>
+<pre>array (
+  'controller' => 'images',
+  'action' => 'logo-mobile.png',
+  'module' => 'home',
+)</pre>
+<h3>Server information:</h3>
+<p>
+<pre>array (
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_REDIRECT_STATUS' => '200',
+  'REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_STATUS' => '200',
+  'HTTP_APPLICATION_ENV' => 'development',
+  'HTTP_PROJECT_HOST' => 'bag.local',
+  'HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'HTTP_HOST' => 'bag.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://bag.local/staff/history?search%5Bfield%5D%5Bdestination%5D=&search%5Bdate%5D%5Bdate_from%5D=&search%5Bdate%5D%5Bdate_to%5D=&search%5Bfield%5D%5Bpickup.id%5D=&search%5Bfield%5D%5Bcourier.search_name%5D=&search%5Bfield%5D%5Bpickup.status%5D=4&search%5Bfield%5D%5Bcustomer.search_name%5D=&page=1&btn_submit=Search',
+  'HTTP_COOKIE' => 'b6589fc6ab0dc82cf12099d1c2d40ab994e8410c=63gt559s72mafm4aejcka2jpv3',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;D:\\server\\mysql\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;D:\\server\\apache\\bin;D:\\server\\php;D:\\server\\mysql\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache/2.2.19 (Win32) mod_ssl/2.2.19 OpenSSL/0.9.8r PHP/5.4.35',
+  'SERVER_NAME' => 'bag.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/project/bag',
+  'SERVER_ADMIN' => 'admin@pc87.com',
+  'SCRIPT_FILENAME' => 'D:/project/bag/core/public/index.php',
+  'REMOTE_PORT' => '60096',
+  'REDIRECT_URL' => '/core/public/images/logo-mobile.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/images/logo-mobile.png',
+  'SCRIPT_NAME' => '/core/public/index.php',
+  'PHP_SELF' => '/core/public/index.php',
+  'REQUEST_TIME_FLOAT' => 1418806131.711,
+  'REQUEST_TIME' => 1418806131,
+)</pre></p>﻿Invalid controller specified (images)#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}﻿<h1>An error occurred</h1>
+<h2>Page not found</h2>
+The error is logged. Please come back later.
+<h3>Exception information:</h3>
+<p>
+    <b>Message:</b> Invalid controller specified (images)</p>
+
+<h3>Stack trace:</h3>
+<pre>#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}</pre>
+
+<h3>Request Parameters:</h3>
+<pre>array (
+  'controller' => 'images',
+  'action' => 'logo-mobile.png',
+  'module' => 'home',
+)</pre>
+<h3>Server information:</h3>
+<p>
+<pre>array (
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_REDIRECT_STATUS' => '200',
+  'REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_STATUS' => '200',
+  'HTTP_APPLICATION_ENV' => 'development',
+  'HTTP_PROJECT_HOST' => 'bag.local',
+  'HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'HTTP_HOST' => 'bag.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://bag.local/staff/history?search%5Bfield%5D%5Bdestination%5D=&search%5Bdate%5D%5Bdate_from%5D=&search%5Bdate%5D%5Bdate_to%5D=&search%5Bfield%5D%5Bpickup.id%5D=&search%5Bfield%5D%5Bcourier.search_name%5D=&search%5Bfield%5D%5Bpickup.status%5D=4&search%5Bfield%5D%5Bcustomer.search_name%5D=&page=1&btn_submit=Search',
+  'HTTP_COOKIE' => 'b6589fc6ab0dc82cf12099d1c2d40ab994e8410c=63gt559s72mafm4aejcka2jpv3',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;D:\\server\\mysql\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;D:\\server\\apache\\bin;D:\\server\\php;D:\\server\\mysql\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache/2.2.19 (Win32) mod_ssl/2.2.19 OpenSSL/0.9.8r PHP/5.4.35',
+  'SERVER_NAME' => 'bag.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/project/bag',
+  'SERVER_ADMIN' => 'admin@pc87.com',
+  'SCRIPT_FILENAME' => 'D:/project/bag/core/public/index.php',
+  'REMOTE_PORT' => '60210',
+  'REDIRECT_URL' => '/core/public/images/logo-mobile.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/images/logo-mobile.png',
+  'SCRIPT_NAME' => '/core/public/index.php',
+  'PHP_SELF' => '/core/public/index.php',
+  'REQUEST_TIME_FLOAT' => 1418806630.075,
+  'REQUEST_TIME' => 1418806630,
+)</pre></p>﻿Invalid controller specified (images)#0 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#2 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#4 {main}

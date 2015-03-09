@@ -1,0 +1,234 @@
+﻿<h1>An error occurred</h1>
+<h2>Application error</h2>
+The error is logged. Please come back later.
+<h3>Exception information:</h3>
+<p>
+    <b>Message:</b> Plugin by name 'Redirect' was not found in the registry; used paths:
+Courier_View_Helper_: D:/project/bag/modules/courier/views\helpers/
+Base_Display_Helper_: D:\project\bag/modules\base\display\helpers/
+Zend_View_Helper_: Zend/View/Helper/;D:\project\bag/modules\base\display\helpers/</p>
+
+<h3>Stack trace:</h3>
+<pre>#0 D:\project\bag\library\framework\Zend\View\Abstract.php(1182): Zend_Loader_PluginLoader->load('Redirect')
+#1 D:\project\bag\library\framework\Zend\View\Abstract.php(618): Zend_View_Abstract->_getPlugin('helper', 'redirect')
+#2 D:\project\bag\library\framework\Zend\View\Abstract.php(344): Zend_View_Abstract->getHelper('redirect')
+#3 D:\project\bag\views\scripts\success.phtml(7): Zend_View_Abstract->__call('redirect', Array)
+#4 D:\project\bag\views\scripts\success.phtml(7): Zend_View->redirect('/auth')
+#5 D:\project\bag\library\framework\Zend\View.php(108): include('D:\project\bag\...')
+#6 D:\project\bag\library\framework\Zend\View\Abstract.php(888): Zend_View->_run('D:\project\bag\...')
+#7 D:\project\bag\modules\courier\controllers\RegisterController.php(83): Zend_View_Abstract->render('success.phtml')
+#8 D:\project\bag\library\framework\Zend\Controller\Action.php(516): Courier_RegisterController->indexAction()
+#9 D:\project\bag\library\framework\Zend\Controller\Dispatcher\Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#10 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#12 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#13 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#14 {main}</pre>
+
+<h3>Request Parameters:</h3>
+<pre>array (
+  'module' => 'courier',
+  'controller' => 'register',
+  'action' => 'index',
+  'is_company' => '1',
+  'company_name' => 'test',
+  'firstname' => 'min',
+  'lastname' => 'min',
+  'abn' => 'min',
+  'contact_firstname' => 'min',
+  'contact_lastname' => 'min',
+  'email' => 'admin@admin.com',
+  'alternative_email' => 'admin@admin.com',
+  'general_number' => '1242353245',
+  'contact_number' => '2352352352',
+  'mobile' => '23523523',
+  'fax' => '23523523',
+  'image' => '320.jpg',
+  'address' => '23532523',
+  'suburb' => '2352352',
+  'courier_state' => '235',
+  'postcode' => '23523',
+  'app_email' => 'admin@admin.com',
+  'app_password' => 'admin123',
+  'bank_institution' => '12423',
+  'bank_bsb' => '2352',
+  'bank_account' => '235',
+  'preferred_region' => 'Sydney',
+  'preferred_pickup_suburb' => '1',
+  'preferred_pickup_suburb_ids' => 
+  array (
+    0 => '20',
+  ),
+  'preferred_delivery_suburb' => '1',
+  'preferred_delivery_suburb_ids' => 
+  array (
+    0 => '1',
+  ),
+  'register' => '',
+)</pre>
+<h3>Server information:</h3>
+<p>
+<pre>array (
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_REDIRECT_STATUS' => '200',
+  'REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_STATUS' => '200',
+  'HTTP_APPLICATION_ENV' => 'development',
+  'HTTP_PROJECT_HOST' => 'bag.local',
+  'HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'HTTP_HOST' => 'bag.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+  'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://bag.local/courier/register',
+  'HTTP_COOKIE' => 'b6589fc6ab0dc82cf12099d1c2d40ab994e8410c=q2glp37lfntfu7c1hb3v59qj93; 356a192b7913b04c54574d18c28d46e6395428ab=h0ldo7q56ren7avs9hsakat0r3',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+  'CONTENT_LENGTH' => '595',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;D:\\server\\mysql\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;D:\\server\\apache\\bin;D:\\server\\php;D:\\server\\mysql\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache/2.2.19 (Win32) mod_ssl/2.2.19 OpenSSL/0.9.8r PHP/5.3.28',
+  'SERVER_NAME' => 'bag.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/project/bag',
+  'SERVER_ADMIN' => 'admin@pc87.com',
+  'SCRIPT_FILENAME' => 'D:/project/bag/core/public/index.php',
+  'REMOTE_PORT' => '53607',
+  'REDIRECT_URL' => '/core/public/courier/register',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'POST',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/courier/register',
+  'SCRIPT_NAME' => '/core/public/index.php',
+  'PHP_SELF' => '/core/public/index.php',
+  'REQUEST_TIME' => 1418264006,
+)</pre></p>﻿<h1>An error occurred</h1>
+<h2>Application error</h2>
+The error is logged. Please come back later.
+<h3>Exception information:</h3>
+<p>
+    <b>Message:</b> Plugin by name 'Redirect' was not found in the registry; used paths:
+Courier_View_Helper_: D:/project/bag/modules/courier/views\helpers/
+Base_Display_Helper_: D:\project\bag/modules\base\display\helpers/
+Zend_View_Helper_: Zend/View/Helper/;D:\project\bag/modules\base\display\helpers/</p>
+
+<h3>Stack trace:</h3>
+<pre>#0 D:\project\bag\library\framework\Zend\View\Abstract.php(1182): Zend_Loader_PluginLoader->load('Redirect')
+#1 D:\project\bag\library\framework\Zend\View\Abstract.php(618): Zend_View_Abstract->_getPlugin('helper', 'redirect')
+#2 D:\project\bag\library\framework\Zend\View\Abstract.php(344): Zend_View_Abstract->getHelper('redirect')
+#3 D:\project\bag\views\scripts\success.phtml(7): Zend_View_Abstract->__call('redirect', Array)
+#4 D:\project\bag\views\scripts\success.phtml(7): Zend_View->redirect('/auth')
+#5 D:\project\bag\library\framework\Zend\View.php(108): include('D:\project\bag\...')
+#6 D:\project\bag\library\framework\Zend\View\Abstract.php(888): Zend_View->_run('D:\project\bag\...')
+#7 D:\project\bag\modules\courier\controllers\RegisterController.php(83): Zend_View_Abstract->render('success.phtml')
+#8 D:\project\bag\library\framework\Zend\Controller\Action.php(516): Courier_RegisterController->indexAction()
+#9 D:\project\bag\library\framework\Zend\Controller\Dispatcher\Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#10 D:\project\bag\library\framework\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 D:\project\bag\library\framework\Zend\Application\Bootstrap\Bootstrap.php(101): Zend_Controller_Front->dispatch()
+#12 D:\project\bag\library\framework\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#13 D:\project\bag\core\public\index.php(36): Zend_Application->run()
+#14 {main}</pre>
+
+<h3>Request Parameters:</h3>
+<pre>array (
+  'module' => 'courier',
+  'controller' => 'register',
+  'action' => 'index',
+  'is_company' => '1',
+  'company_name' => 'test',
+  'firstname' => 'min',
+  'lastname' => 'min',
+  'abn' => 'min',
+  'contact_firstname' => 'min',
+  'contact_lastname' => 'min',
+  'email' => 'admin@admin.com',
+  'alternative_email' => 'admin@admin.com',
+  'general_number' => '1242353245',
+  'contact_number' => '2352352352',
+  'mobile' => '23523523',
+  'fax' => '23523523',
+  'image' => '320.jpg',
+  'address' => '23532523',
+  'suburb' => '2352352',
+  'courier_state' => '235',
+  'postcode' => '23523',
+  'app_email' => 'admin@admin.com',
+  'app_password' => 'admin123',
+  'bank_institution' => '12423',
+  'bank_bsb' => '2352',
+  'bank_account' => '235',
+  'preferred_region' => 'Sydney',
+  'preferred_pickup_suburb' => '1',
+  'preferred_pickup_suburb_ids' => 
+  array (
+    0 => '20',
+  ),
+  'preferred_delivery_suburb' => '1',
+  'preferred_delivery_suburb_ids' => 
+  array (
+    0 => '1',
+  ),
+  'register' => '',
+)</pre>
+<h3>Server information:</h3>
+<p>
+<pre>array (
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_REDIRECT_STATUS' => '200',
+  'REDIRECT_HTTP_APPLICATION_ENV' => 'development',
+  'REDIRECT_HTTP_PROJECT_HOST' => 'bag.local',
+  'REDIRECT_HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'REDIRECT_STATUS' => '200',
+  'HTTP_APPLICATION_ENV' => 'development',
+  'HTTP_PROJECT_HOST' => 'bag.local',
+  'HTTP_APPLICATION_TIMEZONE' => 'Australia/Sydney',
+  'HTTP_HOST' => 'bag.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0',
+  'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://bag.local/courier/register',
+  'HTTP_COOKIE' => 'b6589fc6ab0dc82cf12099d1c2d40ab994e8410c=q2glp37lfntfu7c1hb3v59qj93; 356a192b7913b04c54574d18c28d46e6395428ab=h0ldo7q56ren7avs9hsakat0r3',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'HTTP_CACHE_CONTROL' => 'max-age=0',
+  'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+  'CONTENT_LENGTH' => '595',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;D:\\server\\mysql\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;D:\\server\\apache\\bin;D:\\server\\php;D:\\server\\mysql\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache/2.2.19 (Win32) mod_ssl/2.2.19 OpenSSL/0.9.8r PHP/5.3.28',
+  'SERVER_NAME' => 'bag.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/project/bag',
+  'SERVER_ADMIN' => 'admin@pc87.com',
+  'SCRIPT_FILENAME' => 'D:/project/bag/core/public/index.php',
+  'REMOTE_PORT' => '53722',
+  'REDIRECT_URL' => '/core/public/courier/register',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'POST',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/courier/register',
+  'SCRIPT_NAME' => '/core/public/index.php',
+  'PHP_SELF' => '/core/public/index.php',
+  'REQUEST_TIME' => 1418264101,
+)</pre></p>
